@@ -1,0 +1,3865 @@
+﻿<!DOCTYPE html>
+<html>
+<body onload="rnd()">
+<p id="demo">Click</p>
+<script>
+var link="/\s\d+-r/"
+var anch="/\n\d+./"
+
+function rnd() {
+var nyal = document.getElementById("nyaloka").innerHTML;
+
+nyal = nyal.replace(/\n(\d+).\n\n/g,'<br><h1><a name="$1">$1.</a></h1><br>')
+
+nyal = nyal.replace(/\s(\d+)-r/g,'<a href="#$1">&nbsp;$1-r</a>')
+
+nyal = nyal.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
+document.getElementById("demo").innerHTML = nyal;
+}
+
+</script>
+<script id="nyaloka" type="text/template">
+Csire Géza
+Molnár László
+Vakulya Csaba
+
+
+
+
+
+
+
+
+
+A Nyalóka
+Trilógia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figyelmeztetés! 
+
+Ez a könyv szerzői jogvédelem alatt áll, és csak otthoni olvasásra engedélyezett. A könyv kép- és írott anyagának részeiről és egészéről másolatot készíteni tilos. A könyv továbbadására, nyilvános helyen történő hangos felolvasására csak a Nyalóka Team® adhat engedélyt. A felsorolt tevékenységek folytatása vagy tűrése semmilyen büntetést nem von maga után.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Köszönetnyilvánítás
+
+A könyv nem készülhetett volna el, ha nincsenek az alábbiak:
+A legfontosabb a toll meg a papír. Ugye mindenki belátja, hogy ezek nélkül nem sikerülhetett volna. Persze azért több mindennek is köszönetet kell mondanunk:
+Bodrinak a macskának; Olivérnek, aki tud zongorázni; Norbinak a lótenyésztőnek, aki mellékállásban kalapokat árul; A Magyar Fogorvosok Szövetségének; az Alföldi WC-gyárnak; a Nyalókás talált eszközöknek, amiket az osztálytársainktól tulajdonítottunk el, és használtunk föl a Nyalóka írásában (a tollakért jelentkezni a 105-ös telefonszámon lehet); annak a vak bácsinak, akit csak az út közepéig vezettünk el; a nevetséges púzliknak; a vörös és fekete hangyáknak; a rajztanárunknak, Szabó Ildikónak, aki megengedte, hogy a rajzóráján írjuk a Nyalókát; a Dél-Amerikai repülő mókusoknak; a román juhászpásztoroknak; a bélférgeknek; a paraszt felkeléseknek reggelente; Sanyinak, aki a sötétben is tudja húzogatni; a takarítónéniknek, akik olyan nagy kedvességgel zavartak el minket; a menzásnéniknek, akik oly sok finomsággal kedveskedtek nekünk; a favágóknak, akik kegyetlenül irtják az esőerdőket és nem utolsósorban, hanem elsősorban MAGUNKNAK, akik megalkották e remekművet.
+És végül mindenkinek szeretnénk kedveskedni e kis versikével:
+
+
+
+
+Boci, boci megfázott
+Vettünk neki kabátot
+Nem akarta fölvenni
+    A k■■■■ anyját neki!
+
+Boci, boci megfázott
+Varrtunk neki nadrágot
+Nem akarta fölvenni
+Jól megkéne vesszőzni!
+(Csire Géza, Molnár László, Vakulya Csaba)
+                            2000
+
+
+
+
+És megköszönjük az olvasóknak, akik pénzt áldoznak arra, hogy megvegyék a könyvet és a kis szemüveges „pizzafutárnak”, akit mi csak Turinak hívtunk!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nyalóka I.
+
+
+
+Előszó
+
+Az előszót általában senki sem szokta elolvasni, ezért mi nem is írtunk. 
+
+Játékszabályok röviden
+
+Ennek a könyvnek nemcsak olvasója, hanem főhőse is vagy. Neked kell eldöntened, hogy kivel állsz szóba vagy, hogy kivel küzdesz meg. Ezt a könyvet nem úgy kell olvasni, mint a többi könyvet. Az egyes részek vannak ellátva számokkal, melyek között ide-oda lapozva lehet a történetben továbbhaladni. A feladatokat a könyv olvasása közben kapod meg. Mindössze ceruzára, radírra, dobókockára és papírra van szükséged (Meg egy pelenkára, ha a nevetéstől bepisilnél). Karakteredet négy alapvető tulajdonság határozza meg:
+Életerő: fizikai állapotodat, erőnlétedet mutatja. Ha például valaki megsebez, akkor le kell vonni az életerőpontokból. Ha elfogy, akkor meghalsz. Meghatározásához dobj ötször kockával és adj hozzá 10-et. A kapott érték 15-40 közé fog esni. Ezt írd be a kalandlapodba!
+Támadási képesség: meghatározza, hogy mennyire jól harcolsz. Minél magasabb, annál könnyebben tudod legyőzni az ellenfeleidet. Meghatározásához dobj háromszor a kockával, és adj hozzá hatot. A kapott érték 9-24 közé fog esni. Ezt is írd be a kalandlapodba!
+Védettségi szint: minél magasabb az értéke, annál kisebb a valószínűsége, hogy ellenfeled meg tud sebezni. Meghatározásához dobj kétszer a kockával, és ezt írd be a kalandlapodba.
+Szerencse: meghatározza, hogy mennyire vagy szerencsés. Meghatározásához dobj egyszer a kockával és adj hozzá hatot. Kalandjaid során előfordul, hogy szerencsepróbát kell tenned. Ekkor dobj két kockával, és ha a kapott érték kisebb vagy egyenlő, mint a te szerencsepontjaidnak a száma, akkor nem sikerült a szerencsepróba. Minden szerencsepróba után vonj le egy pontot a szerencsepontjaidból.
+
+Felszerelés
+
+10 pimpóval indulsz. (pimpó = arany, pimpam = ezüst). Ezek a tárgyak vannak még nálad: játékpisztoly 3-8 veszteséget okoz, elemmel működő lézerkard 1-6 veszteséget okoz (az elem le van merülve), 3 papírzsebkendő, egy toll, egy festékszóró 2-7 veszteséget okoz, egy tekercs WC papír 1-6 veszteséget okoz. Ötnapi élelem. Ha eszel (ezt bármikor megteheted) adj az életerőpontjaidhoz kettőt, és vonj le egynapi élelmet a kalandlapodról. Ha már nincs élelmed, akkor nem nyerhetsz vissza életerőpontot. Ezeket írd fel a kalandlapodra. 
+
+Harc
+
+A kaland során előfordulhat, hogy meg kell küzdened az ellenfeleddel. Hozzád hasonlóan nekik is adott tulajdonságaik vannak. Először el kell dönteni, hogy ki kezdjen. Dobj először magadnak, majd ellenfelednek egy dobókockával. Akié a nagyobb szám az kezd. Ha a te számod a nagyobb, akkor el kell döntened, hogy milyen fegyverrel harcolsz. Ezután dobj két kockával és add hozzá a támadási képességedet. Ha a kapott érték nagyobb, mint az ellenfeled védettségi szintje, akkor sikerült megsebezned. Ha kisebb a kapott érték, akkor az ellenfeled kivédte a támadásodat. Ha megsebezted nézd meg az adott fegyver sebzését.(pl.: WC papír 1-6, ez azt jelenti, hogy dobsz egy kockával, így a kapott érték 1-6 között lesz, vagy pl.: festékszóró 2-7, dobsz egy kockával és hozzáadsz egyet) Ha például WC papírral küzdesz, dobj egy kockával, és az így kapott értéket (1-6 között lesz.) vond le az ellenfeled életerejéből. Ha az ellenség életereje 0-ra csökken, akkor meghal, vagyis te nyertél. Ha ellenséged támad meg, akkor ugyanezt kell megtenned, azzal a különbséggel, hogy az ő támadásához kell hozzáadni a dobott értéket, és a te védettségi szinteddel kell azt összehasonlítani. Azt, hogy az ellenség mekkorát sebez, mindig az adott harcnál lesz leírva. 
+
+
+Ha nem érted ezt az egészet, hagyd a francba, csak olvasd végig a könyvet és röhögj egy jót!  
+(Ha harcra kerülne sor, akkor vedd úgy, mintha nyertél volna.)
+JA ÉS A LEGFONTOSABB SZABÁLY: Ne csalj !!!
+Fajok
+
+Ebben a könyvben lehetőséged nyílik a más fajokkal való játékra. Minden faj különbözik egymástól, vannak előnyeik és hátrányaik. A leírtak szerint módosítsd a kalandlapodat.
+Bioparaszt: Nem túl erős, de nagyon jól harcol, ezért vonj le az életerejéből és védettségi szintjéből 2-2 pontot. Támadásához adj 3-at. A szerencsepontjait ne változtasd. 
+Hegyi jeti: Az átlagosnál nagyobb lábú élőlény. Nagyon erős, de lomhán mozog. Életerejéhez és védettségi szintjéhez adj 3-3 pontot. A támadási képességéből viszont vonj le 5 pontot. A legnagyobb hibája az, hogy nagyon szerencsétlen szegény. Szerencsepontjaiból vonj le 6-ot. 
+Bibe: Támadási képességét növeld 7-tel, mivel a virágporát ellenfele szemébe tudja fújni. Védettségi szintjét csökkentsd 7-tel, mivel, ha harcra kerül sor, úgy megijed, hogy földbegyökerezik a lába.
+Politikus: Óriási szerencséje van és a támadása is elég nagy, mivel a közéletben csak így tudnak megmaradni. Szerencsepontjaihoz adj 15-öt, támadási képességéhez 5-öt. Életerejét és védettségét csökkentsd 2-2 ponttal. A kaland kezdetén 10 pimpó helyett 30 pimpóval indul.
+
+
+Sebzési értékek táblázata
+ 
+Sebzési érték
+Szükséges dobás
+Sebzési érték
+Szükséges dobás
+1-2
+Dk/3
+2-12
+Dk*2
+1-3
+Dk/2
+2-18
+Dk*3
+1-6
+Dk
+4-24
+Dk*4
+2-3
+Dk/3+1
+5-30
+Dk*5
+2-4
+Dk/2+1
+6-11
+Dk+5
+2-7
+Dk+1
+6-16
+2Dk+2
+3-8
+Dk+2
+7-22
+3Dk+4
+4-9
+Dk+3
+7-27
+4Dk+3
+
+A Dk a dobókockát jelenti. Pl.: 4-9, először dobj egy kockával, majd a kapott értékhez (pl. 4) adj 3-at. A kapott érték 7 lesz.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Előzmények
+
+Ez a történet a XXXI. században játszódik. Míg a Föld többi részén a technika a legmagasabb fokra fejlődött, a Világegyetem a Föld fennhatósága alá került, addig ezen a területen, ahol élsz, a fejlődés a XX. században megállt. Valószínűleg azért, mert ez a terület egy szigeten fekszik, elzárva a külvilágtól. A szigeten túl az általatok csak primitíveknek nevezett emberek népesítik be a Földet, akik még az anyjukat is eladnák azért, hogy valami újat alkossanak a technikában. A szigeten élő emberek degenerálódtak, már-már írni s olvasni sem tudnak. (Nem beszélve a számolásról)
+Egy tanyán éltél az édesanyáddal nagy boldogságban, amíg be nem következett az a dolog, ami teljesen megváltoztatta az életedet.
+Édesanyád épp a földeteken dolgozott (olajat keresett), mikor talált egy TV-t. Nem is. Egy zölden világító Nyalókát. Mivel ő nem szereti a nyalókát, ezért nem adhatta másnak, mint a kutyátoknak. Szerencsére még időben el tudtad venni tőle. Gyönyörű szép zöld nyalóka. Mintha valamilyen elektromágneses tér venné körül. Zölden foszforeszkál. Nagyon élvezed, ha a nyalókát beteszed a szádba, ugyanis ekkor az egész fejed zöld lesz.
+Tehát így éltél boldogan a nyalókával, amíg a szomszéd tanyán élő Piroska József aliasz Piroska Józsi meg nem látogatott. Büszkén mesélted el neki, hogy milyen bűvös nyalókád van. Piroska Józsinak ekkor egy gonosz ötlet fogant meg az agyában, kiragadta a szádból a nyalókát és elrohant ezt kiabálva:
+- Enyém lesz a világ! Ezzel a bűvös nyalókával világuralomra török! De előbb elmegyek WC-re!
+Még túl fiatal voltál, ezért nem mertél utánaszaladni. Különben is fájt a lábad. De megesküdtél, hogyha felnősz visszaveszed tőle a nyalókát.
+Eközben Piroska Józsi - egy várban meghúzódva - a nyalóka titokzatos alkotóelemeiből olyan szert akart kifejleszteni, aminek a segítségével az emberiség őt szolgálja. Az áldozatnak zölden kezd el világítani a szeme. Ez a „Nyalóka átka”. Ám a nyalókából készült szer hatása egyedenként különbözik, valaki erős lesz tőle, valaki megbolondul, valaki meghal vagy valakire nem is hat. Mivel Piroska Józsi változtatta őket ilyenné, ezért alapvetőleg neki engedelmeskednek, de a változás mellékterméke az intelligencia nagymértékű lecsökkenése, ezért bárki által könnyen befolyásolhatóvá válnak.
+Amikor úgy 20 vagy 21 éves lehettél, és a TV-ben megnézted az összes ismeretterjesztő- és dokumentumfilmet, úgy gondoltad, hogy elérkezett a bosszú ideje. Összecsomagolsz, elbúcsúzol édesanyádtól és kilépsz a házatok ajtaján.
+
+
+
+
+
+
+
+
+
+
+Lapozz az 1-re!
+
+1.
+
+Ott állsz a házatok előtt. Innen két út vezet a legközelebbi városba, amely az egyetlen, ami a szigeten található. Miközben azon gondolkozol, hogy melyik utat válaszd, észreveszed, hogy anyád az ablakból integet.
+Mit csinálsz?
+
+Visszamész megkérdezni, mit akar anyád, lapozz a 12-re!
+Elmész keletre, lapozz a 120-ra!
+Elmész nyugatra, lapozz a 240-re!
+Ha ellátogatsz Piroska Józsi tanyájára, lapozz a 414-re!
+
+2.
+
+Elindulsz a tűzoltóság épülete felé. Egy kisebbfajta ház és egy hatalmas udvar alkotja. A kapura ez van kiírva: „VIGYÁZAT AUTÓ”. Ügyet sem vetsz rá, és óvatlanul belépsz a kapun. 
+
+Lapozz a 243-ra!
+
+3.
+
+Belépsz a fülkébe és látod, hogy egy kedves férfi fekszik bent. Megszólítod, de nem kapsz rá választ. Elkezded lökdösni, rugdosni, de nem reagál semmire, ezért otthagyod.
+
+Ha a lepráshoz mész, lapozz a 179-re!
+Ha kimész, lapozz a 335-re!
+
+4.
+
+Egyszer csak egy nomád lovascsapat vágtat el melletted. Rövid időn belül az erdő szélénél egy büféhez érsz. A büfében egy ember áll.
+
+Ha enni akarsz, lapozz a 227-re!
+Ha csak beszélgetni akarsz vele, lapozz a 70-re!
+Ha továbbmész, lapozz a 154-re!
+
+5.
+
+Belépsz a röntgenbe. Hirtelen megpillantasz egy csontvázat, és rémülten szaladnál ki, de hiába tolod a befelé nyíló ajtót, nem tudsz kimenni. Mikor megfordulsz, látod, hogy a csontváz sehol sincs, és egy ember jön feléd. Ettől mégjobban megijedsz, és megint elkezded tolni az ajtót, de megint nem nyílik, majd az emberré változott csontváz kedvesen megszólít:
+- Szia fiú. Hogy hívnak? - te még mindig rémült vagy, ezért nem tudsz válaszolni, de azért óvatosan elmondod neki a neved.
+- Nem ismerlek, node mindegy.
+Megkérdezi tőled, hogy van-e egy egyszer használt rágógumid.
+
+Ha van, lapozz a 230-ra!
+Ha van nálad, de nem adod oda, vagy nincs, lapozz a 362-re!
+
+
+
+
+
+
+
+
+6.
+
+Nekifeszülsz az állatnak. Az egy hatalmasat rúg beléd, amitől nekiszállsz egy fának, és egy kiló alma esik a fejedre. (Nem is olyan jámbor ez a szarvas) Utána odajön hozzád az állat és leintéz. (Itt valami bűzlik) Nyersz 2 életerőpontot.
+
+Ha szóba elegyedsz vele, lapozz a 391-re!
+Ha inkább visszamész az útra, és ezen haladsz, lapozz a 19-re!
+Ha a csapáson keresztül távozol, lapozz a 257-re!
+
+7.
+
+Az eladónő ingyen adja a sima kukoricát. Gyorsan befalod és egy kisebb rosszullét után már jobban is vagy.
+
+Ha megkóstolod a sajtos-sonkásat, lapozz a 45-re!
+Ha ciánosat kóstolod meg, lapozz a 233-ra!
+Ha megnézed a Kínlakók háborújának I. epizódját, lapozz a 20-ra!
+Ha kimész a moziból, lapozz a 132-re!
+
+8.
+
+Beugrasz az ágyba, de az sajnos összetörik alattad. Muszáj lesz a földön aludnod. Vagy fél óráig forgolódsz össze-vissza, amikor végre sikerül elaludnod, de ez nem tart sokáig, mert a szomszéd szobából ütemes dörömbölést hallasz. Nem bírod türtőztetni magad, ezért átmész a szomszéd szobába. 
+
+Lapozz a 283-ra!
+
+9.
+
+Elindulsz az elmegyógyintézet felé. Egyre több melegség áraszt el. Ahogy közeledsz az épület felé, már teljesen beleéled magad, hogy bekerülhetsz, amikor egy alak az ablakból kikiabál:
+- Ide csak a tesztemen keresztül lehet bejutni.
+E szavak hallatán inkább otthagyod. 
+
+Lapozz a 226-ra!
+
+10.
+
+Egy autó áll meg melletted és két kedves ember száll ki belőle. Tisztelegve üdvözlik a melletted sikítozó embert:
+- Jó napot polgármester úr!
+A két ember feléd fordul, megragadják a kezed és az autóba tuszmákolnak. Egy épületbe visznek, ahol kapsz egy puha falú szobát. 
+
+Lapozz a 177-re!
+
+
+
+
+
+
+
+
+
+
+
+11.
+
+Honnan tudod, hogy 5+6 az 11, hisz csak 10-ig tudsz számolni. De a számítógép megszán és így szól:
+- Lásd, hogy nekem is van áramforrásom, segítek neked. A szükséges információt a városban megtalálhatod.
+Fejedből és füledből gőz tör elő, végtagjaid remegni kezdenek.
+Mit teszel?
+
+Fölforrt agyvízzel visszamész a városba, akkor lapozz a 136-ra!
+Ha nem törődsz a számítógéppel és átmész a kapun, lapozz a 248-ra!
+
+12.
+
+Visszamész a házba és megkérdezed anyádat, hogy mit akar. Azt mondja, hogy nem akar semmit csak integetett. De hamár visszajöttél ad neked egy parasztkolbászos kenyeret. (1 napi élelem)
+
+Lapozz az 1-re!
+
+13.
+
+Leteszed a 2 pimpót a pultra.
+- Kérek egy szendvicset. – mondod.
+Az eladóstól nem érkezik válasz, de szendvics sem, a pénzt viszont elvette. Pár perc múlva kirak eléd egy maréknyi vetőmagot. Nagyon ideges leszel, de még mielőtt bármit is tehetnél egy nomád lovascsapat vágtat el melletted és széttiporja a büfét és a benne ülő valószínűleg autista férfit is. A pénzt is elvitték. Körülnézel a pusztában. Ez a puszta nagyon puszta. Hirtelen egy ötlet pattan ki az agyadból, de úgy elszalad, hogy meg sem tudod mi volt az. 
+Nem baj, inkább beveted a pusztát. (A magokkal úgysem tudnál mit kezdeni) Egy pár perces várakozás után a magok kicsíráznak. Ekkor jössz rá, hogy ezek azok a legendás varázsmagok, melyek békét hozhatnak az emberiség számára. A következő pillanatban egy melletted elvágtató nomád lovascsapat az összeset eltapossa. Csüggedten veszed tudomásul, hogy a növényeken már nem lehet segíteni. 
+
+Lapozz a 154-re! 
+
+14.
+
+A pincér felír valamit a noteszára, majd körülbelül 30 perc múlva ismét jön. Az asztalodra lerak egy tányér levest, amiben bab van.
+
+Ha megeszed, lapozz a 307-re!
+Ha otthagyod a levest és távozol, lapozz a 141-re!
+
+15.
+
+Felszippantod a tűbe a morfiumot, elszorítod a vénád és belenyomod a tűt. Nagyon jól érzed magad, szinte már repülsz. Odaállsz az ablakba és kiugrasz. Nem sikerült a repülés. Lezuhansz és összetöröd a csontjaidat. Kalandod véget ért!
+
+
+
+
+
+
+
+
+16.
+
+Az összes kép csak mesztelencsigát ábrázol. Néhány képen még párzanak is.
+- Hát ez undorító. - mondod, majd elkap a hányinger. Kiüríted a gyomrod tartalmát. Rosszul érzed magad. Nagyon rosszul. Nem tudod megemészteni a történteket. (Vesztesz 2 életerőpontot) Undorodva mész ki a házból és indulsz el az úton. 
+
+Lapozz a 86-ra!
+
+17.
+
+Nyugodtan sétálsz be az egyre sötétedő utcába, mert te nem félsz a sötéttől, csak a sötétben. Egyszer csak sikítozást hallasz, majd egy ember fut el melletted, női retiküllel a kezében.
+
+Ha te is elkezdesz sikítani, lapozz a 340-re!
+Ha integetsz a rohanó férfinek, lapozz a 172-re!
+Ha megnézed, honnan terjedt a sikítozás, lapozz a 26-ra!
+Ha gyorsan elmenekülsz, lapozz a 237-re!
+
+18.
+
+Alkonyodni kezd. Mire a nomád lovascsapat elvágtat melletted már sötét is lesz. Eléggé fáradtnak érzed magad, ezért úgy gondolod, hogy aludnod kéne. Keresel egy bokrot, eleget teszel a természet hívó szavának, felveszed a pizsamádat, megnézed az esti mesét, megkeresed Brumit a macidat, betakarózol egy levedlett kígyóbőrrel, és álomba szenderülsz. (Vonj le egy szorgalompontot, amiért nem mostál fogat) 
+Másnap reggel suhogásra ébredsz, és egy csomó nyilat látsz feléd közeledni. Még idejében fedezékbe tudsz vonulni a nyilak elől, azonban Brumit már nem tudod megmenteni. A gyilkos vesszők átfúrják ártatlan kis testét. Brumi kalandja véget ért. Nincs időd a gyászra, hiszen zöld szemű kannibálok vesznek körül, és táborukba kísérnek, ami egy félszigeten van. 
+
+Lapozz a 304-re!
+
+19.
+
+A poros úton meglátsz egy csigát. Pont az út közepén csúszik. Valószínűleg a másik oldalra akar átjutni.
+
+Ha segítesz neki és bevágod az erdőbe, lapozz a 205-re!
+Ha eltaposod, lapozz a 165-re!
+Ha nem bántod, lapozz a 332-re!
+
+20.
+
+Leülsz az első sorba. Mikor elkezdődik a film sötét lesz és mindenki örülni, ujjongani kezd. A melletted ülő nő akkorát sikít, hogy majd beszakad a dobhártyád. (Vesztesz 1 életerőpontot) Látod, hogy Darts Mól vesztésre áll.
+Mit csinálsz?
+
+Ha segítesz neki és elkezded verni a mozivásznat, lapozz a 329-re!
+Ha türtőzteted magad és a film után kimész a moziból, lapozz a 132-re!
+
+
+
+
+
+
+21.
+
+Odalépsz a csarnok legvégén lévő orvoshoz, leütöd és az asztal alá húzod. Megeszed a „finom” ebédet, mikor a többi orvos észreveszi, hogy nem is vagy orvos, és, hogy leütötted a főorvost. Felkapják a kanalaikat és villáikat, majd neked esnek. Még időd sincs gondolkozni, mikor észreveszed, hogy kalandod véget ért!
+
+22.
+
+Belépsz egy óriási terembe. Előtted egy medence, aminek a neve: NAGYMEDENCE. A szélén egy ember áll háttal neked. A pólójára az van írva: „ÚSZÓMESTER”. Odamész hozzá.
+
+Lapozz a 246-ra!
+
+23.
+
+Bent a boltban csak nyüzsögnek az emberek. Hatalmas ez a bolt, körülbelül 10 sor van, tele mindenféle élelmiszerrel. Fogsz egy kosarat, és úgy döntesz, hogy bevásárolsz. Végigjárod a sorokat és veszel egy pár apróságot. Odalépsz a pulthoz, és azon gondolkozol, hogy ki tudnál-e csenni valamit.
+
+Ha ezt teszed, lapozz a 100-ra!
+Ha fizetsz, lapozz a 292-re!
+
+24.
+
+Nem érdekel a szendvics, ezért eldobod. Amikor leesik a földre, szétfröccsen, és egy döglött patkány esik ki belőle.
+
+Ha keresel valami használhatót, lapozz a 140-re!
+Ha beveszel egy ricinust, lapozz a 366-ra! 
+Ha leveszel valamit és megiszod, lapozz a 173-ra!
+Ha kimész a folyosóra, lapozz a 335-re!
+
+25.
+
+Nem tudjuk, hogy mit akarsz ezzel a rágóval kezdeni. Hülye ötlet volt. Már nincs időd elővenni elem nélküli fénykardodat. A kutya rádugrik és széttép. Kalandod véget ért!
+
+26.
+
+Besétálsz a sikátor mélyébe, és látod, hogy egy vörösruhás nő egy lépcsőn ül. Hullatja a könnyeit, miközben azt kiabálja:
+- Ellopták a golyósdezodoromat.
+A nő elővesz idegességében egy zacskó pisztáciát, és neked összegyűlik a nyál a szádban. 
+
+Ha elrabolod tőle, lapozz a 346-ra!
+Ha beszélsz vele, lapozz a 288-ra!
+Ha otthagyod a nőt, és kimész a sikátorból, lapozz a 237-re!
+
+
+
+
+
+
+
+
+
+27.
+
+Folytatod az utad és meglátod a várost KELBIMBÓ SZITI-t. Belépsz a városkapun. Melletted egy hirdetőtáblán a város térképe található.
+Merre mész?
+
+Ha előre, lapozz a 215-re!
+Ha balra, lapozz a 132-re!
+Ha jobbra, lapozz az 54-re!
+Ha kimész a városból, lapozz a 228-ra!
+Ha megnézed a térképet, lapozz a 85-re!
+
+28.
+
+Te kis csaló. Ezt a kutyát nem lehet megölni. Ez Piroska Józsi kedvenc ölebe. De a kalandod nem ért véget.
+
+Lapozz az 1-re!
+
+
+29.
+
+Egy-két óra múlva észreveszed, hogy valaki, vagy összecserélte a táblákat, vagy te nem tudsz olvasni, hiszen ez egy erdő, tele fákkal, levelekkel, amiket a posta nem kézbesített, mert nem volt rajtuk irányítószám. Úgy gondolod, hogy nincs értelme visszamenni, hiszen túl sok időt vesztenél el vele.
+
+Lapozz a 357-re! 
+
+30.
+
+Szerencsére a szerencsepróbád sikerült, ezért a börtönőrbarátod nem tudott kivinni erről a csodálatos helyről.
+
+Lapozz a 177-re!
+
+31.
+
+Tőled balra egy ajtót látsz, amire ez van írva: „AJTÓHÓ”, jobbra pedig a folyosó többi részét, amit fáklyák világítanak meg.
+
+Ha balra mész, lapozz a 390-re!
+Ha jobbra, lapozz a 119-re!
+
+32.
+
+Ijedten tuszkolod be a szekrénybe Kodzsek holttestét, de nem bírod a sok nyalókapapírtól. A következő pillanatban vagy 20 rendőr lép be az irodába. Most már késő menekülni. Kalandod véget ért!
+
+33.
+
+Belemész a zöld színű vízbe, majd egy hatalmasat ordítasz. Jéghideg a víz. Visszarohansz a partra, de már késő. Zölden világít a szemed. Ez tudod mit jelent. Kalandod véget ért!
+
+
+
+
+
+34.
+
+Már elindulnál az első szintre, amikor összevet a sors a recepciós nővel. A recepciós nő egy vad bestia.
+
+Ha kimenekülsz, lapozz a 226-ra!
+Ha megküzdesz vele, lapozz a 91-re!
+
+35.
+
+Odamész a börtön elé. A kapu zárva van, de te be akarsz menni. Elkezded verni az ajtót, és addig vered, amíg ki nem jön egy őr. Megszólítod:
+- Be akarok menni! - mondod határozottan. 
+- Nem kell jönnöd. Behozlak, ha még sokáig vered a kaput.
+- Tényleg?
+- Igen.
+- Tudja, hogy hol lakik Piroska Józsi? 
+- Nem, de nagyon utálom.
+- Akkor jó, mert meg akarom ölni.
+- Helyes, ezért örök barátomnak fogadlak 58-szor. (ezt a számot jegyezd meg)
+ Azzal visszamegy a börtönőr a börtönbe.
+
+Lapozz a 226-ra! 
+
+36.
+
+- A jelszó helyes. Átengedlek! - azzal kikapcsolja az elektromos áramot, és sok szerencsét kíván. Búcsút veszel ettől a gyönyörű várostól, és kilépsz a kapun.
+
+Lapozz a 380-ra!
+
+37.
+
+Az öregek otthonából kiabálás szűrődik ki. Odabent megtudod, hogy csigagyűjtő verseny van a kertben.
+
+Ha beszállsz a versenybe, lapozz a 356-ra!
+Ha szétnézel a házban, lapozz a 158-ra!
+Ha kimész, lapozz a 237-re!
+
+38.
+
+Eléred az elfekvőt. Hatalmas csapóajtaja van, amire az van kiírva óriási betűkkel: „FERTŐZŐ BETEGEK”. Nem igazán érted, hogy mit jelent, de biztos nem jó dolgot, ezért meggondolod bemész-e, vagy nem.
+
+Ha bemész, lapozz a 97-re!
+Ha nem, lapozz a 335-re!
+
+39.
+
+Balszerencsédre nem veszed észre, hogy a pult mellett lézerfény van. Amikor átmész a fényen, megszólal a riasztó, és biztonsági őrök tömkelege száguld be az épületbe. Kalandod véget ért!
+
+
+
+
+40.
+
+A főtérről kiindulsz, mikor belebotlasz egy koldusba, de ő nem botlik beléd, mert nincs lába. Nagyon elrettensz és a kijárat felé rohansz.
+
+Lapozz a 228-ra!
+
+41.
+
+Most választhatsz. (Ha valahol voltál, ne menj vissza még egyszer!)
+
+Ha az első irodába mész, lapozz a 96-ra!
+Ha a másodikba, lapozz a 160-ra!
+Ha a harmadikba, lapozz a 260- ra!
+Ha a rendőrtömeghez mész, lapozz az 59-re! 
+Ha kimész, lapozz a 226-ra!
+
+42.
+
+Az úszómester szerencsére időben észreveszi, hogy neki embert menteni, nem pedig ölni kell, de azért a sípja madzagját a nyakad köré tekeri, és te a megmaradt életerőpontodat is elveszted. Kalandod véget ért!  
+
+43.
+
+A szivarhegyből kilépve Kodzsekhez rohansz. Mikor belépsz meglepetten látod, hogy nyalóka van a szájában. Odarohansz hozzá, és elkezded a szájából kirángatni a nyalókát, de ezt nem engedi, előveszi kedvenc nyalókáját, melynek átmérője fél méter, és rád támad.
+
+Kodzsek: életerő 39, támadási képesség 24, védettségi szint 23. Minden sikeres támadásával 2-7 életerőpont veszteséget okoz nyalókájával.
+
+Ha győztél, lapozz a 295-re!
+Ha vesztettél, lapozz a 103-ra!
+Ha elmész péknek, lapozz a 255-re!
+
+44.
+
+Az ékszerész a hozzávágott nagyítótól kék-zöld-lila folt, de kitart az ékszerei mellett, felkap egy arany/bizsu nyakláncot és neked támad.
+
+Ékszerész: életerő 23, támadási képesség 14, védettségi szint 8. Minden sikeres támadásával 1-6 életerőpont veszteséget okoz a nyaklánccal.
+
+Ha nyertél, lapozz a 325-re!
+Ha vesztettél, lapozz az 56-ra!
+Ha elmész péknek, lapozz a 255-re!
+
+45.
+
+Megeszed a sajtos-sonkásat. Nagyon finom, jól érzed magad, majd egy szép sárga csíkot hánysz a padlóra.
+
+Ha megkóstolod a simát, lapozz a 7-re!
+Ha a ciánosat, lapozz a 233-ra!
+Ha a filmet nézed meg, lapozz a 20-ra!
+Ha kimész a moziból, lapozz a 132-re!
+46.
+
+A japán specialitás 25 pimpóba kerül. Elszörnyedsz ezen az áron és megkérdezed tőle:
+- Muszáj kifizetni ezt a borsos árat?
+- Ha itt maradsz és elmosogatsz, akkor nem. - válaszolja.
+
+Ha elmosogatsz, lapozz a 193-ra!
+Ha van 25 pimpód és kifizeted, majd távozol, lapozz a 229-re!
+
+47.
+
+Jóízűen elfogyasztod az ételt, majd émelygés fog el, és a gyomrod görcsölni kezd. Most már érted, miért rohantak be ilyen eszeveszetten a tűzoltók. Bízol szerencsédben, ezért utánuk indulsz a házba.
+
+Lapozz a 267-re!
+
+48.
+
+Szégyenkezve mondod el neki, hogy ölted meg Kodzseket, mire ő meglepően azt válaszolja:
+- Nem baj, úgyis utáltam ezt a nyalókazabálót, különben is nem hazudtál. Most gyorsan tűnj el a környékről, addig én eltávolítom a hullát.
+Gyorsan kiszaladsz a rendőrségről.
+
+Lapozz a 226-ra!
+
+49.
+
+A kert egyik sarkában egy szagtalan műtrágyadombra leszel figyelmes. Zöld fénye miatt arra következtetsz, hogy a nyalóka titkos összetevőinek felhasználásával készítették. Ha akarsz, vehetsz belőle egy marékkal, de akkor írd fel a kalandlapodra! Elég sok időt vesztettél a nézelődéssel, úgyhogy egyből a kapuhoz mész.
+
+Lapozz a 273-ra!
+
+50.
+
+Így nem lehet bemenni, de most már ki se. A kövér ember a hájába gyűr és megfullaszt. Kalandod véget ért!
+
+51.
+
+Megpróbálod bedobni az erdőbe. Tegyél szerencsepróbát!
+
+Ha sikerült, lapozz a 375-re!
+Ha nem sikerült, lapozz a 222-re!
+
+52.
+
+Megfogod a láncfűrészt, és sikeresen beindítod. A kezed hirtelen megremeg. Tegyél szerencsepróbát!
+
+Ha sikerült, lapozz a 225-re!
+Ha nem sikerült, lapozz a 114-re!
+
+
+
+
+53.
+
+Szerencsére tudod korrigálni a kezed, ezért nem sértetted meg magad. Ha akarod, elteheted a láncfűrészt. (Írd fel a kalandlapodra) Szétnézel, de nem látsz több érdekes dolgot, ezért kimész.
+
+Lapozz a 400-ra!
+
+54.
+
+Jobbra folytatod utad, de látod, hogy sajnos egy zsákutcába értél és nagyon büdös van. Lenézel a lábadra, és elszörnyedve látod, hogy egy hatalmas tehéntrágyába léptél. De nem baj, hisz azt mondják, hogy szerencsét hoz. Visszamész az elágazáshoz.
+
+Ha előre mész, lapozz a 215-re!
+Ha balra, lapozz a 132-re!
+Ha a térképet nézed meg, lapozz a 85-re!
+Ha kimész a városból, lapozz a 228-ra!
+
+55.
+
+Kicsit langyos a víz, de kellemes. Elkezdesz pancsikolni, de véletlenül egy csepp zöld víz kerül a szádba. Úgy érzed, mintha a belső szerveid fogócskázni kezdenének. Kalandod véget ért!
+
+56.
+
+Az ékszerész a láncot a fejedre tekeri és megfújt vele. Kalandod véget ért!
+
+57.
+
+Amikor megszagolod, kellemetlen szag csap meg. A földhöz vágod és elkezd gőzölni a padló, majd egy méter átmérőjű luk keletkezik rajta. Jó, hogy nem ittad meg.
+
+Ha leveszel valamit és megeszed, lapozz a 67-re!
+Ha beveszel egy ricinust, lapozz a 366-ra!
+Ha keresel valami használhatót, lapozz a 144-re!
+Ha kimész, lapozz a 335-re!
+
+58.
+
+A börtönőr barátod megtudta, hogy ide kerültél és kivisz innen. De ha még egyszer bekerülsz ide, már nem fog kivinni.
+
+Lapozz a 226-ra!
+
+59.
+
+Közelebb mész a rendőrökhöz és látod, hogy kávét isznak, és fánkot zabálnak. Nagyon vicces kedvedben vagy, ezért elhatározod, hogy rendőrvicceket mesélsz nekik.
+
+Ha elmeséled, lapozz a 352-re!
+Ha mégsem kezdesz ki velük, lapozz a 41-re!
+
+
+
+
+
+
+60.
+
+A pincér egy asztalhoz vezet, de sajnos semmi sincs az asztalon, ezért átülsz a melletted lévőhöz, ahol már hárman eszik a finom ételt. Belekóstolsz mindegyiknek az ételébe, mikor észreveszed, hogy először rendelni kell, ezért átülsz az asztalodhoz.
+
+Lapozz a 291-re!
+
+61.
+
+Ez egy elég rövid folyosó, legalábbis úgy gondolod, mivel nem látod a végét, mert sötét van. Ha Piroska Józsi olyan gazdag, akkor miért nincs a várában rendes világítás? Ez gyanús. Ekkor kinyílik melletted egy ajtó, és egy őr lép ki rajta. Odamegy a falhoz és felkapcsolja a villanyt. Még mielőtt bármit is tehetnél, visszamegy a szobájába.
+
+Ha abba a szobába mész be, ahonnan az őr jött ki, lapozz a 377-re!
+Ha a folyosó végén lévő baloldali ajtóhoz mész, lapozz a 238-ra!
+Ha visszamész az elágazáshoz és jobbra mész, lapozz a 253-ra!
+Ha visszamész a kastély kapujához, és ott a baloldali ajtót választod, lapozz a 390-re!
+
+62.
+
+A papírboltban papírokat látsz. Ezen nagyon elcsodálkozol, mivel nem erre számítottál. Körbenézel bent, mikor egy polcon megakad a szemed. Csak nehezed tudod kiakasztani, majd odamész a polchoz, és a következő tárgyakat veheted meg:
+
+Papírrepülő:    2 pimpam
+WC papír:    1 pimpam
+Zenélő képeslap:    1 pimpó
+Ceruza:    5 pimpam
+Kék színű toll:    17 pimpam
+
+Harc közben felhasználhatod ezeket a tárgyakat, 1-6 életerőpont veszteséget okoznak, kivétel a zenélő képeslap, ez fülsüketítő zenéjével 3-8 életerőpont veszteséget okoz, de csak 3-szor használhatod, mert lemerül az elem. Ha ezt használod te is károsulsz, ekkor vonj le az életerődből 1 pontot. Amikor bevásároltál, körbenézed még az épületet, hátha találsz még valamit, de sajnos nem, ezért kimész.
+
+Lapozz a 229-re!
+
+63.
+
+A tűzoltók azonnal megölnek, de ügyet sem vetnek rád, újra a WC elé sorakoznak. Kalandod véget ért!
+
+64.
+
+Úgy néz ki, hogy ekkora ellenséggel nem tudsz megküzdeni. Ő erősebbnek bizonyult nálad. (pedig csak egy kullancs) Holtan esel a földre. (ha ekkora ellenfelet nem tudtál legyőzni, hogy akartad Józsival felvenni a küzdelmet) Kalandod véget ért!
+
+
+
+
+
+
+
+
+65.
+
+Nekirugaszkodsz a parázson járásnak és az 50 oroszlánnal való küzdelemnek, majd a 100000 méteres szabadesésnek (ejtőernyő nélkül) és az elefánt talpának megcsiklandozásának. Rálépsz a parázsra, de az megéget.
+
+Ha inkább kompromisszumos megoldást javasolsz az indiánoknak, lapozz a 189-re!
+Ha kiengeded, ami a torkodban van, lapozz a 306-ra!
+
+66.
+
+Úgy döntesz, hogy éhes gyomrodra hallgatsz. Valószínűleg a konyha irányába tartasz. Odabent egy serpenyőben sok-sok gusztustalan csigát látsz mászkálni.
+
+Ha kipróbálod a csigapecsenyét, lapozz a 388-ra!
+Ha benevezel a versenyre, lapozz a 356-ra!
+Ha kimész, lapozz a 237-re!
+
+67.
+
+Odalépsz a polchoz, kutatsz valami ehető után, mikor találsz egy félig megrágott szendvicset.
+
+Ha megkóstolod, lapozz a 397-re!
+Ha elrakod, lapozz a 181-re!
+Ha otthagyod, lapozz a 24-re!
+
+68.
+
+Elindulsz a múzeum felé. Gyönyörű oszlopok díszítik kívülről. Belépsz az első terembe, ahol dinoszauruszcsontvázakat találsz. Felmászol az egyik nyakába, összevered a sarkad, de nem indul el, valószínűleg már nem él.
+
+Ha átmész a következő terembe, lapozz a 394-re!
+Ha kimész, lapozz a 237-re!
+
+69.
+
+Odalépsz hozzá és látod, hogy egy gyönyörű szép fiatal lány fekszik az ágyban.
+
+Ha azt akarod csinálni, amire mi gondolunk, akkor lapozz a 368-re!
+Ha beszélni akarsz vele, lapozz a 142-re!
+Ha otthagyod, lapozz a 94-re!
+
+70.
+
+- Hogy hívnak? – kérdezed
+A büfés ember meredt szemekkel néz rád.
+- Itt van-e a közelben Piroska Józsi vára?
+A férfi nem reagál erre a kérdésre sem. Megunod a kérdezősködést, és e kimerítő beszélgetés után továbbállsz. Egyszer csak egy nomád lovascsapat vágtat el melletted.
+
+Lapozz a 154-re!
+
+
+
+
+
+71.
+
+Feléd fordul és elvigyorodik.
+- Megmutassam?
+Te bólogatni kezdesz, mire ő röhögve belevág a vízbe. Vizesen és sírva rohansz ki az épületből.
+
+Lapozz a 108-ra!
+
+72.
+
+Mész tovább. Innentől már betonút visz a városba. Az út szélénél találkozol egy idétlen öregemberrel. Mit teszel?
+
+Leállsz vele beszélgetni, lapozz a 150-re!
+Megvered, lapozz a 195-re!
+Öngyilkos leszel, lapozz a 259-re!
+
+73.
+
+Odalopakodsz a jámborszarvas mögé, majd lehajolsz, hogy megvizsgáld. Amikor fölnézel hirtelen egy nagy barna esik az arcodba. Rájössz, hogy mi is történt: a jámborszarvas most ürítette rád a végbelében felhalmozódott fölösleges salakanyagot. Nyersz 2 életerőpontot.
+
+Ha ledöntöd, lapozz a 6-ra!
+Ha szóba elegyedsz vele, lapozz a 391-re!
+Ha a csapáson távozol, lapozz a 257-re!
+Ha visszamész az útra, ahonnan ide jöttél, lapozz a 19-re!
+
+74.
+
+Odamész a nőhöz, de rémült kiáltozásai miatt te is elájulsz. Egy órával később ébredsz föl, de a nővéreknek és a nőnek hűlt helye. Nem érdekel a hely, ezért kimész.
+
+Lapozz a 400-ra!
+
+75.
+
+Az öregasszony amint meglát, feléd rohan, és körbeszaglász. A borotvahab az arcodra kenődik.
+
+Ha szóba elegyedsz vele, lapozz a 146-ra!
+Ha otthagyod, lapozz a 326-ra!
+
+76.
+
+Nyugodtan sétálnál át a kapun, mikor erős áramütést kapsz. Eszméletlenül rogysz le a földre. Kalandod véget ért!
+
+77.
+
+Megpróbálsz megszökni. Tegyél szerencsepróbát!
+
+Ha sikerült, lapozz a 395-re!
+Ha nem, lapozz a 159-re!
+Ha tudod, miként tudsz kijutni, lapozz oda!
+
+
+
+78.
+
+Megpróbálsz a nomád lovascsapattal beszélni, de még mielőtt odaérnél felpattannak lovaikra és elvágtatnak. Dühödben felkapsz egy követ és utánuk dobod, de olyan béna vagy, hogy nem találod el őket. Körbenézel a réten. Körös-körül zöld szemű nyuszikák, őzikék és báránykák legelésznek.
+
+Ha elejtesz egyet, hogy megedd, lapozz a 216-ra!
+Ha a vár előtt alaposan körbenézel, lapozz a 374-re!
+
+79.
+
+Az alábbi tárgyak közül csak azokat használhatod, amelyeket utad során megszereztél.
+
+Almacsutka, lapozz a 234-re!
+Szív, lapozz a 171-re!
+Elhasznált rágógumi, lapozz a 25-re!
+Egynapi élelem, lapozz a 341-re!
+
+80.
+
+Berontasz az autógyár nyitva hagyott ajtaján, és igen fura látvány tárul eléd: itt autókat raknak össze.
+
+Ha lelöksz egy autót a futószalagról, és felülsz a helyére, lapozz a 115-re!
+Ha beülsz egy alvázba, lapozz a 164-re!
+Ha beülsz egy kész autóba, lapozz a 305-re!
+Ha kimész, lapozz a 132-re!
+
+81.
+
+Benyitsz a szobába. Hatalmas dobozhegyeket látsz, amikben a nyalókából készült mérgező cukorkák vannak. Mindegyik a kórház és az öregek otthona részére van címezve. Egy zöld szemű őr van a sarokban, aki úgy bele van merülve a cukorkák majszolásába, hogy észre sem vesz.
+
+Ha megeszel egy cukorkát, lapozz a 376-re!
+Ha kimész ebből és az előző szobából, lapozz a 279-re!
+
+82.
+
+Odalépsz hozzá, és egy erős mozdulattal kirántod a szájából a nyalókát. Meglepetten veszed észre, hogy az nem a te nyalókád, de már késő. Kodzsek kiragadja a kezedből, és rád ront.
+
+Kodzsek: életerő 39, támadási képesség 24, védettségi szint 23. Minden sikeres támadásával 2-7 életerőpont veszteséget okoz hatalmas nyalókájával.
+
+Ha nyertél, lapozz a 169-re!
+Ha vesztettél, lapozz a 103-ra!
+Ha elmész péknek, lapozz a 255-re!
+
+83.
+
+Elrakod a táskádba, de az kettétörik, kimarja a táskádat és az összes felszerelési tárgyadnak annyi. Így már nem tudod elvenni a nyalókát Piroska Józsitól, ezért hazaindulsz. Kalandod véget ért!
+
+
+
+
+84.
+
+Megfogod az ember fejét, és erősebben kezded verni a falba. A férfi összedől, de sajnos vele együtt a hotel is. Kalandod véget ért!
+
+85.
+
+A város legújabb térképe ez, idei kiadás. Jól átvizsgálod, és ezt látod:
+
+Ha balra mész, lapozz a 132-re!
+Ha jobbra, lapozz az 54-re!
+Ha egyenesen, lapozz a 215-re!
+Ha kimész a városból, lapozz a 228-ra!
+
+86.
+
+Ez az út összevissza kanyarog. Már 2 órája haladsz, de a gyomrod már teljesen felkavarodott. Tengeribeteg lettél. Vesztesz 1 életerőpontot. Végre elérsz egy útkereszteződéshez. A balra vezető útnál egy tábla van ezzel a felirattal: RÖVIDEBB ÚT.
+
+Ha balra mész, lapozz a 95-re!
+Ha jobbra, lapozz a 199-re!
+
+87.
+
+Az üveg csörömpölve törik össze. A zajra felébred a sarokban alvó teremőr, és rád támad.
+
+Teremőr: életerő 31, támadási képesség 20, védettség 12. Minden sikeres támadásával 2-7 életerőpont veszteséget okoz.
+
+Ha nyertél, lapozz a 125-re!
+Ha vesztettél, lapozz a 93-ra!
+Ha elmész péknek, lapozz a 255-re!
+
+88.
+
+A rágó még hasznos lehet. Jót röhögsz magadban, hiszen az átkot nem is oldottad föl.
+
+Lapozz a 247-re!
+
+89.
+
+Utolsó csapásodra az ember szeméből kihűl a zöld fény. Átkutatod a szobát és találsz egy fényképet, amin Piroska Józsi van, csak az a baj, hogy el van szenesedve. Visszamész a szobádba, megkeresed Brumit a macidat, és végre dörömbölés nélkül el tudsz aludni. Reggel frissen ébredsz (nyertél 2 életerőpontot) és elhagyod a szállodát.
+
+Lapozz a 229-re!
+
+90.
+
+Közelebb mész az edényekhez. Nagyon viccesnek találod, hogy a fejedet beledugod a fehér folyadékba, és még jobban viccesnek, hogy a fejedre tekered a szalagokat. Azt hiszed, hogy láthatatlan vagy, és egy jót akarsz bújócskázni.
+
+Lapozz a 333-ra!
+
+91.
+
+Recepciós nő: életerő 29, támadási képesség 19, védettségi szint 21. Minden sikeres támadásával 3-13 veszteséget okoz tűsarkú cipőjével.
+
+Ha nyertél, lapozz a 153-ra!
+Ha vesztettél, lapozz a 284-re!
+Ha elmész péknek, lapozz a 255-re!
+
+92. 
+
+A pincér felír valamit a noteszára, majd elmegy. Várakozás közben már teljesen megéheztél, mikor szerencsére meglátod a pincért. Kezében egy tálca, benne felismerhetetlenségig összeroncsolt valami van. Leteszi az asztalodra, és jó étvágyat kíván. Még mielőtt elmenne megkérdezed tőle:
+- Mi ez?
+- Ez egy japán specialitás, a neve: macsakakacsamócsingcsüngkinn.
+
+Ha megeszed, lapozz a 302-re!
+Ha otthagyod és távozol, lapozz a 109-re!
+
+93.
+
+A teremőr felvesz a földről egy éles üvegdarabot és átvágja a torkodat. Kalandod véget ért!
+
+94.
+
+Nem érdekel a lány, ezért kilépsz a fülkéjéből.
+
+Ha az eboláshoz mész, lapozz a 3-ra!
+Ha a lepráshoz mész, lapozz a 179-re!
+Ha kimész a folyosóra, lapozz a 335-re!
+
+95.
+
+Elindulsz ezen az úton. (Érdekes volt a tábla hátán az a csigamaradvány, de finom is, nyersz 1 életerőpontot) Találkozol eszkimókkal, négerekkel, oroszlánokkal, kékbálnákkal, Némóval, Néróval, Kaligulával, Mátyással, Góliáttal, Dáviddal, Xenával, Szupermennel, Archimédisszel, sirályokkal, egy utcai járókelővel, a primitívekkel, két kéményseprővel, indiánokkal, a nyalóka szerzőivel, névszerint: Csire Gézával, Molnár Lászlóval, Vakulya Csabával. Találkozol még Attilával, a hunnal, Csipkerózsikával, elefántokkal, a STAR WARS főszereplőivel, Betmennel, Piroska Józsival… Hoppá, mintha ez ismerős lenne, mostmár mindegy. Nagyon elfáradtál. (vesztesz 2 életerőpontot.) Ezek után egy útkereszteződéshez érkezel, és látsz egy táblát, amire ez van írva: RÖVIDEBB ÚT. Nagyon ismerős ez a táj. Rájössz, hogy innen indultál. Tovább mész.
+
+Lapozz a 199-re!
+
+96.
+
+Belépsz az első irodába, amire az van kiírva: COLOMBO. Bent rengeteg ballonkabátot látsz. Közelebb mennél Colombóhoz, de nem igazán tudsz átgázolni az elszívott szivarokon, és úgy 5 méterre megállsz tőle és megkérdezed:
+- Hallott már a nyalókáról?
+- Hát persze, az a hülye Kodzsek mindig azt nyalja.
+Megköszönöd az információt és elindulsz Kodzsekhez.
+
+Lapozz a 43-ra!
+
+97.
+
+Belököd a csapóajtót, és bent 12 ágyat látsz… legalábbis úgy gondolod, de nem vagy biztos benne, mivel csak tízig tudsz számolni, de azt biztosan látod, hogy csak 3 beteg van bent. Mind a három az ágyon fekszik, és külön fülkében van elszigetelve. Végignézed a kórlapokat, az első beteg ebolás, a második AIDS-es, a harmadik leprás.
+
+Ha beszélsz valakivel, lapozz a 392-re!
+Ha kimész a folyosóra, lapozz a 335-re!
+
+98.
+
+Elmondod neki, hogy fel tudod őt oldozni az átok alól. Nagyot szívsz az orrodból, és szembeköpöd a törzsfőnököt, majd utána a többi kannibált. Üdvrivalgás tör ki közöttük, majd így szól a törzsfőnök:
+- Hama, himi, huma, csuma, csimi, csumi, csuma, hama.
+Átad neked egy kulcsot, amin a 953-as szám van. (Írd fel a kalandlapodra) Röhögve távozol, mivel nem is oldottad föl őket az átok alól, ráadásul egy nomád lovascsapat vágtat be a táborukba, és elgázolnak mindenkit.
+
+Lapozz a 4-re!
+
+99. 
+
+Belépsz a megfigyelő ajtaján. Bent egy gyereket látsz (olyan zseni feje van, ahogy megállapítod). Éppen egy óriáslexikont tanulmányoz. Közelebb mész hozzá, és kérdezel tőle egy olyan dolgot, amit még te sem tudsz, hogy megbizonyosodj róla, tényleg olyan okos-e.
+- Mennyi 5+6? – kérdezed.
+- 36. – vágja rá azonnal.
+(Ezt a számot jegyezd meg) Mikor megbizonyosodtál okosságáról, kifelé indulsz.
+
+Lapozz a 400-ra!
+
+100.
+
+Zsebre rakod a kosárból az apróságokat, és kifelé indulsz. Tegyél szerencsepróbát!
+
+Ha sikerült, lapozz a 217-re!
+Ha nem, lapozz a 39-re!
+
+101.
+
+Hirtelen egy villanás és erős bűzt érzel. A páncél sehol, a támadási és védettségi szinted 25-tel csökken. Nem érted az egészet.
+
+Lapozz a 386-ra!
+
+102.
+
+Sikeresen a szájába lépsz az úszómesternek a víz alatt. Kapálózik, de nem bír veled. Hullája a lefolyóhoz süllyed. Kimászol a nagymedencéből, és szerencsédre, csak egy süketnéma és vak öregember vette észre, amit műveltél. Inkább nem maradsz itt.
+
+Lapozz a 229-re!
+
+103.
+
+Kodzsek hatalmas nyalókájával fejbe vág. Kalandod véget ért!
+104.
+
+Ahogy odamész az egyikhez, azonnal rádirányítja óriási slagját, és hatalmas erejű vízsugár csap ki belőle egyenesen a két szemed közé, amitől vagy 2 méterre hátrarepülsz. A tűzoltó azt kiabálja:
+- Akcióóóóóó!!!
+Majd felvesz a földről egy guriga WC papírt, és berohan a házba. A többiek azonnal utánarohannak. Egyedül maradtál az udvarod.
+
+Lapozz a 318-ra!
+
+105.
+
+Bemész a bozótba és megvizsgálod a táblát. Fából készült, meg van repedezve, és az van ráírva, hogy: ÖSVÉNY.
+
+Ha ezen az ösvényen mész tovább, lapozz a 4-re!
+Ha nem érdekel és továbbmész, lapozz a 210-re!
+
+106.
+
+Sajnos börtönbe kerültél 3 évre. Mit csinálsz?
+
+Letöltöd a büntetésed, lapozz a 358-ra!
+Megpróbálsz megszökni, lapozz 77-re!
+ 
+107.
+
+Közelebb lépsz a képhez. Egy 4*4 centiméteres, vízfestékkel készült festmény, amely alá ez van írva: „PIROSKA PANNI”. Felnézel és egy zöldszakállas férfit látsz, akinek arcán Piroska Józsi vonásai fedezhetők fel. Mintha láttad volna már ezt az embert… megvan. Ez az az ember, aki Kelbimbó Sziti városfala mellett idétlenkedett.
+
+Ha továbbmész, lapozz a 344-re!
+Ha a szemközti ajtón mész be, lapozz a 157-re!
+Ha a kastély bejáratától balra lévő „AJTÓHÓ” mész, lapozz a 390-re!
+
+108.
+
+Egyszer csak egy autó áll meg melletted, és két kedves ember száll ki belőle. Kapsz egy szép fehér ruhát, igaz egy kicsit kényelmetlen, mert nem tudod mozgatni a kezeidet, de legalább jól áll. Ezenkívül adnak még egy szobát, aminek olyan jó puha falai vannak. Itt megtalálod a harmóniát, és nem is akarsz elmenni innen. 
+
+Ha beszéltél a börtönőrrel, lapozz a 338-ra!
+Ha nem beszéltél vele, lapozz a 177-re!
+ 
+109.
+
+Nem fogod megenni ezt az undorító valamit, de sajnos a pincér észreveszi a fintorokat a maszatos képeden, odarohan hozzád és belédtömi az összeset, majd elégedetten elvonul.
+
+Lapozz a 141-re!
+
+
+
+
+
+110.
+
+Mikor belépsz a műtőbe egy liter vér fröccsen az arcodra. Elkap a hányinger.
+
+Ha itt rókázol, lapozz a 244-re!
+Ha a WC-be sietsz, lapozz a 350-re!
+
+111.
+
+A moziban épp a Kínlakók háborújának I. epizódját játsszák. Tőled balra pattogatott kukoricát árulnak.
+
+Ha veszel kukoricát, lapozz a 364-re!
+Ha megnézed a filmet, lapozz a 20-ra!
+Ha kimész, lapozz a 132-re!
+
+112. 
+
+Elmész a vidámparkba, de látod, hogy karbantartás miatt nem üzemel. Nagyon bosszús vagy, most kibulizhattad volna magad.
+
+Ha berontasz, lapozz a 163-ra!
+Ha inkább máshova mész, lapozz a 229-re!
+
+113.
+
+Türelmed és fáradságod siker koronázza. Találsz egy ágytálat, amit a fejedre húzol. Védettségi szinted 2-vel nő. Valamint találsz még egy hőmérőt is, amit elteszel. (Írd fel a kalandlapodra)
+
+Ha az AIDS-eshez mész, lapozz a 69-re!
+Ha a lepráshoz, lapozz a 179-re!
+Ha kimész, lapozz a 335-re!
+
+114.
+
+Annyira nehéz a láncfűrész, hogy ügyetlenséged miatt megcsúszik a kezedben, és átvágod a torkodat. Két részben esel a földre. Kalandod véget ért!
+
+115.
+
+Gyorsan lelöksz egy autót a futószalagról, majd felülsz a helyére. Tök jó! Csak mész előre, száguldozol két autó között. Egy magasabb emelvénynél hirtelen egy motor esik a fejedre, majd szögek és csavarok állnak a halántékodba. Kalandod véget ért!
+
+116.
+
+Egészen a főtérig rohansz az elmebeteget üldözve, majd sikeresen elkapod. Amikor megérinted mégjobban elkezd sikítani, erre te is hangosabban ordítasz. Amikor…
+
+Lapozz a 10-re!
+
+117.
+
+Ha átúszod a várárkot, lapozz a 33-ra!
+Ha átugrod, lapozz a 212-re!
+Ha elmész a rétre és körbenézel, lapozz a 369-re!
+
+118.
+
+Sikeresen legyőzted a kullancsot. Hatalmas ellenfél volt, de fénykardoddal levágtad a fejét.
+
+Lapozz a 72-re!
+
+119.
+
+Pár méter után egy elágazáshoz érsz.
+
+Ha a baloldali folyosón mész tovább, lapozz a 61-re!
+Ha egyenesen, lapozz a 253-ra!
+Ha visszamész az „AJTÓHÓ”, lapozz a 390-re!
+
+120.
+
+Mész a homokúton, mikor erősen viszketni kezd a bal lábad. Mit teszel?
+
+Megvakarod a jobbat, lapozz a 211-re!
+Megvakarod a balt, lapozz a 321-re!
+Nem törődsz vele, lapozz a 72-re!
+
+121.
+
+Előveszed elem nélküli fénykardodat, és támadásba lendülsz.
+
+Kutyuska: életerő 179, támadási képesség 132, védettségi szint 217. Harapásával és karmolásával 15-90 életerőpont veszteséget okoz.
+
+Ha győztél, lapozz a 28-ra!
+Ha vesztettél, kalandod véget ért!
+Ha elmész péknek, lapozz a 255-re!
+
+122.
+
+Egy udvarban találod magad. Eléggé keskeny. Tőled balra, mintha embereket látnál, jobbra pedig egy gyönyörűséges kert van. Szembe a kastély bejárata található.
+
+Ha az emberekhez mész, lapozz a 372-re!
+Ha a kertbe, lapozz a 249-re!
+Ha a kastélyba, lapozz a 273-ra!
+
+123.
+
+A suliban émelyítő érzés fog el. Rossz emlékeid vannak az iskoládról. Éppen szembejön veled a volt igazgatód, fölismer, majd dühöngő őrültként tessékelne ki az ajtón. Mit teszel?
+
+Használod a WC papírt és leütöd vele, lapozz a 287-re!
+Elmenekülsz, lapozz a 132-re!
+
+
+
+
+
+
+
+
+124.
+
+Fekete festékszóróddal cuki kis bajuszt és szakállat fújsz, még néhány fogat is lefestesz. Hirtelen az egyik fogról folyni kezd a festék, odakapsz, hogy műved épségét megőrizd és véletlenül egy szupertitkos gombra lelsz. Megnyomod és Piroska Józsi szája kinyílik. Benyúlsz, hogy megtudd, mi rejlik odabent. Tegyél szerencsepróbát!
+
+Ha sikerült, lapozz a 254-re!
+Ha nem, lapozz a 198-ra! 
+
+125.
+
+Jó ellenféllel volt dolgod, de ő sem lehet tökéletes. (egyébként sincs tökéletes ember) Elrakod a kólás üveget, és gondolkodóba esel. Elég nehéz kimászni belőle, de végül sikerül.
+
+Ha további információkat akarsz szerezni a tökéletességről, lapozz a 289-re!
+Ha kimész, lapozz a 237-re!
+
+126.
+
+Odalépsz hozzá és megszólítod:
+- Hé haver!
+A kövér ember rádförmed és látod, hogy húscafatok lógnak ki a fogai közül.
+- Jegyeket, bérleteket! – szól hozzád
+
+Ha odaadod neki azt a papírt, amit a földön találtál, lapozz a 224-re!
+Ha nem adod oda neki, lapozz az 50-re!
+
+127.
+
+Megpróbálod megfűzni az embert, hogy hagyja abba, mert még valami rossz is történhetne, de nem hallgat rád. Hirtelen meglátod, hogy a szemében valami zöld csillog.
+- Ez a nyalóka átka! – ordítasz fel
+Erre az ember feléd fordul és rád támad.
+
+Megátkozott ember: életerő 39, támadási képesség 23, védettségi szint 19. A férfi felvesz egy törött ajtódarabot, ami 3-8 életerőpont veszteséget okoz.
+
+Ha nyertél, lapozz a 89-re!
+Ha vesztettél, lapozz a 280-ra!
+Ha elmész péknek, lapozz a 255-re!
+
+128.
+
+Nekiugrasz az embernek, de az felemel és kettétör. Kalandod véget ért!
+
+129.
+
+A várat vizesárok veszi körül, amiben zöld színű víz folyik. Reméled, hogy Piroska Józsi a várban tartózkodik. Körbenézel, de nem látsz semmilyen bejutási lehetőséget. Kelet felől biztosan nem tudsz bejutni, mert arról óceán határolja. A vártól nyugatra egy rétet látsz, amit gyönyörű szép zöld fű borít, és éppen egy nomád lovascsapat legelteti lovait.
+
+Ha odamész, lapozz a 78-ra!
+Ha alaposan körbenézel, lapozz a 374-re!
+
+
+130.
+
+Hiába nézed meg őket jobban, akkor is ugyanolyan unalmasnak találod őket. Minél jobban erőlteted a szemed, annál jobban fáj. (Vesztesz 1 életerőpontot) Úgy látszik itt nincs semmi keresnivalód, ezért átmész a következő terembe.
+
+Lapozz a 278-ra!
+
+131.
+
+Mivel a zöld a kedvenc színed, ezért úgy gondolod, hogy megiszod a kéket. Émelyítő szagától kellemesen elbódulsz. Szaglóreceptoraid tönkre mennek, de ez a rohadt tyúkszarízű valami kárpótol. Fejed kéken kezd el világítani, de nemsokára elmúlik. Mutatóujjaid bizgeregni kezdenek, majd olyan késztetést érzel, hogy kezed az ég felé mutatva füledhez emeld. Ekkor a fejedben hangokat hallasz:
+„- Időjárás jelentés következik: Délről melegfront közeleg…"  
+Ijedten felkapod a jobb lábad, és balszemedre hunyorítani kezdesz, de a hangok nem múlnak el. Most zenét hallasz:
+„- Tralalala tuc-tuc tralalala tuc-tuc"
+Azonban nem élvezheted tovább ezt a remek zenét, mert lábad elfárad és elesel. Ekkor döbbensz rá: hiszen te fogod a RÁDIÓ állomásokat. Gyakorlati hasznát nem veszed, de marhajó, hogy van.
+
+Ha akarod, kipróbálhatod a zöldet, lapozz a 219-re!
+Vagy a sárgát, lapozz a 419-re!
+Esetleg a pirosat, lapozz a 363-ra!
+Ha abba a szobába mész be, ahonnan az óvóbácsi jött ki, lapozz a 135-re!
+Ha a kastély bejáratától balra lévő "AJTÓHÓ" mész, lapozz a 390-re!
+
+132.
+
+Rengeteg épület sorakozik előtted. Tőled balra egy suli van, mellette pedig egy kocsma, egy autógyár, egy fagyizó, és egy mozi. Az autógyárral szemben van egy út, ami a főtérre vezet. (Ahol már voltál ne menj vissza még egyszer!)
+
+Ha a suliba mész, lapozz a 123-ra!
+Ha a kocsmába, lapozz a 371-re!
+Ha az autógyárba, lapozz a 80-ra!
+Ha a fagyizóba, lapozz a 320-ra!
+Ha a moziba, lapozz a 111-re!
+Ha bemész a főtérre, lapozz a 215-re!
+Ha elmész az utca végére, lapozz a 226-ra!
+Ha kimész a városból, lapozz a 228-ra!
+
+133. 
+
+- Kérem, fizessen előre!
+Átadod neki a 4 pimpót és beszállsz a liftbe. Egészen a 3. Emeletig mész. Kattan egyet a lift, megáll, majd megszólal egy hang:
+- Luxusszobák.
+Kiszállsz belőle és bemész a 2574-es szobába.
+
+Lapozz a 396-ra!
+
+
+
+
+
+
+134.
+
+Közelebb lépsz hozzá, de ő ügyet sem vet rád. Köhögsz egy sort, hogy felkelts magadra a figyelmét, de addig köhögsz, amíg megfájdul a torkod. (Vesztesz 1 életerőpontot)
+
+Ha hagyod az egészet, lapozz a 41-re!
+Ha megpróbálsz beszélni vele, lapozz a 378-ra!
+
+135.
+
+Pech, az ajtó zárva.
+
+Ha megpróbálod újra kinyitni, lapozz a 135-re!
+Ha a kastély bejáratától balra levő "AJTÓHÓ" mész, lapozz a 390-re!
+
+136.
+
+Annyira ideges vagy, hogy még jobban felforr az agyvized. A gőz ki akar szivárogni a füleiden, de a fülzsír eltömíti a hallójárataidat. A fejed elkezd dagadni, majd annyira megnő, hogy felemelkedsz a levegőbe. Pechedre egy harkály száll a fejedre otthont keresve.
+
+Ha nem tudod, mit jelent a kávé, lapozz a 203-ra!
+
+137.
+
+Elkezded felkutatni a műtőt. Találsz egy gyönyörű ládát és kinyitod. Rémülten veszed észre, hogy egy dobogó szív van benne. Valószínű a betegé lett volna, de neki már úgysem kell, ezért elrakod. Jól fog jönni. A dobozon van egy szám: 381. (Írd fel a kalandlapodra) 
+
+Lapozz a 335-re! 
+
+138.
+
+Leginkább a babák keltik fel az érdeklődésedet, ezért felveszel egyet és leülsz, hogy kifésüld a haját. Ebben a pillanatban az őrök abbahagyják a verekedést, és te meglátod a szemükben AZT a zöldes fényt. Irigykedve nézik a babát a kezedben, és műanyag kardjaikkal, késeikkel és pisztolyaikkal rád támadnak. Hiába próbálsz védekezni, a túlerő ellen nem tehetsz semmit. Kalandod véget ért!
+
+139.
+
+Beszállsz a mókuskerékbe és elkezdesz szaladni. Ekkor kijön az őr a szobából, és ezt ordítja női hangon:
+- Szállj ki a mókuskerekemből! Az az enyém!
+Ijedtedben elkezdesz szaladni gyorsabban, de nem haladsz sehova. Az őr odajön és megfolyt. Kalandod véget ért!
+
+140.
+
+Sokáig keresgélsz, mire találsz egy tűt és mellette egy morfiumos dobozt.
+
+Ha beadod magadnak, lapozz a 15-re!
+Ha nem érdekel, lapozz a 301-re!
+
+
+
+
+
+141.
+
+Már éppen távoznál, ám a pincér az utadat állja.
+- Osztán fizetni ki fog öcsi?
+- Mennyi lesz? – kérdezed.
+- Majd meglátod!
+
+Ha fizetsz, lapozz a 209-re!
+Ha nem akarsz, vagy nem tudsz fizetni, lapozz a 323-ra!
+
+142.
+
+Közelebb lépsz hozzá és köszönsz neki. Látod, hogy eléggé sápadt szegény. Kinyitja a szemét és megkérdezi tőled, hogy teljesítenéd-e egy haldokló utolsó kívánságát.
+
+Ha meghallgatod, lapozz a 190-re!
+Ha kimész, lapozz a 94-re!
+
+143.
+
+Rálépsz a sóra, ami folyik, illetve a folyóra, ami sóik, izé rálépsz a folyosóra. A folyosó végéről, ahol teljesen sötét van, hangok szűrődnek ki:
+- Azt nevezik merengőnek.
+- Jaj, rá a merengőre!
+- Zsírozzad, zsírozzad!
+- Nyem, nyem, nyem, nyem, nyem, nyem.
+- Kakszi jön.
+- Most megkopasztjuk őket.
+- Tartogassuk a hetest.
+- Nekem mindegy.
+- Sakk!
+- De a fociba nincs is hárompontos.
+Majd hallasz egy ajtónyikorgást és egy szobából fény vetül a dominózó társaságra. Egy alak lép ki a nyitott ajtón, ami a folyosó bal oldalán van, és így szól:
+- Vége a kávészünetnek! Takaroggyatok dógozni! 
+- Igenis óvóbácsi! – hangzik a félénk válasz.
+Majd a kis társaság bebattyog az óvóbácsival szemközt lévő szobába.
+- A dominót pedig elkobzom! – mondja az óvóbácsi.
+Mikor meggyőződik róla, hogy senki sem látja, leül dominózni.
+
+Ha odamész hozzá, lapozz a 175-re!
+Ha visszamész a zsákutcába és körülnézel, lapozz a 239-re!
+Ha visszamész a kastély bejáratától balra levő „AJTÓHÓ”, lapozz a 390-re!
+
+144.
+
+A számítástechnikai teremben a legújabb gépek vannak. Ez elég unalmas.
+
+Ha kimész, lapozz a 226-ra!
+Ha Piroska Józsiról gyűjtesz információt, lapozz a 354-re!
+
+
+
+
+
+
+
+145.
+
+Az ékszerészet kirakata már messziről fénylik a sok aranytól és ezüsttől. Amikor belépsz, elakad a lélegzeted, majd megfulladsz. 
+
+Ha megvizsgálod az ékszereket, lapozz a 285-re!
+Ha kimész, lapozz a 229-re!
+
+146.
+
+Elmeséled az öregasszonynak a célod. Észreveszed, hogy már vagy 5 napja csak te beszélsz. Ezt az öregasszony már marhára unja, de úgy néz ki, van benne annyi tisztelet, hogy kivárja a mondandód végét. Egyszer csak egy zöldruhás ember fut az öregasszonyhoz és leszúrja. Megfogja a testét és berohan az erdőbe. A hátára az van írva: „UNALOM”. Eleinte nem érted a helyzetet, de azután minden világos lesz. Az öregasszonyt megölte az unalom.
+
+Ha bemész a házába, lapozz a 311-re!
+Ha a jobbra vezető úton haladsz tovább, lapozz a 86-ra!
+
+147.
+
+Mondod a kocsmárosnak, hogy adjon egy vodkát, és a kezébe nyomsz egy pimpót. A kocsmáros idegesen mondja, hogy három pimpó az ára. Túl magasnak tartod az árát, és nem iszol. A kocsmáros visszaadja a pimpót.
+
+Ha kimész, lapozz a 132-re!
+Ha kirobbantasz egy kocsmaverekedést, lapozz a 331-re!
+
+148.
+
+Az elmebeteg hatalmasat repül a fal fölött, keze megakad a szögesdrótban, de a furcsa figura tovább repül. Dörrenést, puffanást és macskanyávogást hallasz. Nem törődsz vele és továbbmész. 
+
+Lapozz a 348-ra! 
+
+149.
+
+Elkezded felkutatni a láncfűrészt, majd pár perc múlva nekimész valaminek, ami nagyot csörren. A kezed a csörrenés irányába nyújtod, és végre megtalálod a láncfűrészt. Már nagyon fuldokolsz. (Vesztesz 2 életerőpontot)
+
+Lapozz az 52-re!
+
+150.
+
+- Hé öreg! – szólsz oda
+- Mi van fiú, téged is megöljelek?
+- Ne! – mondod.
+- De!
+Mielőtt neked esne, megemlíted a zöld nyalókát. Erre ő elenyhül és megkérdezi, hogy fel tudod-e őt oldani a rajta lakozó átok alól.
+- Igen, fel tudlak oldani. – mondod, majd nagyot szívsz az orrodból és leköpöd az öreget. Sokáig hálálkodik neked és cserébe ad egy használt rágógumit. (Írd fel a kalandlapodra!)
+
+Lapozz a 88-ra!
+
+
+151.
+
+Egyszer csak egy nomád lovascsapat vágtat el melletted. Az útnak hamarosan vége van. Egy hatalmas óceán állja el az utadat. Megkéred, hogy menjen arrébb, de ő nemhogy nem mozdul meg, mégcsak meg se szólal. Ez nagyon irritál, és kihívásnak tekinted. (Ha nem akarsz megküzdeni vele, mert szerinted fölösleges, akkor is meg kell tenned. Te vagy a spórolásunk áldozata.)
+
+Óceán:    életerő 28, támadási képesség 19, védettségi szint 10. Posszeidon elveszettnek hitt, de megtalált szigonyával támad rád, és 4-9 életerőpont veszteséget okoz.
+
+Ha győztél, lapozz a 383-ra!
+Ha vesztettél, kalandod véget ért!
+Ha elmész péknek, lapozz a 255-re!
+
+152.
+
+Ordítva rohansz ki az uszodából, és szerencsére ki is érsz. Az emberek körülállnak, és nagyot nevetnek rajtad.
+
+Lapozz a 108-ra!
+
+153.
+
+Sikeresen legyőzted a recepciós nőt. A holttestét a recepciós asztal mögé húzod. A hajából kiveszel egy hajtűt. (Írd fel a kalandlapodra!) Folytatod az utad az első szintre. Kiszállsz a liftből, és 5 ajtót látsz. 
+
+Ha a műtőbe mész, lapozz a 110-re!
+Ha az ebédlőbe, lapozz a 276-ra!
+Ha a gyógyszerekhez, lapozz a 282-re!
+Ha a WC-be, lapozz a 162-re!
+Ha az elfekvőbe, lapozz a 220-ra!
+Ha a második szintre mész, lapozz a 207-re!
+Ha kimész a kórházból, lapozz a 226-ra!
+
+154.
+
+Egyszer csak egy nomád lovascsapat vágtat el melletted. Egy útkereszteződéshez érsz.
+
+Ha egyenesen mész tovább, lapozz a 266-ra!
+Ha jobbra lekanyarodsz, lapozz a 151-re!
+Találsz egy ösvényt is, ami az erdőbe vezet. Ha ezen akarsz továbbmenni, lapozz a 210-re!
+
+155.
+
+Nem érdekel, hogy vérzik a fejed, ezért tovább vered. Kis idő múlva megrepedezik a fal, és összeomlik a hotel. Kalandod véget ért!
+
+156.
+
+Ahogy mész az úton, találsz egy lovat. Ott fekszik az út közepén.
+
+Ha megrugdosod, lapozz a 265-re!
+Ha megeszed, lapozz a 327-re!
+Ha továbbmész, lapozz a 27-re!
+
+
+157.
+
+Benyitsz a szobába, de úgy megijedsz, hogy be is csukod. Bekukucskálsz a kulcslyukon, és egy FAszéket látsz. Ez nem is olyan ijesztő! Ahogy kiegyenesedsz, meglátod az ajtóra szegezett táblát: FASZOBA. Másodszorra is benyitsz a szobába. A FAszéktől balra egy FAágy, mellette egy FAszekrény, jobbra pedig egy FAszénnel tüzelő kályha, egy FAló, egy FAszobor, egy FAkard és egy FArakás van. A földön FAszerszámok hevernek. A FAágyból FAszögek állnak ki és egy FAkír fekszik rajta. A FAkír lábán FApapucs van. FAntáziadús szobába kerültél. A FAkír felugrik a FAágyából és egy FAzékkal rád támad.
+
+FAkír:    életerő 20, támadási képesség 10, védettségi szint 22. Minden sikeres támadásával 3-8 életerőpont veszteséget okoz.
+
+Ha nyertél, lapozz a 258-ra!
+Ha vesztettél, Kalandod véget ért!
+Ha elmész péknek, lapozz a 255-re!
+
+158.
+
+Kicsinek tűnik a ház, ezért úgy gondolod, gyorsan végzel átkutatásával. Többnyire az idősek szobája alkotja a belső teret, ám az egyik helyiségből íncsiklandozó illat árad.
+
+Ha megnézed, honnan származik ez a jó illat, lapozz a 66-ra!
+Ha benevezel a versenyre, lapozz a 356-ra!
+Ha kimész, lapozz a 237-re!
+
+159.
+
+Nem sikerült, sajnos elkapnak. Igen szigorú bírákat fogsz ki. Életfogytig tartó szabadságvesztésre ítélnek. Kalandod véget ért!
+
+160.
+
+Benyitsz a második iroda ajtaján, amire az van kiírva: KODZSEK. Bent meglepetten látod, hogy egy kopasz fejű ember egy 0.5 méter átmérőjű nyalókát nyalogat.
+
+Ha odamész hozzá és kitéped a szájából, lapozz a 82-re!
+Ha beszédbe elegyedsz vele, lapozz a 270-re!
+Ha nem zaklatod, lapozz a 41-re!
+
+161.
+
+Ennek az érdekes alakú kulcsnak, amit a kezedben tartasz, mackóalakú feje van. A mozgólépcső oldalán három lyukat találsz. A lyukak fölé a következő állatok képét festették: Méhecske; Lókecse; Macika. Melyik lyukba helyezed be a kulcsot?
+
+Ha a méhecskésbe, lapozz a 405-re!
+Ha a lókecsésbe, lapozz a 428-ra!
+Ha a macikásba, lapozz a 166-ra!
+Ha inkább fölmész rajta, lapozz a 409-re!
+Ha megpróbálod tönkretenni, lapozz a 336-ra!
+
+
+
+
+
+
+162.
+
+Hiába rángatod a WC ajtót, az nem nyílik. Néhány próbálkozás után észreveszed, hogy az ajtón van egy kis tábla, amire az van írva: TOLNI. Sikeresen benyitsz a WC-be. Bent 6 fülkét látsz. Végignézed mindegyiket, de csak a kettes és a hetes van nyitva.
+
+Ha a kettesbe mész, lapozz a 167-re!
+Ha a hetesbe, lapozz a 382-re!
+Ha kimész, lapozz a 335-re!
+
+163.
+
+Felmászol a kerítésre, mikor egy kattanást hallasz és nagy feszültség alá kerülsz. Alig bírod elengedni, de mikor sikerül, átzuhansz a kerítésen, és nagyon bevered a fejedet. Balszerencsédre egy csapat kutyával nézel farkasszemet. Ez nem a te napod. Kalandod véget ért!
+
+164.
+
+Beülsz egy alvázba, igaz, semmi sincs benne, de jól érzed magad. Nemsokára jön egy hatalmas ember, és neked vág egy csavarkulcsot (vesztesz 1 életerőpontot), majd megfog, és idegesen kidob az ajtót. (A csavarkulcsot írd fel a kalandlapodra. Ha harcolsz vele, 2-7 életerőpont veszteséget okoz.)
+
+Lapozz a 132-re!
+
+165.
+
+Szadista érzéseid felszínre törnek. Rátaposol a csigára, de szerencsétlenségedre a legújabb cipődet beteríti a csigabelsőség. Megpróbálod letörölni egy falevéllel, de csak jobban szétkenődik. Most már ilyen gusztustalan cipővel kell továbbmenned.
+
+Lapozz a 332-re!
+
+166.
+
+A kulcs elfordítása után egy szelídített Macika jön elő egy kinyíló ajtóból. Lassan odacammog melléd és megnyom egy rikító vörös, kb. 15 cm sugarú „STOP” felirattal rendelkező gombot. Ekkor csoda történik. A titokzatos szerkezet, a Mozgó Lépcső leáll és sima, átlagos lépcső lesz. A Macika visszakullog oda, ahonnan kijött.
+Elindulsz fölfelé.
+
+Lapozz a 367-re! 
+
+167.
+
+Benyitsz, majd szörnyülködve látod, hogy egy barna és nagyon büdös, szivar alakú… van a WC mellett. A falon látsz egy versikét, ami így szól: 
+
+„Hali-hó hali-hó WC mellé szarni jó”
+
+Ezután a bűz a hatalmába kerít. Kalandod véget ért!
+
+
+
+
+
+
+
+168.
+
+Odalépsz a terhes /vagy nagyon kövér/ nőhöz. Megkérdezed tőle, hogy mire vár Azt válaszolja, hogy a szülészetre. Most már valószínű, hogy terhes, de kíváncsiságod nem hagy nyugodni, ezért megkérdezed tőle, hogy kövér-e. Tokája megremeg, miközben azt válaszolja, hogy nem. Most már teljesen biztos vagy benne, hogy terhes. Megkérdezi tőled, hogy kinek a gyereke vagy. Hevesen azt válaszolod, hogy az apámé. Hirtelen egy nagy csörrenést hallasz, és látod, hogy a normálisnak tűnő öregember repül kifelé az ablakon, miközben azt ordítja, hogy:
+- Áááá… ez nem a földszint?
+Majd egy puffanást és egy nyekkenést hallasz. Erre a nő fölugrik, és elkezd ordibálni. Jobbnak látod, ha kimész.
+
+Lapozz a 400-ra! 
+
+169.
+
+Átkutatod Kodzsek irodáját, de 30 nyalókán kívül semmit sem találsz. Boldogan beülsz Kodzsek székébe, és azt hiszed magadról, hogy rendőr vagy, de 10 óra múlva megunod.
+
+Ha itt maradsz, lapozz a 213-ra!
+Ha kimész, lapozz a 384-re!
+
+170.
+
+Tényleg biztos, hogy nagyon akarod, hogy oda bejuss? /Mert mi nem/
+
+Ha igen, lapozz a 312-re!
+Ha nem, lapozz a 132-re!
+
+171.
+
+Ha valóban van nálad szív, lapozz a dobozán lévő számra.
+Ha nincs, akkor minek lapoztál ide te kis csaló. De lásd, milyen jószívűek vagyunk, nem tépetünk szét a kutyával.
+
+Lapozz az 1-re!
+
+172. 
+
+Boldogan elkezdesz a férfinak integetni, mire ő visszainteget, és tovább rohan. Kellemes meglepetésként ér a tudat, hogy itt ilyen kedvesek az emberek. Örömödben könnyeket hullatsz, mikor egy nő zokogását hallod a sikátor mélyéből. Elhatározod, hogy kideríted ezt a különös ügyet, ezért elindulsz a sikátor mélyébe.
+
+Lapozz a 26-ra!
+
+173.
+
+Leveszel a polcról egy üvegcsét, amiben egy gusztustalan zöld itóka van.
+
+Ha megiszod, lapozz a 299-re!
+Ha mégsem iszod meg, lapozz az 57-re!
+Ha elrakod, lapozz a 83-ra!
+
+
+
+
+174.
+
+Odaadod a nőnek a 2 pimpót, majd elrakod a vett dolgokat és kimész. (A vett élelmeket összesen kétszer használhatod. Ilyenkor 3 életerőpontot gyógyulsz vissza.)
+
+Lapozz a 229-re!
+
+175.
+
+Odamész és megszólítod:
+- Beállhatok játszani? – kérded kisfiús hangon.
+- Nem! – feleli gúnyosan az óvóbácsi. 
+Az imént kimondott három betű sértően hat rád. Mérgedben meglöksz egy dominót, mire az láncreakciót indít be. A gondosan összerakott dominósor egy pillanat alatt dől össze. Az óvóbácsinak szikrát hánynak a szemei. A szikrázás okozta fényben megpillantod azt a bizonyos zöld foszforeszkálást. Szinte ölni tudna a tekintetével. Ám a tekintettel való ölés szinte teljesen lehetetlen. Erről láttál is egy dokumentumfilmet, amiben a primitívek egyik tudósa kifejti, hogy a tekintettel való ölés matematikailag és elméletileg is egyaránt lehetetlen. Ám te hiszel az óvóbácsik eme képességében, ezért felkészülsz a harcra. Különben is, a nyalóka átka által bármi megtörténhet. Még ez a lehetetlen dolog is. 
+
+Lapozz a 431-re!
+
+176.
+
+Lábadat lassan osontatod az EXIT nevezetű ajtóhoz. Fogalmad sincs, hogy mit jelent, hiszen sohase tanultál németül. Nem baj, azért benyitsz.
+Egy kisebbfajta folyosóra érsz, amiből két ajtó nyílik. Az egyiken egy nagy J betű, a másikon egy kisebb „P” betű van. Valamint található még egy ablak is, amin szép rózsaszín függöny van.
+A „J” betűből arra következtetsz, hogy Piroska Józsi szobája lehet. Elönt a düh. Most visszaszerezheted a Nyalókát.
+
+Lapozz a 345-re!
+
+177.
+
+Ezen a gyönyörű helyen éled le életed, még egy játékmacit is kaptál. Csak az a baj, hogy anyád nem lehet veled. Kalandod véget ért!
+
+178.
+
+Odalépsz a terhes /vagy nagyon kövér nőhöz/, mire az idegesen felugrik és elkezd ütögetni. Nem érted a helyzetet, ezért megkérdezed tőle, hogy mit csinál, mire ő azt mondja:
+- Az az öregapám volt, kit te arra kényszerítettél, hogy kiugorjon, ugyanis ő nincs tudatában önmagának, mert…
+Úgy gondolod, hogy ez a nő egy évig tudna neked beszélni. Ez még veszélyes lehet rád, ezért kirohansz.
+
+Lapozz a 400-ra!
+
+
+
+
+
+
+
+
+
+179.
+
+Belépsz a leprás fülkéjébe, és szóba elegyedsz vele. Elmeséled neki kalandod célját, de ő úgy elcsodálkozik, hogy leesik az álla. A leesett áll szétporhad a földön. Beszélnél még vele, de már nem tudsz kommunikálni , ugyanis már keze sincs. Nagyon sajnálod szegényt, de nincs sok értelme itt maradni.
+
+Ha még nem voltál az AIDS-esnél, most elmehetsz, lapozz a 69-re!
+Ha az eboláshoz mennél, lapozz a 3-ra!
+Ha kimész, lapozz a 335-re!
+
+180.
+
+Az eredmény helyes. Belépsz a csigaházba. Bent egy csomó tárgy van, pl.: csigaszobrok, csigákról szóló dokumentumfilmek és aktfotók, akvárium, ami tele van csigával, csigafestmények és egy kakaós csiga. A szoba közepén egy csigákból készült asztal áll, rajta egy papír van.
+
+Ha megeszed a kakaós csigát, lapozz a 389-re!
+Ha megnézed azt a papírt, ami az asztalon van, lapozz a 264-re!
+Ha a csigákról készült aktfotók érdekelnek, lapozz a 16-ra!
+Ha kimész, és a ház melletti ösvényen továbbindulsz, lapozz a 86-ra!
+
+181.
+
+Magad sem tudod hogy miért, de azért elteszed a félig megrágott szendvicset. (Írd fel a kalandlapodra. Ha utad során valamikor belekóstolsz, lapozz a 397-re)
+
+Ha találomra leveszel valamit és megiszod, lapozz a 173-ra!
+Ha beveszel egy ricinust, lapozz a 366-ra!
+Ha keresel valami használhatót, lapozz a 140-re!
+Ha kimész, lapozz a 335-re!
+
+182.
+
+Megfogod a lábát és elkezded fölfele rángatni, de be van szorulva. Mérgedben lehúzod a WC-t.
+
+Lapozz a 361-re!
+
+183.
+
+Egy kicsit baljóslatúak a növény körül heverő végtagcsonkok, de nem bírsz ellenállni, hogy meg ne érintsd eme furcsa organizmus húsos leveleit. Váratlanul liánokhoz hasonló kacsok tekerednek körbe a testeden, úgy, hogy mozdulni sem bírsz. Emelkedni kezdesz és a növény a szájába tuszmákol. Nyugi, nem vagy egyedül, még veled van néhány halott kertész és egy madárijesztő is. Pechedre egy húsevő növénnyel hozott össze a sors. Kalandod véget ért!
+
+184.
+
+A kocsmáros nagyon meglepődik, de azért elveszi a pimpót és ad helyette kettőt. Boldogan teszed el a két pimpót. Örülsz, hogy át tudtad vágni a kocsmárost.
+
+Ha kimész, lapozz a 132-re!
+Ha iszol egy vodkát, lapozz a 147-re!
+Ha kirobbantasz egy kocsmaverekedést, lapozz a 331-re!
+
+
+
+185.
+
+Lefekszel a „jó puha” FAágyba, de a FAszögek a FArodba állnak. Kalandod véget ért! 
+
+186.
+
+Elmeséled nekik a vicceket még egyszer, de lassabban, közben megeszel egy fánkot. Úgy tűnik, kezdik megérteni a vicceket, mert összenéznek és vigyorognak. Ezen fölbátorodsz és elmondasz még egy párat. Ekkor megszólal az egyik:
+- Nagyon bátor vagy!
+Alig, hogy kimondta ezt a mondatot, bézbólütőkkel támadnak rád. Kalandod véget ért!
+
+187.
+
+Egy csodálatos, az egész falat betöltő olajfestékkel készült, aranyozott rámával keretezett képet látsz. Memóriasejtjeidnek köszönhetően felismered a képen látható férfi mintázatát. Ez nem más, mint a nagy MÁJ KELL DZSORDEN. Várjunk csak! Mit keres itt egy kosaras képe? De hiszen ez nem is Ő! Ez PIROSKA JÓZSEF. Hülye fehérvérsejtek! Most bosszút állhatsz rajta, ha tönkreteszed ezt a bizonyosan méregdrága festményt, mondjuk egy kis festékszóróval.
+
+Ha ezt teszed, lapozz a 124-re!
+Ha visszamész a kastély bejáratától balra lévő „AJTÓHÓ”, lapozz a 390-re!
+Ha elmész az előző elágazáshoz, lapozz a 239-re!
+
+188.
+
+A barátod kivitt innen, de ennek egyáltalán nem örülsz. Legszívesebben visszamennél. De legalább egy orrcsipeszt magaddal hoztál. (Írd fel a kalandlapodra) 
+
+Ha eljárod az esőtáncot, lapozz a 360-ra!
+Ha hagyod az egészet, és a következő utcához mész, lapozz a 200-ra!
+
+189.
+
+Az indiánoknak ez nem tetszik, ezért megesznek. /Lehet, hogy kannibálok voltak/ Kalandod véget ért!
+
+190.
+
+Megkér rá, hogy köss vele vérszerződést. Megijedsz a kéréstől, legszívesebben kiszaladnál, de lábad a földbe gyökerezik, valamilyen mágikus erő tarthat ott. A lány fölkel az ágyából és megköti a vérszerződést. Most már megkaptad a halálos kórt. Teljesen elmegy az életkedved. Lefekszel egy ágyba, és itt várod meg életed további pár évét. Tíz év múlva rájössz, hogy lett volna még időd, hogy elkapd Piroska Józsit, de most már késő. Kalandod véget ért!
+
+191.
+
+Elindulsz az uszoda felé. A bejárat előtt találsz egy érdekes papírdarabot, amin érdekes betűk vannak, de nem tudod elolvasni, különben is szakadt. Elteszed a papírdarabot és belépsz.
+
+Lapozz a 251-re!
+
+
+
+
+
+
+192.
+
+A kocsmáros visszaadja a pimpódat, és büszkén mondja:
+- Engem nem tudsz átvágni kölyök!
+
+Ha iszol egy vodkát, lapozz a 147-re!
+Ha kirobbantasz egy kocsmaverekedést, lapozz a 331-re!
+Ha kimész, lapozz a 132-re!
+
+193.
+
+Az étteremben lévő összes tálat, tányért és evőeszközt elmosod, de a pincér egyre többet és többet követel tőled, míg végül halálra mosogatod magad. Kalandod véget ért!
+
+194.
+
+Nagyon fulladozol, már alig élsz. (Vesztesz 3 életerőpontot) Gyorsan kell cselekedned. Tegyél szerencsepróbát!
+
+Ha sikerül, lapozz a 310-re!
+Ha nem, lapozz a 114-re!
+
+195.
+
+Megütöd az öregembert, mire ő átváltozik egy szörnyeteggé. Valószínűleg a zöld nyalóka átka van rajta.
+
+Ha nekiugrasz, lapozz a 128-ra!
+Ha elmész péknek, lapozz a 255-re!
+
+196.
+
+Egy jobbra kanyar és néhány méter után egy tisztásra érkezel, aminek a közepén egy jámborszarvas legelészik. Észak felé egy csapást látsz.
+
+Ha erre mész, lapozz a 257-re!
+Ha ledöntöd a jámborszarvast, lapozz a 6-ra!
+Ha szóba elegyedsz vele, lapozz a 391-re!
+Ha odamész, hogy megvizsgáld, lapozz a 73-ra!
+Ha inkább itthagyod, lapozz a 19-re! 
+
+197.
+
+Odaállsz a tűzjelző elé, és egy óriásit beleütsz, de nem történik semmi. Valószínűleg golyóálló. Mivel nem tudod beverni, folytatod utad az elfekvőbe.
+
+Lapozz a 38-ra!
+
+198.
+
+Remegő kezekkel nyúlsz be Piroska Józsi szájába, de a nyálba beleragad a kezed. Hirtelen becsukódik a szája, és te nem tudsz kiszabadulni. Egy őr, piros hajú babával a kezében jön feléd. Mikor meglát sikítva visszarohan, és kis időn belül egy egész sereg őr, piros hajú babával a kezében rohan feléd. Kalandod véget ért!
+
+
+
+199.
+
+Elindulsz ezen az úton. Egyszer csak az út mentén a bozótban meglátsz egy táblát.
+
+Ha nem látod meg, lapozz a 385-re!
+Ha észreveszed és megvizsgálod, lapozz a 105-re!
+
+200.
+
+Befordulsz a következő utcába, amelynek a neve: „TEHERAUTÓVAL BEHAJTANI TILOS”. Nem igazán nagy utca, de nem is kicsi. A végén, egy egyre sötétedő utcát látsz, valamint néhány épületet.
+
+Lapozz a 237-re!
+
+201.
+
+Elindulsz a rendőrség felé. Nem nagy épület, de rengeteg ablak van rajta. Kíváncsiságod nem hagy nyugodni, ezért elkezded megszámolni, de 10 után teljesen belebonyolódsz, ezért abbahagyod. Bekopogsz az ajtaján.
+
+Lapozz a 204-re!
+
+202.
+
+Az öregasszony egyből kiszúrja a cipődön a szétkenődött csigát és így szól:
+- Megölted a kedvenc ragadozó csigámat!
+Majd elmormol magában valamit, és te csigává változol. Kidob az útra, de csak addig tudsz csúszkálni-mászkálni, amíg nem jön egy vándor. Rádtapos és a te kalandod véget ért! Ha ez a vándor is elmegy az öregasszonyhoz, valószínűleg az ő kalandja is véget ér.
+
+203.
+
+Hát azt, hogy kalandod véget ért te béna. A harkály szétloccsantotta a fejed. 
+
+204.
+
+Egy kövér ember nyit ajtót, aki szó nélkül beenged. Bent rengeteg irodát látsz, de csak három kelti fel az érdeklődésedet, valamint rengeteg rendőrt, akik épp a kávéjukat isszák.
+
+Lapozz a 41-re!
+
+205.
+
+Megfogod a csigát, és teljes erődből bedobod az erdőbe, de szerencsétlen pont egy fának repül, és darabokban esik a földre. Szegény csiga…, na nem baj kit érdekel. Bocsánatot már nem kérhetsz tőle.
+
+Lapozz a 332-re!
+
+206.
+
+Egy óriási udvarban találod magad, ahol tűzoltók ebédelnek. Úgy gondolod, nem tudnál feltűnés nélkül átjutni a tűzoltókon, ezért nem is próbálkozol vele, de azért még odamehetsz az egyenruhásokhoz.
+
+Ha odamész, lapozz a 104-re!
+Ha kimész, lapozz a 237-re!
+207.
+
+Felmész a második szintre. Egy kisebbfajta folyosón állsz. Jobbra tőled egy váróterem van, és látsz még néhány ajtót.
+
+Lapozz a 400-ra! 
+
+208.
+
+Betakarózol, hüvelykujjadat a szádba rakod és elalszol. Egyszer csak női hang kiabálására ébredsz:
+- Ki aludt az ágyacskámban?
+Kinyitod a szemed, és meglátod az őrt. Zölden világít a szeme. Odamegy hozzád és megfolyt. Kalandod véget ért!
+
+209.
+
+Melyiket rendelted?
+
+Ha a 14-est, lapozz a 315-re!
+Ha a 92-est, lapozz a 46-ra!  
+
+210.
+
+Kivágtatsz a bozótból, majd megvilágosodsz, ahogy kinyitod a szemed.
+
+Lapozz a 385-re!
+
+211.
+
+Nagyon erősen vakarod a bal lábad, de úgy néz ki, hogy nem segít, mivel a bal még mindig viszket.
+
+Ha még erősebben vakarod, lapozz a 342-re!
+Ha megvakarod a bal lábad, lapozz a 321-re!
+Ha nem törődsz vele, lapozz a 72-re!
+
+212.
+
+Nekirugaszkodsz és elugrasz. A várárok közepéig repülsz, de tovább nem. Nagy csobbanással érkezel a vízbe. Ekkor jössz rá, hogy nem is tudsz úszni. Kalandod véget ért!
+
+213.
+
+Bár unod a rendőrösdit, mégis itt maradsz, és új játékokat találsz ki magadnak. Odabilincseled magad a radiátorhoz, mikor kb. 20 rendőr lép be az irodába. Menekülnél, de nem bírsz. Kalandod véget ért!
+
+214.
+
+- Hol az úszómester?
+Egy picit elgondolkozik, és azt válaszolja:
+- Hm, nem tudom. Lehet, hogy az épületben van.
+Szomorúan fordulsz el tőle, de mikor visszanézel rá, látod, hogy egy jót röhög magában. Kifogott rajtad.
+
+Ha mérgedben odarohansz hozzá és belököd a vízbe, lapozz a 337-re!
+Ha kimész, lapozz a 229-re!
+
+215.
+
+Bemész a főtérre. Itt hatalmas épületek vannak, és csak úgy nyüzsögnek az emberek. Csak a koldusok zavarnak. Meg a legyek.
+
+Lapozz a 229-re!
+
+216.
+
+Megfogsz egy nyulat, felemeled, majd jó magasról elejted. Sikerül elejtened, mégsem vagy olyan béna. Az elem nélküli fénykardoddal darabokra szabdalod a nyulat és megeszed. Nagyon finom étel. Hirtelen furcsa érzés kerít hatalmába, majd foszforeszkálni kezd a szemed. Ez a nyalóka átka. Kalandod véget ért!
+
+217.
+
+Már majdnem kint vagy, mikor meglátod, hogy a pult mellett lézerfény van. Így biztos nem fogsz kijutni, mert ha átmennél rajta, valószínűleg megszólalna a riasztó. Muszáj lesz fizetned.
+
+Lapozz a 292-re!
+
+218.
+
+Belépsz a szülészet ajtaján. Bent egy orvost látsz, aki nagyon hevesen ír valamit. Odalépsz hozzá és megkérdezed:
+- Mit ír maga ilyen hevesen?
+- Hát levelet magamnak. – válaszolja.
+- És mi van benne? – kérdezed érdeklődve
+- Hát honnan tudjam, még nem kaptam meg.
+Egy kicsit gondolkozol, és magára hagyod a zsenit. Kifelé indulnál, mikor egy sikítozó nőt hoznak be. Az orvos ájultan esik össze.
+
+Ha segítesz a nőnek, lapozz a 74-re!
+Ha gyorsan kifutsz, lapozz a 400-ra!
+
+219.
+
+Ujjaid körbefonják a kicsiny, zöld löttyel teli kémcsövet. Kerek szélét szádhoz emeled, majd egyetlen mozdulattal - az üveggel együtt - lenyeled. Az üvegtől megfulladsz, a zöld löttytől pedig megszáll a nyalóka átka. Kalandod kétszeresen is véget ér!
+
+220.
+
+Az elfekvőbe vezető úton a folyosó parkettával van kirakva, de ez téged abszolút nem érdekel. A falon találsz egy tűzjelzőt.
+
+Ha szórakozásból betöröd a tűzjelzőt, hogy tüzet jelezve megszólaljon a csengő, lapozz a 197-re!
+Ha folytatod utad az elfekvőbe, lapozz a 38-ra!
+Ha kimész a kórházból, lapozz a 226-ra!
+
+
+
+
+
+
+
+
+221.
+
+Követed a csapást egész be az erdőbe, majd egy fára felfüggesztett táblára leszel figyelmes:
+
+„TOALETT 10 KM”
+
+A csapást mindkét oldalon büdös barna kövek szegélyezik végig. Nincs bátorságod megérinteni őket, ezért nem is próbálkozol vele.
+A Nap is magasra kúszik és a mákfák is ritkulni kezdenek, mire egy újabb tisztáson találod magad, aminek a közepén egy cseréptetős budi van. Zöldre festett ajtajára nagy fehér betűkkel ezt írták:
+
+„TOALETT 10 KM”
+
+Ha már ennyi időt és energiát áldoztál fel, kíváncsi vagy, hogy mi lehet odabent.
+
+Lapozz a 403-ra! 
+
+222.
+
+Sajnos miközben be akartad dobni az erdőbe, szétnyomtad a szerencsétlent, de sebaj, mert úgyis csak egy kullancs volt, ami mellesleg nem is tápláló.
+
+Lapozz a 72-re!
+
+223.
+
+Megfogod a törzsfőnök nyakában lógó koponyákat, megrántod, és a 90o-os gerincferdülésből 180o-os lesz. (Ezt Brumiért) Elkezdesz rohanni, de a kannibálok nem hagyják annyiban, ordítva üldözőbe vesznek. Már majdnem utolérnek, amikor egy nomád lovascsapat vágtat el melletted és elgázolja a kannibálokat. Nagy szerencséd volt. Kifújod magad és továbbmész északra.
+
+Lapozz a 4-re!
+
+224.
+
+Átadod neki a papírdarabot. Valószínűleg az ő „díszírása” lehet rajta.
+- Jól van, mehetsz! – ordítja neked és a következő pillanatban kilazul a foga közül az egyik húscafat, kiesik, majd nagy cuppanással a földre esik.
+Undorodva fordulsz el tőle, és az uszoda felé veszed az irányt.
+
+Lapozz a 22-re!
+
+225.
+
+Ha van a fejeden kötés, lapozz a 194-re!
+Ha nincs, lapozz az 53-ra!
+
+
+
+
+
+
+
+
+
+
+
+226.
+
+Az utca végén látod, hogy balra egy börtön van, jobbra pedig az utca folytatása. Itt újabb házak vannak. A sarkon két ember beszélget. (Ahol már voltál, ne menj vissza még egyszer)
+
+Ha odamész hozzájuk, lapozz a 324-re!
+Ha a börtönbe mész, lapozz a 35-re!
+Ha a kórházba, lapozz a 242-re!
+Ha a rendőrségre, lapozz a 201-re!
+Ha számítástechnikai kiállításra, lapozz a 144-re!
+Ha az elmegyógyintézetbe, lapozz a 9-re!
+Ha elmész a következő kanyarig, lapozz a 200-ra!
+Ha visszamész az előző utcába, lapozz a 132-re!
+Ha bemész a főtérre, lapozz a 215-re!
+Ha kimész a városból, lapozz a 228-ra! 
+Ha a sok választás láttán megijedsz, és újra kezded a kalandod, lapozz az 1-re!
+
+227.
+
+A menüre pillantasz. Ekkor egy nomád lovascsapat vágtat el melletted. Nem túl nagy a választék, ugyanis csak szendvics van, de az is 2 pimpóba kerül.
+
+Ha veszel belőle, lapozz a 13-ra!
+Ha inkább beszélnél a büféssel, lapozz a 70-re!
+Ha továbbmész, lapozz a 154-re!
+
+228.
+
+Már majdnem kiérnél a főkapun, mikor egy gépi hang szólal meg melletted:
+- Mondd meg a számot, amivel kiléphetsz! Piroska Józsi már vár. 
+
+Ha tudod a számot, lapozz oda!
+Ha könnyítést kérsz, lapozz a 355-re!
+Ha nem törődsz a hanggal és kimész, lapozz a 76-ra!
+
+229.
+
+Körös-körül épületek vannak. (Ahol már voltál, ne menj vissza még egyszer)
+
+Ha a hotelba mész, lapozz a 274-re!
+Ha a boltba, lapozz a 23-ra!
+Ha az ékszerészetbe, lapozz a 145-re!
+Ha a pékségbe, lapozz a 379-re!
+Ha a papírboltba, lapozz a 62-re!
+Ha az uszodába, lapozz a 191-re!
+Ha az étterembe, lapozz a 60-ra!
+Ha a vidámparkba, lapozz a 112-re!
+Ha kimész a városból, lapozz a 40-re!
+Látod, hogy a főtérről három köz fut ki három utcába.
+Ha az elsőbe mész, lapozz a 132-re!
+Ha a másodikba, lapozz a 226-ra!
+Ha a harmadikba, lapozz a 237-re!
+
+
+
+
+230.
+
+Odaadod neki a használt rágógumit, mire ő őrült röhögésbe kezd, elragadja tőled és beleteszi egy szerkentyűbe, majd azt üvölti:
+- Elpusztul az egész város!
+Megnyom egy gombot és az egész város a levegőbe repül. A te és a város kalandja véget ért!
+
+231.
+
+Csöppnyi hadakozás után kiszabadítod magad és a már kitört ablakon keresztül távozol. Most veszed észre, hogy az ablak és az óceán közötti szintkülönbség 302,23 méter. Ez csak azért lehetséges, mert a vár egy magas sziklás parton épült, amit a másik oldalon nem vehettél észre.
+Hatalmas csobbanással érkezel a vízbe. Hálát adsz az égnek, hogy vízbe estél éppen apály idején, így túlélted a zuhanást. 
+Ekkor megpillantod a könyv negatív főhősét – aki, mint tudjátok Piroska Józsi – amint ejtőernyőjével a jachtja felé libben a nyalókáddal a kezében.
+Balszerencséd tovább tetőzik. Nem elég, hogy Józsi meglógott, most meg egy orgona is a fejedre esik. Kalandod véget ért!
+De ne bánkódj! Szép teljesítmény volt, és amiért idáig eljutottál, újrakezdheted a könyvet!
+
+232.
+
+Miután elvégezted a dolgod, átkutatod az épületet. Teljesen feldúlod, mire találsz egy tűzoltósisakot (ha viseled, adj a védettségi szintedhez 3 pontot) és a parancsnok íróasztalán egy iratot, amin ez áll: „6+5=36”. Elteszed, majd kifelé indulsz.
+
+Lapozz a 237-re!
+
+233.
+
+Megkóstolod a ciánosat. Már két litert megeszel belőle, mikor zölden kezd világítani a leheleted. Összeesel, hirtelen el kezd körülötted forogni a világ. Nem tudtad teljesíteni a feladatodat. A szomszédod gonosz célokra használja a nyalókát. Kalandod véget ért!
+
+234.
+
+Az almacsutkát a kutya elé dobod. Az megszaglássza és levizeli. De különösebben nem kötöd le a figyelmét. Meg kell küzdened vele.
+
+Lapozz a 121-re!
+
+235.
+
+Szerencsére nem az irodába tartottak. Nem kockáztatsz többet, ezért kimész. 
+
+Lapozz a 226-ra!
+
+
+
+236.
+
+Mikor belépsz a látvány megdöbbent. Ez a labor! Adj egyet döbbentség pontjaidhoz! A szoba bútorzatát kísérleti felszerelések alkotják. De ezeken kívül még van nyuszi alakú körte, tyúk alakú tojás, kerekasztalfejű lovag, kamionfejű kisfiú, nevetséges púzli és felhőalakú bárány.
+Úgy látszik ezek az utóbbi években Nobel-díjat nyert találmányai az óvodásoknak. Ezt onnan tudod, mert a polcra, amin vannak, rá van írva, hogy az utóbbi években Nobel-díjat nyert alkotásai az óvodásoknak.
+
+Ha jobban körülnézel, lapozz a 417-re!
+Ha abba a szobába mész be, ahonnan az óvóbácsi jött ki /amíg élt/, lapozz a 135-re!
+Ha a kastély bejáratától balra lévő "AJTÓHÓ" mész, lapozz a 390-re!
+
+237.
+ 
+A következő épületek közül választhatsz. (Egy épületbe ne menj vissza még egyszer!)
+
+Ha a tűzoltóságra mész, lapozz a 2-re!
+Ha a múzeumba, lapozz a 68-ra!
+Ha az öregek otthonába, lapozz a 37-re!
+Ha az utca végén lévő és egyre sötétedő utcát nézed meg, lapozz a 17-re!
+Ha bemész a főtérre, lapozz a 215-re!
+Ha visszamész az előző utcához, lapozz a 226-ra!
+Ha kimész a városból, lapozz a 228-ra!
+
+238.
+
+Legnagyobb meglepetésedre egy fürdő tárul eléd. A WC-ben egy ember fejjel lefelé áll. A fürdőkád zöld színű vizében kacsák úszkálnak.
+
+Ha beleülsz a kádba, lapozz az 55-re!
+Ha megvizsgálod az embert, lapozz a 330-ra!
+Ha kimész, lapozz a 279-re!
+
+239.
+
+A folyosó itt véget ér. Vissza kell fordulnod. De mielőtt ezt megteszed, szétnézel. Jobbra a falon egy hatalmas portrét látsz, szembe pedig egy ablakot.
+
+Ha megnézed a képet, lapozz a 187-re!
+Ha kiugrasz az ablakon, lapozz a 314-re!
+Ha visszamész az előző elágazáshoz és lekanyarodsz a mellékfolyosón, lapozz a 143-ra!
+Ha visszamész a kastély bejáratától balra lévő „AJTÓHÓ”, lapozz a 390-re! 
+
+240.
+
+Elindulsz a poros homokúton. Már jó ideje mész, és az út folyton balra kanyarodik, de ez téged nem idegesít. Csak az idegesít, hogy miért nem tudták lebetonozni ezt az utat. Miközben ezen gondolkodsz, nagyon elfáradsz, és leheveredsz a fűbe. Egyszer csak azt veszed észre, hogy egy páncél hever a fűben, ami egy sárkányt ábrázol, amint tüzet okád. Megtaláltad a bűvös Tűzokádó Sárkányos páncélt!
+
+Ha gyorsan felveszed magadra, lapozz a 297-re!
+Ha nem teszel semmit, lapozz a 386-ra!
+
+
+
+241.
+
+A TV-ben csak egy pornócsatornát tudsz fogni, de ez abszolút nem érdekel és egy negyed órás tévézés után lefekszel, hogy kipihend magad.
+
+Lapozz a 8-ra!
+
+242.
+
+Belépsz a kórházba. Jobbra tőled egy tábla van, amin a kórház alaprajzát látod. Két szint van.
+
+Ha az elsőre mész, lapozz a 34-re!
+Ha a másodikra, lapozz a 207-re!
+Ha kimész, lapozz a 226-ra!
+
+
+243.
+
+Az egyik pillanatban egy óriási piros színű autó tart feléd. Éppen el tudsz ugrani előle, de a visszapillantó tükör az arcodba csapódik. (vesztesz 5 életerőpontot)  
+
+Ha itt bent kutatsz, lapozz a 206-ra!
+Ha kimész innen, lapozz a 237-re!
+
+244.
+
+Nem bírod ki, míg elmenj a WC-be, itt rókázol. Az összes orvos és nővér rád néz, elejtik a szikéket és ollókat. A műtős eszközök a betegbe állnak. A beteg kalandja véget ért! Az egyik orvos feléd rohan a betegből kivett szikéjével a kezében, de elcsúszik a hányásodon és a szikéjét a betegbe ejti. 
+
+Ha megpróbálod újraéleszteni a beteget, lapozz a 290-re!
+Ha szétnézel a műtőben, lapozz a 137-re!
+Ha kimész, lapozz a 335-re!
+
+245.
+
+Az ajtó előtt megállásra késztetnek az odabentről kiszűrődő furcsa sikolyok, de nem tántorítanak el és belépsz.
+Érdekes, ámde félelmetes látvány tárul eléd. Öt, a TV-ből már jól ismert FELFÖLDI IQ BARBÁRT találsz odabent, akik éppen emberhusit lakmároznak. A félelemtől földbegyökerezik a lábad és egészen addig beszélni se tudsz, amíg az egyik meg nem szólít:
+- Hé te! Te könyvtáros vagy?
+Mit felelsz:
+
+Ha igen, lapozz a 432-re!
+Ha nem, lapozz a 412-re!
+
+246.
+
+Mit kérdezel tőle?
+
+„- Hol van az úszómester?”, lapozz a 214-re!
+„- Hol a Nagymedence?”, lapozz a 71-re!
+Nem kérdezel semmit, inkább elkezdesz bőgni és kiszaladsz, lapozz a 108-ra!
+
+
+
+247.
+
+Kis idő elteltével egy útkereszteződéshez érsz. Innen háromfelé mehetsz, de az egyik út visszavezet a házatokhoz. Erre nem mész. 
+
+Ha a bal oldali utat választod, lapozz a 347-re!
+Ha a jobbat, lapozz a 156-ra!
+
+248.
+
+Fölforrt agyvízzel megfogod a kilincset, majd nyugodtan veszed észre, hogy nem történik semmi. Kilépsz a kapun és az országút felé indulsz, mikor a hátad mögül sercegést hallasz. Megfordulsz és egy kékruhás embert látsz.
+- Hát te ki vagy? – kérdezed.
+- Áram Áron. ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+Kalandod véget ért! (Nagy volt a feszültség)
+
+
+249.
+
+Belépsz a burjánzó növények közé. Szemed megakad a kert közepén lévő hatalmas ZÖLD növényen.
+
+Ha közelebbről megvizsgálod, lapozz a 183-ra!
+Ha szétnézel a kertben, lapozz a 49-re!
+Ha a kastélyba mész, lapozz a 273-ra!
+
+250.
+
+Ismét látsz egy táblát, amire ez van írva: „SZAKADÉK”. Azt mondod, hogy Á, de már nem legyintesz. Kalandod véget ért!
+
+251.
+
+Bent egy hatalmas embert látsz, aki olyan óriási, mint, mint… Te se tudod, mert még soha nem láttál ekkora embert. Egy székben ül, és ahogy mozog, úgy mozog vele a hája. Ott folydogál. Előtte egy asztal van, amire az van írva: „PORTÁS”.
+
+Ha elosonsz mellette, lapozz a 393-ra!
+Ha odalépsz hozzá, lapozz a 126-ra!
+Ha kimész, lapozz a 229-re!
+
+
+
+
+
+
+252.
+
+- Hagyjuk itt és menjünk kutyát gyűjteni! - mondja a fogorvos, azzal mindenki felvesz egy vasvillát a földről és futásnak ered.
+Egyedül maradsz a teremben. Megpróbálsz kiszabadulni a gondosan mellkasod köré tekert kötél szorítása alól. Még szerencse, hogy a végtagjaidat szabadon hagyták, mert így könnyen ki tudod bogozni a masnit. Azonban mégse!!! - jut eszedbe. Hiszen anyád nem tanított meg masnit kioldozni /ezért hordasz tépőzáras cipőt/. Hagyod a fenébe az egészet, így mész tovább. (Adj 1-et a védettségi szintedhez a rajtad maradt kötél miatt) Körülnézel a szobában, és búgó hangra leszel figyelmes. A hang a szoba túlsó oldalából egy MOZGÓ LÉPCSŐből jön. Csak arra mehetsz tovább!!! Ilyet még a tévében sem láttál. Hogyan jutsz most tovább?
+
+Ha fölrohansz rajta, lapozz a 409-re!
+Ha megpróbálod tönkre tenni, lapozz a 336-ra!
+Ha megpróbálkozol azzal a kulccsal, amit a várban találtál, akkor adasd össze a rajta lévő számokat a valóságban hozzád legközelebb álló személlyel, majd lapozz az így kapott számra! (Figyelmeztetünk, te csak 10-ig tudsz számolni!)
+
+253.
+
+Továbbmész a folyosón. Balra egy ajtó van, vele szemben pedig egy kép.
+
+Ha bemész az ajtón, lapozz a 157-re!
+Ha megnézed a képet, lapozz a 107-re!
+Ha továbbmész a folyosón, lapozz a 344-re!
+Ha a kastély bejáratától balra lévő „AJTÓHÓ” mész, lapozz a 390-re!
+
+254.
+
+Remegő kezekkel nyúlsz be Piroska Józsi szájába, de szerencsére semmi sem történik. Megforgatod a csuklódat, és egy kulcs akad a kezedbe. Kiveszed, hogy megvizsgáld. Ilyen alakú kulcsot még életedben nem láttál. Három szám van rajta, 53, 47 és a 61. Elteszed a kulcsot. (Írd fel a kalandlapodra!)
+
+Ha visszamész az előző elágazáshoz és lekanyarodsz, lapozz a 143-ra!
+Ha visszamész a kastély bejáratától balra levő ajtóhoz, lapozz a 390-re!
+
+255.
+
+Nagy karrier előtt állsz. Ellenfeled futni hagy. Pékként sikeres életed lesz, jól fogsz keresni. Lesz egy szép családod, ronda, de gazdag feleséggel. De ezzel sajnos nem segítettél a nyalóka ügyön. Kalandod véget ért!
+
+256.
+
+Hősiesen az úszómester után ugrasz, de sajnos nem tudsz úszni. Az úszómester elvigyorodik és kiúszik a vízből. Megvárja, míg teljesen elfáradsz (vesztesz 6 életerőpontot) és utánad ugrik. Elkezdesz neki hálálkodni, de ő gúnyosan visszalök a vízbe, de már nem ugrik utánad. Kalandod véget ért!
+
+
+
+257.
+
+A csapás egy hatalmas illegális szemétlerakóhoz vezet. Émelyítő szag terjeng a levegőben. Körbenézel a telepen. Balra nukleáris szemét, jobbra olajoshordók teszik változatosabbá a környezetet, nem beszélve az ételmaradékokról és ruhadarabokról. Valószínűleg a primitívek szemete lehet. Ha egyszer eljutsz a primitívek világába, vagyis kimozdulsz erről a szigetről - ami szinte teljesen lehetetlen - majd megbosszulod. Addig is keresel valamit a szemétben. A hulladék nagyrészén ugyanazt a szimbólumot látod. Mintha láttad volna ezt a jelet a TV-ben. Igen, eszedbe jutott. Ez az „ÁLDOTT JÓLELKEK TERMÉSZETVÉDELMI EGYESÜLET”-ének a jele. Kutakodsz még néhány órát, de néhány ionágyún és hidrogénbombán kívül nem találsz semmit. Nem tartod ezeket érdemesnek ahhoz, hogy magaddal cipeld, ezért otthagyod őket. Egy csapás vezet ki a szeméttelepről, és ezen keresztül távozol.
+Egy útkereszteződéshez érsz.
+
+Ha jobbra mész, lapozz a 199-re!
+Ha balra, lapozz a 95-re! 
+
+258.
+
+Utolsó csapásodra a FAkír vére a FAlakra fröccsen. Hát ez FAntasztikus.
+
+Ha befekszel a FAkír ágyába, lapozz a 158-ra!
+Ha kimész és megnézed a képet, lapozz a 107-re!
+Ha továbbmész innen, lapozz a 344-re!
+Ha a kastély bejáratától balra lévő „AJTÓHÓ” mész, lapozz a 390-re!
+
+259.
+
+Belenyúlsz a zsebedbe, és előveszel egy guriga WC papírt. Megfogod, és tiszta erővel elkezded vele verni a fejedet. Az öregember nem érti, hogy mit csinálsz, de te addig vered a fejed, amíg be nem törik a koponyád. Az agyvelőd az öregember arcára fröccsen. Az idegesen letörli és továbbmegy. Kalandod véget ért!
+
+260. 
+
+Belépsz a harmadik irodába, amire az van kiírva: „DERRIK”. Bent egy őszülő ember van, aki éppen nagyítóval nézeget egy hangyát.
+
+Ha odamész hozzá, lapozz a 134-re!
+Ha kimész az irodából, lapozz a 41-re!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+261.
+
+Hirtelen ötlettől vezérelve rákiáltasz Pannira:
+- Katéter!!!
+Amint tudatosul benne a szó jelentése, ijedten kap ágyékához, és összegörnyedve rogy össze a padlón. Hamarosan megsajnálod a földön fetrengő Pannit, és felsegíted a földről. Hálás szemmel néz rád és megkérdezi:
+- Miért jöttél ide?
+- A Nyalókámért! De Józsi elvitte. Sajnos fogalmam sincs, hogy hová! Azt hiszem, kudarcot vallottam!
+- De hiszen én tudom, hogy hová vitte! A primitívek országába, az EGYESÜLT PROTEKTORÁTUSOKBA, amit mi csak RendkívülFejletlenCivilizálatlanNépekLakóhelyének szoktunk nevezni.
+- Te ismered Józsi terveit? – kérdezed.
+- Persze, hiszen a testvére vagyok.
+- Kérlek, mondd el!
+- Józsi ezt a szigetet kísérletezésre használta, hogy a Nyalókát tökéletesítse. A sziget fölötti hatalom csak a világuralom első állomása volt. Az utazását az Egyesült Protekturátusokba már régóta tervezte, hogy a legfejlettebb eszközökhöz jusson, ám érkezésed miatt hamarabb kellett távoznia.
+- Mi készteti Józsit minderre?
+- Nekem azt mesélte, hogy kiskorában egy erdei séta során találkozott egy titokzatos, mániákus csigagyűjtő vajákos asszonnyal. Ő jövendölte neki, hogy: „Egyszer eljő a nagy darumadár, leszállik a tóra, belefagy a lába és lelövi az orrvadász…” Nem tudom, hogyan értelmezhette, de azóta mániákusan hisz abban, hogy neki kell a világ élére állnia. Segítened kell az emberiségen! Te vagy az utolsó remény! Mentsd meg a hörcsögöket!
+Panni szavainak hallatára új cél tudatosul előtted. Bár a szigetlakókat megmentetted, az emberiség még mindig veszélyben van. Ekkor azonban Panni megzavar az elmélkedésben.
+- Láttál már embert ikozaéderben szenvedni?
+Ám a választ meg sem várva kiugrik az ablakon, és csatlakozik a hógolyózó társasághoz.
+Szép csendesen kiballagsz a várból és elporoszkálsz új kalandok felé…
+
+Ez a kalandod véget ért!
+
+262.
+
+Visszatérsz Kalambóhoz, belegázolsz a szivarhegybe /mintha most magasabb lenne/. Kalambó szeme megakad rajtad.
+- Sikerrel jártál? – szegezi neked a kérdést
+
+Ha elmondod neki, hogy mit tettél Kodzsekkel, lapozz a 48-ra!
+Ha hazudsz, lapozz a 303-ra!
+
+263.
+
+Korán reggel ébredsz, mivel egy madár épp a te homlokodat csórézta le. Letörlöd a gusztustalan salakanyagot, majd szépen beágyazol. Bárcsak látná anyád is, biztos büszke lenne rád. Továbbindulsz.
+Pár kilométer után egy útkereszteződéshez érsz. Két táblát látsz. Az egyikre az van írva, hogy: PUSZTA, a másikra pedig az, hogy: ERDŐ. 
+
+Ha a puszta felé veszed az irányt, lapozz a 29-re!
+Ha az erdő felé, lapozz a 398-ra!
+264.
+
+A papír felének elolvasása után, tudod, hogy egy indián törzs él az erdőben. Ez nagyon érdekes. Továbbolvasnád, de egy szót nem tudsz elolvasni, így a szöveg is teljesen értelmetlenné válik számodra.
+
+Ha eszel a kakaóscsigából, lapozz a 389-re!
+Ha megnézed a csigákról készült aktfotókat, lapozz a 16-ra!
+Ha kimész és továbbindulsz, lapozz a 86-ra!
+
+
+265.
+
+Belerúgsz a ló fejébe, és a bal szeme a lábadra folyik. Ezt a lovat már nem fogod használni. Most jössz rá, hogy a ló, vagy már egy hete döglött. 
+
+Lapozz a 27-re!  
+
+266.
+
+Pár métert megteszel és meglátod a vár körvonalait. Ez hatalmas önbizalommal tölt el. (Adj 10-et az önbizalompontjaidhoz!) Egyszer csak egy nomád lovascsapat vágtat el előtted, és teljesen felveri a port. A szemed teljesen tele lesz homokkal. Már nem látod a várat, és az önbizalmad is elszáll. (Vonj le 10-et az önbizalompontjaidból!) Megvárod, amíg a por leülepszik, kitörlöd a szemedből a homokot és továbbmész.
+
+Lapozz a 129-re!
+
+267.
+
+Világbajnoki gyorsasággal a házba rohansz, de elszörnyedve látod, hogy a WC előtt egy kilométeres sor áll. Nincs mit tenned, meg kell küzdened a tűzoltókkal a WC-ért!
+
+Tűzoltók: életerő 19, támadási képesség 13, védettségi szint 7. Összesen hatan vannak. Egyenként küzdj meg velük. Minden sikeres támadás esetén 1-3 életerőpont veszteséget okoz az a tűzoltó, akivel éppen megküzdesz.
+
+Ha nyertél, lapozz a 370-re!
+Ha vesztettél, lapozz a 63-ra!
+Ha elmész péknek, lapozz a 255-re!
+
+268.
+
+Odalépsz az egyik orvoshoz, mikor észreveszed, hogy tele van a szája spenóttal. Ezzel biztosan nem tudsz beszélni.
+
+Ha megpróbálsz élelmet szerezni, lapozz a 21-re!
+Ha kimész, lapozz a 335-re!
+
+269.
+
+Egy zselés hajú emberke ugrik eléd, majd ugyanazzal a lendülettel ki is esik az ablakon. Eggyel kevesebben vannak, mostmár nagyobb eséllyel veheted fel ellenük a harcot. 
+Meglengeted fejed fölött félelmetes fegyvered, és az őrök közé rontasz, mire ők – tőled megrettenve – a számukra egyetlen kiutat jelentő ablak felé veszik az irányt. Közben persze minden nehézség nélkül gázolnak át fonnyadt sejtjeiden, citoplazmád a földre folyik. Kalandod véget ért!
+
+270.
+
+- Add ide a nyalókát te kopasz fejű!
+- Nem adom!
+- De ideadod!
+- Akarod? Küzdj meg érte!
+ 
+Lapozz a 82-re!
+
+271.
+
+Az elmebeteg ember feléd rohan, de félúton megáll, majd sikítozva berohan a városba. Nagyon elcsodálkozol.
+
+Ha sikítozva utánarohansz, lapozz a 116-ra!
+Ha nem törődsz vele, lapozz a 348-ra!
+
+272.
+
+Hatalmas küzdelem előtt állsz!
+
+Kullancs: életerő 0,03, támadási képesség 0,0001, védettségi szint 1. A kullancs 10 megnyert kör után 1 életerőpont veszteséget okoz.
+
+Ha győztél, lapozz a 118-ra!
+Ha vesztettél, lapozz a 64-re!
+Ha elmész péknek, lapozz a 255-re!  
+
+273.
+
+Kitárod a kaput és belépsz rajta. Kutyaugatást hallasz és egy hatalmas zöld szemű véreb ugrik eléd. (Ha bibe vagy, a félelemtől földbegyökerezik a lábad és a kutya felfal)
+
+Ha megküzdesz vele, lapozz a 121-re!
+Ha cselt alkalmazol, lapozz a 79-re!
+
+274.
+
+A hotel óriási épület. Belépsz automata ajtaján és egy nagy csarnokba jutsz, aminek a közepét egy hatalmas szökőkút díszíti. Odamész a recepcióhoz.
+
+Lapozz a 349-re!
+
+275.
+
+Szemed felcsillan a püspöklilára, kekizöldre és okkersárgára mázolt mászóka láttán. Gondolkodás nélkül megrohamozod a játékszert. Össze-vissza mászkálsz rajta, egyre ügyesebbnek érzed magad, biztonságérzeted megnő. Kezeddel elengedet a fémet és fél lábbal ugrálni kezdesz, ám a mókának hamar vége szakad, amikor ügyetlenségedben megbotlasz egy banánhéjban és ráesel egy disznópörkölőre. Kalandod véget ért!
+276.
+
+Az ebédlő egy hatalmas csarnok. Épp most van ebédidő. Rengeteg orvos és nővér ül a székeken az ebédjükre várva. A menü bableves, spenót és kelkáposztafőzelék. 
+
+Ha beszélsz egy orvossal, lapozz a 268-ra!
+Ha megéheztél, leütsz egy orvost és elveszed tőle a finom ebédjét, lapozz a 21-re!
+Ha kimész, lapozz a 335-re!
+
+277.
+
+Már majdnem kimennél, mikor a hátad mögött az úszómester kinyúl a vízből és beleránt.
+
+Úszómester: életerő 13, támadási képesség 3, védettség 11. Minden sikeres támadásával 1-6 életerőpont veszteséget okoz a sípjával. Amiért a vízben harcolsz, támadásod 3-mal, védettséged 5-tel csökken.
+
+Ha győztél, lapozz a 102-re!
+Ha életerőpontod 2 alá csökken, lapozz a 42-re!
+Ha elmész péknek, lapozz a 255-re!
+
+278.
+
+Átlépsz egy boltíves ajtón és egy hatalmas terembe érsz, ahol különböző népek ereklyéit és tekercseit látod. Az egyik szobor előtt egy üvegburában KÓLÁ-s üveget látsz.
+
+Ha berúgod az üveget és kiveszed, lapozz a 87-re!
+Ha kimész, lapozz a 237-re!
+
+279.
+
+Ismét a folyosón vagy. (Ahol már voltál, ne menj vissza még egyszer)
+
+Ha abba a szobába mész be, ahonnan az őr jött ki, lapozz a 377-re!
+Ha a folyosó végén lévő ajtóhoz mész, lapozz a 238-ra!
+Ha a kastély bejáratától balra levő „AJTÓHÓ” mész, lapozz a 390-re!
+Ha továbbmész a főfolyosón, lapozz a 253-ra!
+
+280.
+
+Az ember az ajtódarabot a fejedbe állítja, majd tovább veri a fejét. Kalandod véget ért!
+
+281.
+
+Ezután a kellemes kis kitérő után elkezdődik a harc.
+
+Piroska Józsi: életerő 40, támadási képesség 20, védettségi szint 10. Minden sikeres támadásával 5 életerőpont veszteséget okoz a csokipapírjával.
+
+Ha életerőpontot 0 alá csökken, Kalandod véget ért!
+Ha elmész péknek, lapozz a 255-re!
+Ha Józsi életerejét 20 alá csökkented, lapozz a 418-ra!
+
+
+
+
+
+282.
+
+Bemész a gyógyszerraktárba és körülnézel. Egy csomó hülyeség van a polcon, de minek? Le is dobálsz néhány gyógyszert a polcról. 
+
+Ha találomra leveszel valamit és megeszed, lapozz a 67-re!
+Ha találomra leveszel valamit és megiszod, lapozz a 173-ra!
+Ha beveszel egy ricinust, lapozz a 366-ra!
+Ha keresel valami használhatót, lapozz a 140-re!   
+Ha kimész, lapozz a 335-re!
+
+283.
+
+Idegesen rohansz át, szinte meg tudnád ölni azt, aki ilyenkor dörömböl. Betöröd az ajtót és meglátod, hogy egy ember veri a fejét a falba.
+
+Ha segítesz neki a fejverésben, lapozz a 84-re!
+Ha te is elkezded verni a fejed, lapozz a 300-ra!
+Ha megakadályozod, hogy verje a fejét, lapozz a 127-re!
+
+284.
+
+A recepciós nő a tűsarkú cipőjét a testedbe mélyíti. Úgy látszik, túl erős volt. A testedet a recepciós nő a többi áldozata közé dobja. Kalandod véget ért!
+
+285.
+
+Elragadod az ékszerésztől a nagyítót és elkezdesz vizsgálódni. Megállapítod, hogy minden ékszer bizsu és hamisítvány. 
+
+Ha felháborodottan hozzávágod a nagyítót és elmondod, hogy itt minden hamisítvány, lapozz a 44-re!
+Ha nem törődsz vele és kimész, lapozz a 229-re!
+
+286.
+
+Az egyik ajtóra egy nőt, a másikra pedig egy férfit festettek.
+
+A beállsz a nő-s elé, lapozz a 404-re!
+Ha a férfi-s elé, lapozz a 430-ra!
+
+287.
+
+A WC papírt teljes erődből nekivágod az igazgató fejének, de az meg sem érzi, csak idegesebb lesz tőle. Jobbnak látod, ha kimész. (A WC papírt ugyan elveszi az igazgató, azonban kifelé menet találsz egy másik gurigát)
+
+Lapozz a 132-re!
+
+288.
+
+A nő magába roskadva ül, pisztáciát majszolva. Valószínűleg az elmúlt percek eseményei sokkolták őt ennyire. Nem háborgatod, ezért kimész a sikátorból.
+
+Lapozz a 237-re!
+
+
+
+289.
+
+Nem mondunk többet, de különben is, ha tényleg szeretnél nyerni, akkor menj tovább.
+
+Lapozz a 237-re!
+
+290.
+
+Rémülten odafutsz a beteghez. Találsz egy defibrilátort vagy valami ilyesmit. Szerencsére sokat nézted otthon a „Szemműtét a végbélen át” című sorozatot a TV-ben, ezért tudod, hogy kell az ilyesmit csinálni. Megfogod a szerkezetet és a beteg mellkasára teszed. Megnyomsz egy gombot és a férfi teste rázkódni kezd. Pár perc múlva már teljesen fekete a teste. Most veszed észre, hogy itt nem lehet segíteni. Szomorúan mész ki.
+
+Lapozz a 335-re!
+
+291.
+
+Megnézed az étlapot. Nagyon szép betűk vannak rajta, ezért elteszed, mint ahogy a szomszéd asztalnál ülő embertől láttad. A pincér odalép az asztalodhoz és megkérdezi:
+- Melyik ételt választja?
+
+Ha azt mondod, hogy a 14-est, lapozz a 14-re!
+Ha azt, hogy a 92-est, lapozz a 92-re!
+Ha a kérdés hallatára sírva kirohansz, lapozz a 108-ra!
+Ha megmondod a pincérnek, hogy semmit se kérsz, majd kimész, lapozz a 229-re!
+
+292.
+
+A boltosnő boldogan ütögeti a kasszát, és közben énekelve ezt mondja:
+- Hét csoki, fél kg kenyér, egy kézápoló, egy babaszappan és egy üveg körömlakklemosó. Összesen 2 pimpó.
+
+Ha ki tudod fizetni, lapozz a 174-re!
+Ha nincs annyi pénzed, lapozz a 313-ra!
+
+293.
+
+Legyőzöd undorodat és a légylárváktól hemzsegő lovat befalod. Kis idő múlva érzed, hogy a légylárvák elkezdenek szaporodni, és belülről rágnak szét. Kalandod véget ért!
+
+294.
+
+Már egy ideje próbálod eltörni a karod, azonban eredménytelenül. Ekkor, mintha az ég küldte volna, megjelenik egy őr, piroshajú babával a kezében. Annyira meglepődsz, hogy eszedbe se jut elfutni, ami azt illeti nem is tudnál, mert az utadat állja.
+- Segíthetek? - kérdezi udvariasan.
+- Persze, eltörnéd a karom? – mondod.
+- Miért ne?
+Azzal előveszi a babáját, és ripityára töri vele a bal karodat. A fájdalomtól felkiáltasz, és már rohannál is be az ajtón, de az őr megint utadat állja.
+- És a köszönet hol marad?
+Még mielőtt bármit is mondhatnál, eltöri a jobb karodat is. Sírógörcsöt kapsz, és fájó hangon köszönöd meg a segítségét.
+- Na jó, nincs harag! - szól az őr, és betöri az orrodat is.
+Ez az egész jelenet 5 életerőpontodba került. Könnyes szemmel nézel a jószívű őr után. Ezek után teljes hangerővel ordítani kezdesz, majd berontasz az ebédlőbe.
+
+Lapozz a 401-re!
+
+295.
+
+Lesújtasz Kodzsek kopasz fejére, aki holtan esik össze. Csalódottan veszed észre, hogy az egyik nyalóka sem a tiéd.(De hogy gondolhattad, hogy itt van a nyalókád, hisz Piroska Józsinál van) Még egy pillantást veszel a szobára és visszamész Kalambóhoz.
+
+Lapozz a 262-re!
+
+
+296.
+
+A virágcserép suhogva hagyja el kezedet, de ahelyett, hogy a legcsekélyebb mértékben megrongálná az ajtót, kecsesen pattan vissza egyenesen a képedbe. Westel 1 életerőpontot, viszont az orrcsontoddal ellentétben a cserépnek és vele a kaktusznak semmi baja nem lesz.
+
+Ha újra próbálkozol, lapozz a 296-ra!
+Ha megkéred Pannit, hogy nyissa ki, lapozz a 322-re!
+Ha Pannihoz vágod a cserepet, lapozz a 416-ra!
+
+297.
+
+Amint felveszed, támadási és védettségi szinted egyaránt 25 ponttal nő. (Írd fel a kalandlapodra)
+
+Lapozz a 101-re!
+
+298.
+
+A szoba közepén egy hatalmas kaktusz áll. A tetejére egy fehér gumikesztyűt húztak. Most már valószínűleg meg tudod fogni a retymás kilincseket. Megpróbálod leszedni.
+
+Lapozz a 402-re!
+
+299.
+
+Megiszod azt a gusztustalan valamit és kellemetlen érzés fog el. A torkod gőzölög, nem kapsz levegőt, majd végül borzalmas kínok között megfulladsz. Kalandod véget ért!
+
+
+300.
+
+A férfi mellé állsz és te is elkezded verni a fejed. A férfi örül, hogy nem egyedül csinálja. Kis idő múlva elkezd vérezni a fejed. (Vesztesz 3 életerőpontot)
+
+Ha tovább vered, lapozz a 155-re!
+Ha abbahagyod és megakadályozod, hogy ő is verje a fejét, lapozz a 127-re!
+
+301.
+
+Nem érdekel a dolog, mert nagyon félsz a drogoktól. Láttad otthon a TV-ben, hogy milyen szörnyű dolgok történnek a drogok hatására. Kimész a folyosóra.
+
+Lapozz a 335-re!
+
+302.
+
+Elfogyasztod ezt a macsakakacsamócsingcsüngkinn nevű ételt. A vártnál jobb íze van, de nem túl tápláló. (Nyersz 1 életerőpontot)
+
+Lapozz a 141-re!
+
+303.
+
+Kitalálsz egy történetet. Kalambó hunyorítani kezd szemével, majd meglát rajtad egy pár mm átmérőjű nyalókadarabot, mely nadrágodhoz tapadt a harc közben. A következő pillanatban már a bíróságon találod magad, és életfogytiglanra ítélnek. Kalandod véget ért!
+
+
+304.
+
+A zöld szemű kannibálok a törzsfőnökükhöz vezetnek, akinek 90o-os gerincferdülése van, valószínűleg a nyakában lógó rengeteg koponya miatt. A törzsfőnök szemében is látod azt a zöld foszforeszkálást, ezért rájössz, hogy ez csak a nyalóka átka lehet.
+
+Ha megpróbálod feloldozni őt és a többi kannibált, lapozz a 98-ra!
+Ha megpróbálsz elszökni, lapozz a 223-ra!
+
+305.
+
+Odamész a legszimpatikusabb autóhoz, beleülsz, a gyújtást lekötöd egy kis drótszállal, mint ahogy a TV-ben láttad. Az autó azonban nem akar elindulni, mert nincs benne üzemanyag. (A drótot írd fel a kalandlapodra. Ha harcolsz vele 2-3 életerőpont veszteséget okoz)
+
+Ha beülsz egy alvázba, lapozz a 164-re!
+Ha felülsz a futószalagra, lapozz a 115-re!
+Ha kimész, lapozz a 132-re!
+
+
+
+
+
+
+
+
+
+
+306.
+
+Böfögsz egyet és az 250 decibellel rázza végig az indiánfalut. Az indiánok dicsőíteni kezdenek, és ezt mondják:
+- Te vagy a nyalóka ura!
+Ezután odajön hozzád a falu ura és elmondja, hogyan juthatsz ki az erdőből. Az indián főnök utasítását követve átvágsz az erdőn, megtalálod az éneklő bokrot, lelövöd, és végül kijutsz az erdőből és meglátod Piroska Józsi várát. Hatalmas kifli formájú kastély. Elindulsz, hogy bejuss.
+
+Lapozz a 129-re!
+
+307.
+
+Jóízűen nyeled az utolsó falatokat, majd hirtelen furcsa érzés kerít hatalmába. A gyomrodban hatalmas erők csapnak össze. Halk szisszenést hallasz, elmúlik a gyomorgörcsöd, és meleget érzel a hátad mögül. Megfordulsz és rájössz, hogy mi is történt valójában. Egy hatalmasat szell*****tél. 
+Mi a tanulság? Ha legközelebb babot rendelsz, ne ülj dohányzó részlegbe. A bab jótékony hatását egy harc alkalmával használhatod, amikor is 10-30 életerőpont veszteséget okoz ellenfelednek. A nagy kavarodásban fizetés nélkül távozol.
+
+Lapozz a 229-re!
+
+308.
+
+Bemész a kötözőbe. Meglepetten látod, hogy egyetlen élőlény sincs bent, kivétel egy legyet. Észreveszed, hogy a földön van két tál, az egyikben fehér szalagok, a másikban pedig fehér folyadék. Az egyik szekrényben látsz egy láncfűrészt is. Nem érted, hogy miért van itt.
+
+Ha megnézed az edényeket, lapozz a 90-re!
+Ha a láncfűrész érdekel, lapozz az 52-re!
+Ha kimész, lapozz a 400-ra!
+
+309.
+
+Előveszed bagolyfelszerelésedet, majd huhogni kezdesz, de nem segít. A kaktusz nem adja oda.
+
+Ha erőszakot alkalmazol, lapozz a 429-re!
+Ha lefejeled, lapozz a 429-re!
+Ha óvatosan lehúzod, lapozz a 425-re!
+
+310.
+
+Sikeresen levágod a kötést a fejedről, bár nagyon nehéz feladat volt. (Megvágod a hajadat, ezért veszítesz 1 életerőpontot) Nem kockáztatsz tovább, ezért kimész.
+
+Lapozz a 400-ra!
+311.
+
+Belépsz a csigaházba és egy erdő tárul a szemed elé. Sokáig gyönyörködsz a látványban, majd rájössz, hogy meg kéne fordulni. Egy 360o-os fordulatot teszel és hirtelen elédtárul… egy erdő. Elkezdesz forogni, pörögni és ismét egy erdő tárul eléd. Matematikai számításokat végzel el, miszerint a cosinus2 egyenlő a tangens és a kotangens szorzatának és az elefánt tömegének a tizedével, ami annyit tesz, hogy E=MC2 és ehhez három atomnak kell hozzáadni az ionrádiuszát. Végre megkaptad a végeredményt, 180o-ot kell fordulni. Ne feledd el, hogy csak tízig tudsz számolni, így nem lehetsz biztos az eredmény sikerében.
+
+Ha megkockáztatod, hogy használod ezt az eredményt, lapozz a 180-ra!
+Ha a csigaház melletti ösvényen folytatod utad, lapozz a 86-ra!
+
+312.
+
+Nesze neked! Az egész felrobbant veled együtt! A fagyizó tulajdonosa köpött és ezt nem hagyhatta annyiban a maffia, ezért az egészet felrobbantotta. Most örülsz? Kalandod véget ért!
+
+313.
+
+A nő meglepetten rádnéz és hívja a biztonsági őröket, akik elveszik tőled a vett dolgokat és kivezetnek.
+
+Lapozz a 229-re!
+
+314.
+
+Nekirugaszkodsz és a napfény felé rohansz, de a szemedbe érkező erős sugarak miatt nem veszed észre a rácsokat az ablakon. Beleszorul a fejed, de akárhogy rángatod, nem bírod kiszedni. Egyszer csak kilazulnak a rácsot rögzítő csavarok és az erős rázkódás miatt kiszakad a helyéről és veled együtt zuhan a várárok zöld színű vizébe. Egy rácsfejű mutáns leszel a radioaktív löttytől.
+
+315.
+
+A bableves 13 pimpamba kerül.
+
+Ha nincs annyi pénzed, vagy nem tudsz fizetni, lapozz a 323-ra!
+Ha undorodva vágod a pincér képébe a pénzt, majd távozol, lapozz a 229-re!
+
+316.
+
+Belépsz a váróterembe, ahol rengeteg ember vár, de csak kettő tűnik normálisnak. Az egyik egy szakállas öregember, a másik egy terhes /vagy nagyon kövér/ nő, aki elég fiatalnak tűnik. Melyikhez lépsz oda?
+
+Ha az öregemberhez, lapozz a 387-re!
+Ha a terhes /vagy nagyon kövér/ nőhöz, lapozz a 168-ra!
+Ha máshova mész, lapozz a 400-ra!
+
+
+
+
+
+
+
+
+
+317.
+
+A mákos tésztakombinát kétszintes, viszonylag nagy épület. Falait régen pirosra festették, de mára már az összes vakolat lepotyogott róla. Az ösvénytől, amin eddig jöttél egy kövekkel kirakott kis út vezet a gyárig. Az épület bejáratától egy másik csapás vezet az erdőbe, amit elég sokszor használhattak, hiszen még nem nőtte be a fű.
+
+Ha bemész a gyárba, lapozz a 351-re!
+Ha megnézed az erdőbe vezető ösvényt, lapozz a 221-re!
+Ha folytatod utad a városba, lapozz a 410-re!
+
+318.
+
+Odamész arra a helyre, ahol előbb a többiek ettek. Az egyik tálban bab és karfiolmaradványokat találsz.
+
+Ha megkóstolod, lapozz a 47-re!
+Ha kimész, lapozz a 237-re!
+
+319.
+
+Mielőtt még teljesen magadra hagynának, kiadják az utasításokat, mégpedig, hogy napnyugtáig legalább 10 kutyát össze kell gyűjtened, mert ha nem, akkor meg kell tanulnod a szorzótáblát kívülről. Még szerencse, hogy nem volt ott Piroska Józsi az ülésen, mert különben már biztos, hogy ott görnyedhetnél a matekkönyv fölött. Amíg ezen tűnődsz egy lelkes állatbarát kutyagyűjtő a verseny hevében téged is begyűjt. Egy 2 méter hosszú vasvilla szúrja át a testedet.
+
+320.
+
+Biztos, hogy be akarsz menni?
+
+Ha igen, lapozz a 170-re!
+Ha nem, lapozz a 132-re!
+
+321.
+
+Megvakarod a bal lábad, amikor egy kullancs akad a kezedbe.
+
+Ha megküzdesz vele, lapozz a 272-re!
+Ha visszarakod a lábadra, lapozz a 120-ra!
+Ha bedobod az erdőbe, lapozz az 51-re!
+
+322.
+
+Úgy gondolod, az lenne a legilledelmesebb, ha úgy kérnéd meg, ahogy azt az etikett tanárodtól tanultad.
+- Nyissad má’ ki azt a rohadt ajtót!
+Úgy látszik ő is ugyanahhoz az illemtanárhoz járt, mert ékes magyarsággal így felel:
+- Nőjjön haj a bokádon te taknyoslidérc!
+És ekkor megjelenik Ő, az illemtanárnő, Madam McToszlak.
+- Hahó tahók! – kiáltja felétek. – Emlékszek ám a nyomorék fejetekre, büdös kölkök. Tik vótatok a legjobb tanítványaim. De most má’ elhúzom a belem, me’ asszem valaki hítt.
+Azzal távozóban jól becsapja maga mögött a kaszinóhoz vezető ajtót.
+A melletted álló Panni elmereng a régi szép időkön, ezért mivel időd kevés, újra megkéred, hogy nyissa ki az ajtót.
+
+Lapozz a 427-re!
+323.
+
+- Ha nem tudsz fizetni, mosogatnod kell!
+Menekülni próbálsz, ám a pincér leüt és a következő pillanatban a konyhában találod magad, koszos edényekkel körülvéve.
+
+Lapozz a 193-ra!
+
+324.
+
+Odamész a beszélgetőkhöz. Szóba elegyedsz velük és megtudod, hogy már hetek óta nem esett eső.
+
+Ha eljárod az esőtáncot úgy, ahogy a nagyapádtól tanultad, lapozz a 360-ra!
+Ha nem foglalkozol vele, lapozz a 226-ra!
+
+325.
+
+Sikeresen megölöd az ékszerészt, elraksz egy pár ékszert (összesen 5 pimpó) és kimész.
+
+Lapozz a 229-re!
+
+326.
+
+Mintha mi se történt volna, elsétálsz mellette. A csigaház mellett egy északra vezető utat látsz és elindulsz ezen.
+
+Lapozz a 86-ra!
+
+327.
+
+Megfordítod és látod, hogy az alját férgek rágták szét.
+
+Ha mégis megeszed, lapozz a 293-ra!
+Ha továbbhaladsz, lapozz a 27-re!
+
+328.
+
+Korán reggel mókuscsicsergésre ébredsz. Elvégzed a dolgod az erdőben, ugyanis nem akarod bepiszkítani az elefánt fészkét, aki mellesleg még mindig alszik.
+A büdös barna kövekkel szegélyezett úton visszamész a gyárhoz.
+
+Ha bemész a gyárba, lapozz a 351-re!
+Ha a város felé folytatod az utad, lapozz a 410-re!
+
+329.
+
+Kiugrasz az első sorból és Darts Mól segítségére indulsz. Darabokra vágod a vásznat. A közönség finom paradicsomokat és tojásokat dobál feléd. Ezt nagyon jól veszed és meg is eszel egy paradicsomot. Nagyon büszke vagy magadra és kifelé indulsz. Kint megállsz és nézelődsz egy kicsit a mozi előtt.
+
+Lapozz a 108-ra!
+
+
+
+
+
+330.
+
+Közelebb mész az emberhez, de az orrba rúg. (Vesztesz 1 életerőpontot)
+
+Ha kihúzod a férfit, lapozz a 182-re!
+Ha lehúzod a WC-t, lapozz a 361-re!
+Ha beülsz a kádba, lapozz az 55-re!
+Ha kimész, lapozz a 279-re!
+
+331.
+
+Szétnézel, majd a hozzád legközelebb álló részeget leütöd. Úgy néz ki, hogy őérte nem fog senki nekedugrani. Leütöd a következő részeget, aki nagy puffanással a földre zuhan. Mész sorra és a kocsmában lévő összes részeget leütöd. Már csak a csapos maradt, aki semmit sem vett észre az egészből. Odamész és leütöd. Kirámolod a kasszát, átkutatod a részegeket és összesen 17,5 pimpót szedsz össze, mellesleg egy kontaklencsét és egy vetítőgépet. (Az utóbbit nem tudod magaddal vinni, a kontaklencse meg nem ér semmit)
+
+Lapozz a 132-re!
+
+332.
+
+Kis idő múlva egy óriási csigaházat látsz meg, amin ablak és ajtó is van. A házból éppen egy kedves néni lép ki, akinek borotvahab fedi az arcát.
+
+Ha széttapostad a csigát, lapozz a 202-re!
+Ha nem bántottad, lapozz a 75-re!
+
+333.
+
+Elindulsz kifele, de valaminek nekimész. Meg akarod nézni, hogy mi volt az, de nem tudod levenni a kötéseket, amik már teljesen megkeményedtek. Nincs más választásod, meg kell keresned ebben a sötétben a láncfűrészt, hogy megszabadulj a kötésektől.
+
+Lapozz a 149-re!
+
+334.
+
+Ahogy átléped a küszöböt egy valószerűtlenül nagy teremben találod magad. De igazából nem a terem méretei ragadják meg figyelmed, hanem az itt felhalmozott játékok. Az egyik sarokban egy homokozó, a másikban mászóka van. A földön pedig szanaszét hevernek a játékvonatok, babák, kézigránátok, pöttyös labdák és különböző ion és lézerfegyverek.
+Ja és mellékesen P. József is a szobában tartózkodik, zöld bársonyborítású három méter magas, egy méter széles trónusán ül és alszik. Érdekes alvó testtartása miatt a szájából a nyál a fülébe csorog.
+/Eközben a Cxyzf[198] nevű bolygón kihalt a Gryx nevű állatfaj. Szegények! De ez most teljesen lényegtelen! /
+Ezalatt a nemi identitástudatzavarral küszködő Panni egy tükör előtt borotválkozik. Először az arcáról, majd a lábáról távolítja el a szőrt.
+
+Ha a homokozóhoz mész, lapozz a 408-ra!
+Ha a mászókához, lapozz a 275-re!
+Ha megtámadod Józsit, lapozz a 365-re! 
+335.
+
+A folyosón vagy. Választhatsz! (Ahol voltál, ne menj vissza még egyszer)
+
+Ha a műtőbe mész, lapozz a 110-re!
+Ha az ebédlőbe, lapozz a 276-ra!
+Ha a gyógyszerekhez, lapozz a 282-re!
+Ha a WC-be, lapozz a 162-re!
+Ha az elfekvőbe, lapozz a 220-ra!
+Ha felmész a második szintre, lapozz a 207-re!
+Ha kimész a kórházból, lapozz a 226-ra!
+
+336.
+
+Dühösen rontasz neki lemerült fénykardoddal a számodra ismeretlen mozgó szerkezetnek. Ütemesen püfölni kezded a lépcsőt, de a hatalmas monstrumban kárt nem okozol, viszont a gép alól egy zölden világító patkánycsalád bújik elő. Köréd gyűlik mindegyik, és rád támadnak. A legfürgébb gyorsan lerágja a bal lábad és visszaszalad vele a patkányfészekbe. Aztán a többi is megszerzi valamelyik végtagod, és mind visszatérnek otthonukba. Igazán rendes volt tőled, hogy megoldottad szegény éhező patkánycsalád táplálékgondját. Hálából újrakezdheted a könyvolvasást. Kalandod véget ért!
+
+337.
+
+Nagy csobbanással érkezik a vízbe, ahol kapálózni kezd, és azt kiabálja: „Nem tudok úszni, segítsééég!”. 
+
+Ha utána ugrasz, lapozz a 256-ra!
+Ha sírva kiszaladsz, lapozz a 152-re!
+Ha csak simán mész ki, lapozz a 277-re!
+
+338.
+
+A börtönőr barátod megtudta, hogy ide kerültél. Beront érted, majd ki akar vinni. Te nagyon ellenkezel, nem akarsz elmenni. Tegyél szerencsepróbát!
+
+Ha sikerült, lapozz a 30-ra!
+Ha nem, lapozz a 188-ra!
+
+339.
+
+Mit veszel?
+
+Kenyér:…………………………………………………………………………………………1pimpam
+Kakaós csiga:…………………………………………………………………………………..1 pimpam
+Lekváros sütemény:……………………………………………………………………………2 pimpam
+Túrós sütemény:………………………………………………………………………………..3 pimpam
+
+Bármiből választhatsz, csak fizesd ki és írd fel a Kalandlapodra. Ahányat vettél, annyiszor 1 életerőpontot gyógyulsz vissza. Összesen 5 dolognál nem vehetsz többet.
+
+Lapozz a 229-re!
+
+
+
+
+
+340.
+
+Torkod szakadtából elkezdesz sikítani. Az arra járó emberek azonnal a telefonhoz rohannak.
+
+Lapozz a 108-ra!
+
+341.
+
+A kutya egy pillanat alatt felzabálja a kaját. Nem volt rossz ötlet, de jó se. Kutyakaja lesz belőled. Kalandod véget ért!
+
+342.
+
+Már annyira vakartad a lábad, hogy kivérzett. (Vesztesz 5 életerőpontot)
+
+Ha megvakarod a bal lábadat, lapozz a 321-re!
+Ha nem törődsz vele, lapozz a 72-re!
+
+343.
+
+Odabent az eltelt évek ellenére is ragyogó rend fogad. A polcokon szép sorban állnak a könyvek, számlakönyvek, képregények és egyéb dísztárgyak.
+Az ablak előtt Józsi íróasztala van, amit gyorsan átkutatsz. Egyenként húzod ki a fiókokat. Hirtelen az egyikből egy guminő ugrik elő. Valószínűleg matracként használta Józsi a strandon. Sajnos túl nagy, hogy beleférjen a táskádba, leengedni nem tudod, úgyhogy itt hagyod.
+Semmi érdekeset nem találsz a továbbiakban, ezért elhagyod a szobát.
+
+Ha a jobb oldali ajtón nyitsz be, lapozz a 424-re!
+Ha a bal oldalin, lapozz a 245-re!
+Ha elhagyod a gyárat és a város felé veszed az irányt, lapozz a 410-re!
+
+344.
+
+Ismét egy elágazáshoz érsz. 
+(Ha már elmúlt este 10 óra, akkor rakd le a Nyalókát, moss fogat és feküdj le aludni. Ha nem mosol fogat, vonj le 1 szorgalompontot. Ha nem múlt el 22 óra, akkor továbbolvashatod.)
+
+Ha egyenesen mész, lapozz a 239-re!
+Ha balra, lapozz a 143-ra!
+Ha visszamész a kastély bejáratától balra lévő „AJTÓHÓ”, lapozz a 390-re!
+
+345.
+
+Már majdnem megfogod a kilincset, azonban a kezed hirtelen megáll a levegőben. A kilincsen valami undorító, gusztustalan zöld retyma van, ami valószínűleg nyál lehet és még büdös is. De ki nyálazta össze? Inkább mégse mész be. Egy olyan tárgyra lesz szükséged, aminek a segítségével ki tudod nyitni az ajtót, anélkül, hogy megérintenéd.
+
+Ha az ablakhoz mész, lapozz a 423-ra!
+Ha a P-s ajtóhoz, lapozz a 413-ra!
+
+
+
+
+
+
+346.
+
+Odalépsz hozzá és kiragadod a kezéből a pisztáciát, majd futásnak eredsz. Már majdnem kiérsz a sikátorból, amikor a nő eléd veti magát és azt ordibálja:
+- A golyós dezodoromat ellopták, de a pisztáciámat nem adom!
+A következő pillanatban belédmélyeszti mind a kilenc műkörmét. Kalandod véget ért!
+
+347.
+
+Mész és látsz egy táblát, amire ez van írva: „SZAKADÉK 100 MÉTERRE”. Azt mondod, hogy Á és legyintesz. 
+
+Ha mégis meggondolod magad és visszafordulsz, lapozz a 247-re!
+Ha továbbmész, lapozz a 250-re!
+
+348.
+
+A városfal mellett haladsz tovább, majd kis idő után kiérsz az országútra. Esteledni kezd, ideje lenne lefeküdni. Az út szélén találsz egy megágyazott franciaágyat. Most nem akarsz tovább menni, ezért lefekszel az ágyba, megkeresed Brumit a macidat, és álomba szenderülsz. Az ágy alatt találsz 3 napi élelmet. (1 napi élelem 2 életerőpontot gyógyít vissza)
+
+Lapozz a 263-ra!
+
+349.
+
+- Ha szobát akar, fizessen 4 pimpót! – mondja a recepciósnő.
+- Miért kerül ilyen sokba? – kérdezed érdeklődve.
+- Azért, mert most csak a luxusszobák vannak szabadon. Itt csak a leggazdagabb és legbefolyásosabb személyek szoktak megszállni. Nem olyanok, mint Maga!
+
+Ha van annyi pénzed és kiveszel egy szobát, lapozz a 133-ra!
+Ha nem és kimész, lapozz a 229-re!
+
+350.
+
+Rohansz a WC-hez, elkezded magad felé rángatni az ajtót, de az nem nyílik ki. Nincs mit tenni, lerókázod a WC ajtót.
+
+Ha megnézed miért nem nyílik, lapozz a 162-re!
+Ha nem érdekel, lapozz a 335-re!
+
+351.
+
+A gyár valószínűleg tele van gépekkel, amelyek egykoron elvégezték a mák feldolgozását és a tészta csomagolását. Azonban az ajtón belépve egy hatalmas, ámde üres terem tárul a szemed elé. Szemben veled egy lépcső vezet fölfelé.
+
+Ha fölmész, lapozz a 420-ra!
+Ha megnézed azt a csapást, ami az erdőbe vezet, lapozz a 221-re!
+Ha a város felé indulsz, lapozz a 410-re!
+
+
+
+
+
+
+352.
+
+Előveszed legjobb viccmesélő képességedet, és elmesélsz nekik vagy 20 rendőrviccet. Nagyon furcsa szemekkel néznek rád, úgy tűnik, nem értik a viccet.
+
+Ha elmeséled nekik még egyszer, lapozz a 186-ra!
+Ha megijedsz a vérben forgó szemektől, és inkább kimész, lapozz a 226-ra!
+
+353.
+
+Sajnos nem nyert.
+
+Ha átmész egy másik rulettasztalhoz szerencsét próbálni, lapozz a 411-re!
+Ha a félkarú rablóhoz mész, lapozz a 426-ra!
+Ha beállsz a sorba, lapozz a 286-ra!
+Ha kimész, lapozz a 176-ra!
+
+354.
+
+Úgy döntesz, hogy ellenségedről próbálsz megtudni valamit. Sajnos a számítástechnika órákon nem nagyon figyeltél. Hirtelen két rendőr jelenik meg és börtönbe visznek. Valami olyasmit mondanak, hogy tönkre tetted az egész rendszert.
+
+Lapozz a 106-ra!
+
+355.
+
+- Jól van, kapsz könnyítést. Mennyi 5+6?
+
+Ha tudod a választ, lapozz arra a számra! 
+
+356.
+
+A verseny már félórája folyik, ám te többet gyűjtesz 5 perc alatt, mint a többiek, akik már elejétől kezdve játszanak. Az első hely nem kétséges kié, ugyanis az egyik lakója az intézetnek nyeri a versenyt. Te sajnos nagyon elbíztad magad a végén. De sebaj, legalább nem lettél utolsó. Legközelebb ne becsülj le senkit. Mit csinálsz?
+
+Kimész, lapozz a 237-re!
+Szétnézel a házban, lapozz a 158-ra!
+
+357.
+
+Egy út vezet nyugat felé. Mivel más út nincs, ezért erre haladsz tovább. Eléggé egyhangú területen mész végig, jobb és baloldalon egyaránt fák vesznek körül. Egyszer csak egy észak felé vezető utat pillantasz meg.
+
+Ha erre haladsz tovább, lapozz a 196-ra!
+Ha továbbra is nyugat felé folytatod utad, lapozz a 19-re!
+
+358.
+
+Miután kiszabadulsz, megtudod egy várositól, hogy a Nyalóka egy atomreaktor felrobbanása után sugárfertőzött lett, ezért megsemmisítették. Kalandod véget ért!
+
+
+
+359.
+
+Berakod a kannibáloktól kapott kulcsot a kulcslyukba, elforgatod, és egy csapóajtó nyílik ki alattad. Belezuhansz. Egy hosszú alagutat látsz. Valószínűleg a várárok alatt húzódhat. Az alagút végén fényt pillantasz meg. Elindulsz arra és…
+
+Lapozz a 122-re!
+
+360.
+
+Félmeztelenre vetkőzve ugrálni kezdesz az utca közepén.
+
+Lapozz a 108-ra!
+
+361.
+
+Meghúzod a fogantyút, mire az ember pörögve eltűnik a WC kagylóban. A férfi kalandja véget ért!
+
+Ha beülsz a kádba, lapozz az 55-re!
+Ha kimész, lapozz a 279-re!
+
+362.
+
+Nem adod oda neki a rágógumit, mire ő nagyon bemérgesedik. Kicsavarozza az ajtóból a kilincset, és rád támad.
+
+Röntgenes: életerő 22, támadási képesség 18, védettségi szint 14. Minden sikeres támadásával 2-3 életerőpont veszteséget okoz az ajtókilinccsel. 
+
+Ha győztél, lapozz a 373-ra!
+Ha vesztettél, kalandod véget ért!
+Ha elmész péknek, lapozz a 255-re!
+
+363.
+
+Ennek a piros miacsodának (nem találtunk más szinonimát a folyadékra) málnaízű szörp íze van. De hiszen ez az, málnaszörp. Ez a kedvenc itókád. Nyersz 3 életerőpontot.
+
+Ha megiszod a kéket, lapozz a 131-re!
+Vagy a sárgát, lapozz a 419-re!
+Ha akarod, kipróbálhatod a zöldet, lapozz a 219-re!
+Ha abba a szobába mész be, ahonnan az óvóbácsi jött ki, lapozz a 135-re!
+Ha a kastély bejáratától balra levő "AJTÓHÓ" mész, lapozz a 390-re!
+
+364.
+
+Milyet veszel? Van sima, sajtos-sonkás és ciános. A spenót ízű épp most fogyott el. Kávéízűt pedig már nem gyártanak.
+
+Ha simát veszel, lapozz a 7-re!
+Ha sajtos-sonkásat, lapozz a 45-re!
+Ha ciánosat, lapozz a 233-ra!
+Ha megnézed a filmet, lapozz a 20-ra!
+Ha kimész, lapozz a 132-re!
+
+
+
+365.
+
+Józsi trónusa egy négylépcsős emelvény tetején helyezkedik el. A lépcsőket sündisznőbőr szőnyeg borítja. Óvatosan indulsz el a lépcsőn fölfelé, hogy álmában lephesd meg a Nyalókatolvajt, ám nagy igyekezeted hiábavaló. Az első lépés után elvágódsz és lefejeled József térdét. Legfőbb ellenséged azonnal felriad álmából, majd miután szétkente arcán a szájából kifolyó nyálat, így szól hozzád:
+- Miért kék az ég, ha a mókusok csicseregnek?
+- He? Mi va’? Vokopájzájszija szanontoja!
+- Milyen tojás? Hol vagyok? Miért kék az ég? Miért csicseregnek a mókusok? És te ki vagy?
+- Én nem vagyok ki, hanem …………………….. vagyok! (Ide írd be a neved! Ha nem tudod, írd azt, hogy Tulkán Szánhozé György Gizella)
+- Azért jöttem, hogy visszavegyem azt, ami egészen addig a jogos tulajdonomat képezte, amíg el nem vetted: A Büdös Bal Zoknimat! Nem is, te a Nyalókámat vetted el, a zoknimat Szabó István, a világhírű bűztenyésztő és terjesztő ejtette túszul.
+Na mindegy! Add vissza, mert különben megmondalak a Mikulásnak!
+- Haha! Most melléfogtál! Nem hiszek a Mikulásban, csak a Télapóban! Ha kell gyere és vedd el, azzal előkapja és…
+
+Lapozz a 281-re!
+
+366.
+
+Jobb lesz, ha felveszel egy pelenkát, mielőtt valami baj történne. Beveszed a gyógyszert és elkezd görcsölni a hasad. Jól meghajt, de szerencsére van rajtad pelenka. Növeld 1 ponttal a támadási képességedet, mivel sokkal kevesebb súlyt kell cipelned.
+
+Ha találomra leveszel valamit és megeszed, lapozz a 67-re!
+Ha találomra leveszel valamit és megiszod, lapozz a 173-ra!
+Ha keresel valami használhatót, lapozz a 140-re!
+Ha kimész, lapozz a 335-re!
+
+367.
+
+Fent egy ajtóhoz érsz. Benyitsz és egy zöld padlószőnyeges szobába érsz. A terem zsúfolásig van különböző nyerőautomatákkal és játékasztalokkal. Azonban nem sok embert látsz a Kaszinóban, mert szinte mindenki két ajtó előtt sorakozik. Van egy harmadik ajtó is, ami valószínűleg a szobából vezethet ki.
+
+Ha a rulettasztalhoz mész, lapozz a 411-re!
+Ha a félkarú rablóhoz, lapozz a 426-ra!
+Ha beállsz a sorba, lapozz a 286-ra!
+Ha kimész, lapozz a 176-ra!
+
+368.
+
+Benyomod kiveszed, benyomod kiveszed, benyomod kiveszed, és büszkén törlöd le a vért a recepciósnőtől elvett hajtűről, de véletlenül megkaristolod magad és elkapod a halálos kórt. Így már nem tudod teljesíteni küldetésedet. Kalandod véget ért!
+
+369.
+
+A magas fűben találsz egy búvárruhát. Felpróbálod. Pont jó rád. Úgy gondolod, így biztonságosan átúszhatod a várárkot. Belemész a vízbe, és szerencsésen átúszol. Kinyitod a kaput és belépsz.
+
+Lapozz a 122-re!
+
+
+370.
+
+Lekaszabolod az összes tűzoltót, és a WC-be rohansz. Bent egy újabb tűzoltót találsz, akinek teljesen vörös a feje, nem is mersz hozzányúlni. Talán még kibírod egy pár percig. A következő pillanatban nagyot sóhajt, majd önkéntesen átadja a helyet.
+
+Lapozz a 232-re!
+
+371.
+
+Belépsz a kocsmába. Mikor kinyitod az ajtót véletlenül leütsz egy részeget, aki ájultan zuhan a földre. Átkutatod és találsz nála 1 pimpót. Odamész a bárpulthoz és felajánlod a csaposnak, hogy felváltana-e 1 pimpót 2 pimpóra. Tegyél szerencsepróbát!
+
+Ha sikerült, lapozz a 184-re!
+Ha nem, lapozz a 192-re!
+
+372.
+
+Amikor közelebb érsz, látod, hogy tulajdonképpen ezek a vár őrei, akik a szabadidejüket kis autókkal való játszadozással és babázással töltik. Hatan vannak. Az egyik épp most veszi el a másiktól a játékát, mire az ordítozásba kezd. Amikor lenyugszik, követve társa példáját, ő is elveszi a másik játékát. Hamarosan tömegverekedés tör ki közöttük. 
+
+Ha kihasználod az alkalmat és a verekedésben eldobált játékokkal játszol, lapozz a 138-ra!
+Ha még nem voltál, most elmehetsz a kertbe, lapozz a 249-re!
+Vagy a kastélyba, lapozz a 273-ra!
+
+373.
+
+Érdemes volt otthon sokat nézni az önvédelmi tanfolyamokat a TV-ben, sokat tanultál belőlük, igaz most nem használtad. Mindegy, most legyőzted a röntgenest. Körbenézel, de nem látsz semmi érdekeset, csak egy almacsutkát. (Ha akarod magaddal viheted, de akkor írd fel a kalandlapodra!)
+
+Lapozz a 400-ra!
+
+374.
+
+Több órás kutatás után találsz a földbe rejtve egy kulcslyukat. A kulcslyuk mellett van egy papír, amin ezt olvasod: „Olvasd visszafelé a kannibálok kulcsát és bejutsz a várba!”
+
+Ha tudod, hogy mit kell tenned, lapozz oda!
+Ha fogalmad sincs, hogy mit csinálj, lapozz a 117-re!
+
+375.
+
+Sikeresen bedobod az erdőbe. 1 mm-en múlt, hogy nem nyomtad szét. Boldogan indulsz tovább.
+
+Lapozz a 72-re!
+
+376.
+
+Lenyeled, majd furcsa érzés kerít hatalmába. Zölden világít a szemed. Kalandod véget ért!
+377.
+
+Benyitsz a szobába. Az őrt nem látod sehol, viszont szemközt van egy ajtó. Valószínűleg ott tartózkodhat. A szobában egy ágy, egy asztal és egy ember méretű mókuskerék van.
+
+Ha lefekszel az ágyba, lapozz a 208-ra!
+Ha odamész mókuskerekezni, lapozz a 139-re!
+Ha a szemközti ajtóhoz mész, lapozz a 81-re!
+Ha kimész, lapozz a 279-re!
+
+378.
+
+Már majd kiesik a mandulád, mikor végre fölnéz és megszólít:
+- Miben segíthetek?
+- A nyalókáról érdeklődnék – válaszolod.
+- Arról nem sokan tudok, csak azt, hogy a végtelen erdő mögött egy kastélyban van. Nagyon vigyázz az úton. Veszélyes. A városkapun csak úgy tudsz kimenni, ha a számítógépnek azt válaszolod, hogy 36. 
+Megköszönöd az információkat és kimész.
+
+Lapozz a 41-re!
+
+379.
+
+Már messziről érzed a pékség jó illatát, de kiderül, hogy egy koldus épp egy jót böfögött. Nem is érted, hogy lehet ilyen jó illata, de mindegy. Valószínűleg hagymát és parasztkolbászt evett. Megint érzel illatot, amint eltávolodsz a koldustól, ez már a pékség illata lehet, de ez már nem olyan jó. Bemész. Rengeteg péksüteményt látsz, csak egy dolog zavar, rengeteg a légy. Szinte az összes péksüteményen van egy, ott mászkálnak össze-vissza.
+
+Ha vennél valamit, lapozz a 339-re!
+Ha kimennél, lapozz a 229-re!
+
+380.
+
+Városfal mellett mész végig, mikor meglátsz egy embert, aki a hasa előtt rángatja a kezét és folyik a nyál az orrából. Rádnéz és idegesen feléd rohan.
+
+Ha arrébb lépsz és kiteszed a lábad, hogy a falnak repüljön, lapozz a 148-ra!
+Ha hősiesen megküzdesz vele, lapozz a 271-re! 
+
+381.
+
+Kiveszed a dobozból a szívet, mire a kutya elkezd pitizni. A szív segítségével megtanítod a kutyát a legfontosabb dolgokra, pl.: ül, fekszik, pitizik, pacsit ad és atombombát épít. Most, hogy már kiszórakoztad magad, ideje továbbmenni. Kidobod a szívet az udvarra, mire a kutya utána rohan. Hogy ne legyen több gondod vele, becsukod a kastély ajtaját, de sajnos az ujjad ott marad. (Vesztesz 1 életerőpontot) Egy folyosón vagy.
+
+Lapozz a 31-re!
+
+382. 
+
+Benyitsz a hetesbe. Semmi érdekes sincs, csak egy WC pumpa. Azt gondolod, hogy ez még hasznos lehet és elrakod. (Írd fel a kalandlapodra!) Ezután kimész az első emeleti folyosóra.
+
+Lapozz a 335-re!
+383.
+
+Amikor legyőzöd az óceánt egy ideig lenyugszik, de azután ismét elkezd háborogni és legnagyobb meglepetésedre kettényílik. A túloldalról egy nomád lovascsapat vágtat feléd. Amikor az óceán közepére érnek, a víz ismét összecsapódik. Már kezdted unni őket, ezért nagyon boldog vagy, hogy végre végük. Hirtelen a vízben bugyborékolást látsz, ami egyre közeledik és a nomád lovascsapat kivágtat a vízből. Ijedtedben visszarohansz az útkereszteződéshez és elindulsz a vár felé. (Nézd meg a varázsamuletteden lévő számot és lapozz oda!) Ez csak vicc volt.
+
+Lapozz a 266-ra!
+
+384.
+
+Már elindulnál kifelé, mikor lépéseket hallasz kívülről. Elfog a félelem. Tegyél szerencsepróbát!
+
+Ha sikerült, lapozz a 235-re!
+Ha nem, lapozz a 32-re!
+
+385.
+
+Mész tovább, egyszer csak találkozol egy tehénnel, aminek tollak állnak ki a fejéből és inkább emberre hasonlít, mégis indián. Arra kényszerít, hogy menj vele. Levezet az útról, be a sűrű fák közé. Megérkezel az indiántáborba. Hatalmas felhőkarcolókat, csúcstechnikával ellátott autókat és légkondicionálós emeletes házakat látsz. Hallasz egy reccsenést és ez az egész látványkép ledől eléd (csupán vászonra volt festve). Az indiánok ordítozva rohannak oda, hogy megpróbálják felállítani. Az öreg indián, aki bevezetett ide, megszólal:
+- Eljött az ember, aki ledönti a látványképet. Győződjünk meg róla, hogy tényleg ő az! Tegyük ki a halálpróbának! Ha túl éli, akkor ő az, ha nem, akkor meg úgyis mindegy! 
+
+Ha túl akarod élni a próbát, lapozz a 65-re!
+Ha inkább nem állod ki, lapozz a 189-re!
+
+386.
+
+Rájössz, hogy csak álmodtál, és hogy nincs semmilyen páncél. Érzed, hogy a bal füled tiszta víz és erős bűz árad belőle. Látod, amint egy béka röhögve ugrál el melletted. Valószínűleg ő hugyozott a füledbe. Idegességedben a béka után nyúlsz, elkapod és megeszed. Igaz a nyers béka nem túl finom, de tápláló. Életerőpontod a maximumra áll.
+
+Lapozz a 247-re!
+
+387.
+
+Odalépsz az öregemberhez. Ahogy közelebb érsz, látod, hogy a fülére van tekeredve a szakálla. Megkérdezed tőle, hogy hova vár, mire ő ezt válaszolja:
+- Az ablakhoz!
+Idegesen elkezd rohangálni, majd az ablakhoz fut és kiugrik. Utolsó szavai ezek:
+- Hééééééééééé, ez nem a földszin… majd hallasz egy nagy puffanást és egy nyekkenést, majd csönd lesz. Nem igazán érted, hogy mit csinált, de most már mindegy.
+
+Ha elmész a terhes /vagy nagyon kövér/ nőhöz, lapozz a 178-ra!
+Ha szétnézel a második szinten, lapozz a 400-ra!
+ 
+388.
+
+Undorodva nyúlsz a csigák után és egytől-egyig  megeszed mindet. E tápláló kaja 1 életerőpontot gyógyít vissza neked. De mivel a csigák forróak voltak, vesztesz 2-őt. 
+
+Ha benevezel a versenyre, lapozz a 356-ra!
+Ha kimész, lapozz a 237-re!
+
+389.
+
+A kakaóscsiga nagyon ízletes, csak az a baj, hogy semmi íze sincs. Ettől függetlenül jót tesz neked. (Nyersz 2 életerőpontot)
+
+Ha megnézed a csigákról készült aktfotókat, lapozz a 16-ra!
+Ha az a papír érdekel, ami az asztalon van, lapozz a 264-re!
+Ha kimész, lapozz a 86-ra!
+
+390.
+
+Ahogy megérkezel az AJTÓHÓ, egy plakátra leszel figyelmes, amire a következőket írták:
+„Csendet kérünk, ülésezés folyik az ebédlőben!"
+
+Ha szép csendben mész be, lapozz a 415-re!
+Ha eltöröd a karod, és ordítva berohansz, lapozz a 294-re!
+
+391.
+
+Elkezdesz beszélgetni a jámborszarvassal. Megtudod tőle, hogy ennek a könyvnek az egyik írója folyton dobál mindent, egy másik pedig fakardmániás (mellesleg nagyon szereti a pénzt), aki pedig ezt a részt írta, az olyan rondán ír, hogy begépeléskor alig lehetett elolvasni ezt a fejezetet (ráadásul a helyesírásában kismillió hiba van). Most még több információval veszel búcsút a jámborszarvastól, és tovább indulsz.
+
+Ha a csapáson keresztül távozol észak felé, lapozz a 257-re!
+Ha nyugat felé indulsz, lapozz a 19-re!
+
+392.
+
+Közelebb lépsz hozzájuk. Melyikkel beszélsz?
+
+Ha az ebolással, lapozz a 399-re!
+Ha az AIDS-essel, lapozz a 69-re!
+Ha a leprással, lapozz a 179-re!  
+
+
+393.
+
+Halk léptekkel elsétálsz mellette, de ő a hasától nem lát téged, így el tudsz osonni mellette.
+
+Lapozz a 22-re!
+
+
+
+
+
+
+
+394.
+
+A következő teremben festmények vannak kiállítva. Elég unalmasak.
+
+Ha jobban megnézed őket, lapozz a 130-ra!
+Ha a következő terembe mész, lapozz a 278-ra!
+Ha kimész, lapozz a 237-re!
+
+395.
+
+A szerencsepróbád sikerült ugyan, de a szökésért még 10 évet kapsz, ugyanis elkaptak. 
+
+Lapozz a 358-ra!
+
+396.
+
+Gyönyörű szép szoba, a baj csak az, hogy csak egy ágy meg egy TV van benne. Az ablakok is be vannak falazva.
+
+Ha alszol, lapozz a 8-ra!
+Ha nézed a TV-t, lapozz a 241-re!
+
+397.
+
+Jóízűen elfogyasztod a szendvicset, bár valami kellemetlen utóíze van. Elkezd fájni a hasad, és szédülni kezdesz, majd elesel és meghalsz. Valószínűleg patkányméreg lehetett benne. Kalandod itt véget ért!
+
+398.
+
+Érdekes ez az erdő, hiszen egy fa sincs benne, mellesleg meleg van és a táj is teljesen kopár. Mindegy, elindulsz errefelé. Egy-két óra múlva rájössz, hogy tulajdonképpen ez a puszta, tehát valaki vagy összecserélte a táblákat vagy te nem tudsz olvasni. Most már nem fordulsz vissza, mert sok idő lenne és ebben a helyzetben minden perc számít. 
+  Ahogy haladsz tovább, egyszer, mintha egy hangot hallanál a hátad mögül, méghozzá egy Ferrari F-50-ét, amiben a sofőr egy kék zakóban ül, fekete napszemüveg takarja el az eredetileg barna, de a kontaklencse miatt kék szemét. A fején fekete bézból sapka van, egy „Nem vagyok hülye” felirattal a közepén, alatta tüsi felzselézett haja, és még hallod, hogy a kocsi bal oldali ajtaján egy karcolás van, amit egy őzgida elgázolásával szerzett. Persze, hacsak a füled nem csal. 
+Megfordulsz és egy kék Trabantot látsz. Már megint nem mostál fület. Vonj le egyet a szorgalompontjaidból. Hirtelen megtámad egy ötlet, de a Trabantos elgázolja. A sofőr kiszáll. Nagyon hosszú haja van, ami leér a földig, és egy rongyos, koszos és piros szerelőruha van rajta. Odamegy a tetemhez és az ötlet láttán elájul. Te rögtön kihasználod az alkalmat és beszállsz a kocsiba, hogy gyorsan a várhoz érj. Megpróbálod beindítani, de csak megráz a 24 V (Vesztesz 1 életerőpontot) Ekkor bekövetkezik legrosszabb rémálmod. A sofőr feleszmél és feléd rohan, de rálép a hosszú hajára és elesik. Újból elájult. Gyorsan elrohansz innen, mielőtt felébred.
+  Ahogy mész egyszer csak egy nomád lovascsapat vágtat el melletted. Egy kereszteződéshez érsz.
+
+Ha északra mész, lapozz a 4-re!
+Ha keletre, lapozz a 18-ra!
+
+
+
+
+
+
+
+399.
+
+Nagyon kedvesnek tűnik az ebolás férfi, ezért odamész hozzá és megkérdezed:
+- Miben szenved? 
+- Hát ágyban, mégis miben! – válaszolja dühösen.
+- Tényleg, azt hittem ebolában. Ez egy új vírus, vagy csak elírták? – mutatsz rá a kórlapjára. 
+Azonban már nem kapsz választ a kérdésedre. Nagyon sajnálod szegény embert. Inkább nem nyúlsz hozzá, de azért az ágy körül szétnézel. Sokáig kutakodsz, de nem találsz semmit.
+
+Ha tovább kutatsz, lapozz a 113-ra!
+Ha az AIDS-eshez mész, lapozz a 69-re!
+Ha a lepráshoz, lapozz a 179-re!
+Ha kimész a folyosóra, lapozz a 335-re!
+
+400.
+
+A következő ajtók közül választhatsz. (Ahol voltál, ne menj vissza még egyszer, nincs értelme!)
+
+Ha a röntgenbe mész, lapozz az 5-re!
+Ha a szülészetre, lapozz a 218-ra!
+Ha a kötözőbe, lapozz a 308-ra!
+Ha a megfigyelőbe, lapozz a 99-re!
+Ha a váróterembe, lapozz a 316-ra!
+Ha kimész, lapozz a 226-ra!
+Ha az első szintre mész, lapozz a 34-re!
+
+401.
+
+Úgy látszik a teremben lévők még nem láttak kiabáló embert, mert nagyon furcsán néznek rád. De ez nem tart soká, mert ahogy magukhoz térnek első megdöbbenésükből rád vetik magukat. Egy erős kötéllel megkötöznek és az egyik sarokba löknek, majd visszaülnek a helyükre és folytatják a beszélgetést. 
+Orrfacsaró bűzre leszel figyelmes, amikor az éppen felszólaló fehérköpenyes, kissé már kopaszodó ember szólásra nyitja a száját: 
+„A Magyar Fogorvosok Szövetségének elnöke vagyok, és azt ajánlom mindenkinek, hogy termeljen sok nyálat és mosson fogat cukormentes rágógumival!"
+Majd elvigyorodik és előtűnnek a még megmaradt, rohadófélben lévő fogai. Ahogy leül, és száját becsukja, a bűz nem fojtogat már annyira, sőt egy kis szellőztetés után a maradék szájszag is eltűnik a teremből.
+Az ülésezés tovább folyik, a következő felszólaló egy Fekete Norbert nevű lótenyésztő, aki másodállásban kalapokat árul és csak azért jött ide, hogy reklámozza saját kalap és ló boltját, ezért gyorsan ki is rakják a szűrét.
+Hát ez bizony kezd már kicsit unalmas lenni, de még mindig nincs vége. Most egy kis köpcös emberke emelkedik szólásra:
+„Szerintem minden gondot megoldana, ha a fodrászüzleteinkben hamburgert árulnánk, ezért rendezzünk kutyagyűjtő versenyt!"
+Javaslatát tapsvihar fogadja, amit csak éles női hang szakít félbe:
+- És ezzel mi lesz? - mutat rád egy kb. két méter magas férfi.
+Tegyél szerencsepróbát!
+
+Ha sikerült, lapozz a 252-re!
+Ha nem, lapozz a 421-re!
+
+
+
+
+
+402.
+
+Ha óvatosan lehúzod, lapozz a 425-re!
+Ha lefejeled, lapozz a 429-re!
+Ha erőszakkal akarod elvenni, lapozz a 429-re!
+Ha bagolynak álcázod magad, lapozz a 309-re!
+
+403.
+
+Benyitsz zöld ajtaján, és csalódottan veszed tudomásul, hogy ez tényleg nem egy MULTIPLEX mozi.
+Azonnal megállapítod, hogy ez a pottyantós WC-k β 23-as szuperfunkciós fejlesztése, dizájnos WC papír tartóval és aranyozott WC ülőkével felszerelve, klímával megspékelve, ahogy otthon a tanyátokon. Kár, hogy itt nincs TV.
+Furcsa mód semmilyen kellemetlen szagot nem érzel. Kíváncsiságod nem hagy nyugodni, ezért a lyuk fölé hajolsz.
+A luk alatti üreget egy éppen alvó rózsaszín elefánt lakja. Azt is megállapítod, hogy a lyuk mindenféle salakanyagtól mentes. Most jössz rá, hogy mik is voltak azok a büdös barna kövek ott az út szélén. A leküzdhetetlennek tűnő távolság a gyár és a WC között megállásra késztette az embereket, akik ott könnyítettek magukon. Mi a tanulság? Nem a WC van messze, csak időben kell elindulni!
+Mikor kilépsz a budi ajtaján lövés dördül, majd a Nap sikítva zuhan le a látóhatár mögé. (Már megint elkezdődött a vadászidény)
+A zaj következtében az elefánt felébred, hatalmasat ordít, majd elcsendesedik és ismét hangos horkolásba kezd.
+Sötétség borul a tájra. A Hold valószínűleg nem számított ilyen gyors műszakváltásra. Jobbnak látod, ha letáborozol, nehogy a sötétben eltévedj.
+
+Lapozz a 328-ra!
+
+404.
+
+Türelmesen végigvárod a hosszú sort, és már készülsz rá, hogy bemenj erre az elit helyre, de a nyíló ajtóban megjelenő hölgy nem enged be, hanem előbb alaposan megnéz és cérnavékony hangján rádkiabál:
+- Maga disznó! – azzal lekever egy hatalmas pofont, és te átrepülsz a másik sorba.
+
+Ha bemész ide, lapozz a 430-ra!
+Ha a rulettasztalhoz mész, lapozz a 411-re!
+Ha a félkarú rablóhoz, lapozz a 426-ra!
+Ha kimész, lapozz a 176-ra! 
+
+405.
+
+Amint elfordítod a kulcsot egy kalitka esik rád és elzárja utadat. Amíg a szabaduláson töröd a fejed egy méhecske repüli körbe a fejed. Felfigyelsz a halk zúgásra és elkapod a kis bogarat. Közelebb emeled szemedhez, hogy jobban szemügyre vehesd, de amint kinyitod a kezed, kirepül és megcsípi az orrodat. A méhecske különösen veszélyes fullánkja miatt először csak az orrod, majd a fejed dagad akkorára, mint egy TV. 
+
+
+
+
+
+
+
+
+
+406.
+
+Közelebb mész hozzá, bekukucskálsz a lukon, mire kellemetlen illatmolekulák kezdik ingerelni szaglóreceptoraidat. Ha van orrcsipeszed, akkor rakd föl a füledre, ha nincs, akkor ne rakd fel és vonj le 1 életerőpontot. A lyukban egy rózsaszín elefánt van, aki éppen alszik. Hát ez nagyon érdekes volt! Miközben azon gondolkozol, hogy hogyan férhetett be azon a kis lukon, a kint lévő türelmetlen emberek rád törik az ajtót és tolongani kezdenek a lyuk körül. 
+A nagy tömeg ellenére sikerül kijutnod, majd kifelé menet még egyszer visszafordulsz és látod, amint 5 ember feje egyszerre szorul be.
+Kilépsz az ajtón, majd ismét a Kaszinóban találod magad. Kész csoda! Mivel már nem tanácsos itt maradnod, ezért a kijárat felé indulsz.
+
+Lapozz a 176-ra!
+
+407.
+
+Ekkor álmaid rémálmának testvére, PIROSKA PANNI lép be a kaszinó felől. A kezét a hasa előtt rángatja és folyik a nyál az orrából, mint amikor Kelbimbó Sziti városfala mellett találkoztatok. Most azonban nem kezd el sikítozni, hisz megáll előtted, és bambán kezd el bámulni.
+
+Ha mondod neki, hogy nyissa ki a „J”- betűs ajtót, lapozz a 322-re!
+Ha nekivágod az ajtónak a kaktuszt, lapozz a 296-ra!
+Ha inkább Pannihoz vágod, lapozz a 416-ra! 
+
+408.
+
+A homokozó önfeledt szórakozást ígér, olyat, amiben már 5 éves korod óta nem volt részed, amikor is a házatoktól néhány méterre levőt egy megaszuper hipermarket váltotta fel. 
+De nem számolsz azzal a ténnyel, hogy Piroska Józsi várában minden másképp működik. Például ez az ártatlan kis homokozó is potenciális veszélyforrás lehet. Ezúttal azonban szerencséd van, végzeted nem egy vérengző fenevaddal, csupán egy futóhomokkal hozott össze. Ám ez ahogy meglát téged, azonnal futásnak ered és kirohan az ajtót. A helyén egy hatalmas verem marad.
+
+Ha a mászókához mész, lapozz a 275-re!
+Ha megtámadod Józsit, lapozz a 365-re!
+
+409.
+
+Bal lábad óvatosan az első lépcsőfokra helyezed, de az nem marad ott, hanem visszasüllyed a jobb lábad mellé. Ismét megpróbálod, de az sem hoz sikert. Gyorsítasz a tempón. Úgy tűnik, mintha haladnál, de amint megállsz pihenni a lépcső közepén, megint visszakerülsz az aljára. Már tiszta ideg vagy a hiábavaló próbálkozások miatt és végső rohamra indulsz. Izmaid megfeszülnek, és teljes erődből felrohansz a lépcső legfelső fokára. Öröm tölti meg szíved. Lecsukod szemed és arcodon a győzelem könnycseppje vág menetet. Mire magadhoz térsz ebből a mámoros állapotból, ismét lent találod magad. Tehát kifogott rajtad ez az ördögi masina. Mivel nem próbálkozol többször, csak két választásod maradt arra, hogy megpróbálj feljutni Piroska Józsihoz.
+
+Ha megpróbálod tönkretenni a MOZGÓ LÉPCSŐt, lapozz a 336-ra!
+Ha megpróbálkozol azzal a kulccsal, amit a várban találtál, akkor adasd össze a rajta lévő számokat a valóságban hozzád legközelebb álló személlyel, majd lapozz az így kapott számra! (Figyelmeztetünk, te csak 10-ig tudsz számolni!)
+
+
+
+
+
+
+410.
+
+Ezután a kis kitérő után a város felé veszed az utad azon az ösvényen, amit valószínűleg Józsi használt, mikor a városba akart jutni. Most te is erre mész.
+Az erdő sötét és homályba burkolózik, akárcsak az elméd, de jól kivehető, amint a mákfák ritkulni kezdenek és helyüket a normális és egyhangú szakrancs fák veszik át. Utad unalmasnak ígérkezik, ám ekkor egy piros bézbólsapkás mutáns ugrik eléd. A kezében lévő pizzásdobozokról azonnal felismered a hírhedt, már évek óta körözött, a „PIZZAFUTÁR” néven elhíresült bűnözőt. A futár rád támad a kezében lévő pizzákkal. Öt körön keresztül ezek elhajításával támad. Ha sikerül eltalálnia, 3-at sebez, de ha elfogy a pizzája, kezével esik neked, ekkor 1-3 életerőpontot sebez.
+
+Mutáns pizzafutár: életerő 25, támadási képesség 9, védettségi szint 15.
+
+Ha életerőd 0 alá csökken, kalandod véget ért!
+Ha elmész péknek, lapozz a 255-re!
+Ha győzöl, folytatod utad a város felé, lapozz a 27-re!
+
+411.
+
+Ez a rulettasztal az előírásoknak megfelelő, tehát négy darab szám van rajta, plusz a 0. A pörgetés előtt gondolj egy számra. Egy öltönyös férfi megpörgeti a rulettet. 
+
+Miután kigondoltad a számot, lapozz a 353-ra!
+
+412.
+
+Halkan elrebeged nekik, hogy nem vagy könyvtáros, csupán egy kalandor, aki nem kisebb feladatra vállalkozott, mint megmenteni a világot a teljes pusztulástól.
+A barbárok csalódottan szegik le a fejüket, majd egy kör alakú asztalhoz invitálnak egy kis beszélgetésre. A felföldi emberektől többek között megtudod, hogy még Józsi engedte meg nekik, hogy itt lakjanak, mivel a sziget lakosai nem szeretik a drogokat, nem volt kit leszoktatni, így a helyiség kihasználatlanul állt. Elmondják még azt is, hogy Józsinak van egy fiútestvére Panni, aki a sziget egyetlen – éppen ezért fővárosának – polgármestere, és van még egy piros szivecskés alsónadrágja.
+Most a továbbjutáshoz elengedhetetlen információk birtokába jutottál, ezért ne felejtsd el őket, és adj egyet a szerencsepontjaidhoz.
+Kifelé menet megtudakolod, hogy miért kérdezték meg tőled, hogy könyvtáros vagy-e?
+- Hát tudod – hangzik a válasz – mi csak úgy tudjuk fenntartani biológiai egyensúlyunkat, ha okos embereket eszünk, és a könyvtárosok általában azok.
+- Akkor miért nem esztek Nobel-díjas fizikusokat?
+A felföldi IQ barbárok gondolkodóba esnek. Te a helyzetet kihasználva távozol a szobából.
+
+Ha a jobb oldali ajtót nézed meg, lapozz a 424-re!
+Ha Józsi volt irodájába mész, lapozz a 343-ra!
+Ha elhagyod a gyárat és a város felé veszed az irányt, lapozz a 410-re!
+
+
+
+
+
+
+
+
+
+
+
+ 
+413.
+
+Telepatikus képességednek köszönhetően /amit ki tudja, hogy honnan szereztél/ megjósolod, hogy mi fog bent várni. Egy hatalmas asztal, tele mindenféle étellel, háremhölgyek és egy hordó a legjobb minőségű borral. Végre valami jó is történik a Kalandod során!
+Bent azonban csak egy falovat találsz, aminek a fejére egy alsógatyát húztak. Miközben a faló vizsgálatával vagy elfoglalva, a szemközt lévő szobából egy szőrös mellkasú dagadt férfi ugrándozik oda hozzád, akin egy lila tüllszoknya van, amire egy zöld tangát húzott. Elkap a félelem. Ijedtedben berosálsz. A kövér ember rádordít:
+- Lehet itt balettozni?
+- Fogalmam sincs! – suttogod ijedten.
+- Nem baj! – mondja félelmetes mély hangján.
+Azzal irtózatos balettlépésekkel távozik. Még mielőtt kilépne a „P”- betűs ajtón, bekapja a kilincset. Hirtelen bűz csapja meg az orrod és megpillantod azt a zöld, gusztustalan, undorító retymát.
+Csapdába kerültél. Most már csak egy ajtó maradt, de fogalmad sincs, hogy mi rejlik odabent. Szerencsére nem kapta be a kilincsét.
+
+Lapozz a 298-ra!
+
+414.
+
+A sziget természetes növényzetét alkotó szakrancs fákat hamarosan csak az errefelé honos mákfák váltanak föl. Az itt élő tanyasi emberek a mák feldolgozására álltak át, ami – valljuk be – nem valami nehéz foglalkozás, hisz a darált mák kilós csomagokban lóg a fákról.
+Korábban Piroska Józsi is ezzel foglalkozott. Józsi ügyes gazdálkodó volt, sikerült egy olyan mákfajtát nemesíteni, ami öt kilós szerelésben csüng le az ágakról.
+Amíg ezeken töprengesz, megpillantod Józsi hatalmas mákos tésztagyárát, ami az erdő közepén, egy tisztáson található. Közelebb mész.
+
+Lapozz a 317-re!
+
+415.
+
+Lábujjhegyen osonsz oda az ajtóhoz, majd olyan érzésed támad, mintha figyelnének. Megfordulsz és meglátsz egy nagy hatalmas óriási gigantikus méretű 200 tonnás nőt, aki csókokat dobálva ugrándozik feléd. Neked se kell több, ordítva rohansz be az ajtón.
+
+Lapozz a 401-re!
+
+416.
+
+A Pannihoz vágott cserép széttörik a fején, majd apró darabokban a földre hull. Piroska Panni üveges szemekkel bámul rád, majd körülbelül öt perc múlva heves ordításba kezd. A lárma következtében őrök tömkelege rohan oda hozzátok. Mindegyiknek piros hajú baba van a kezében. Nincs esélyed a menekülésre. Kalandod véget ért!
+
+
+
+
+
+
+
+
+
+
+
+
+417.
+
+A labort egy szekrény választja ketté, és most az eddig nem látott részét nézed meg. Színes folyadékot tartalmazó kémcsövek és lombikok ragadják meg figyelmed. Egy másik asztalon különböző világpusztító fegyverek tervrajzai hevernek, de ezek nem érdekelnek túlságosan, inkább a kémcsöveket nézed meg. Itókának néz ki a tartalmuk.
+
+Ha megiszod a kéket, lapozz a 131-re! 
+Ha a zöldet, lapozz a 219-re!
+Ha megpróbálkozol a sárgával, lapozz a 419-re!
+Vagy a pirossal, lapozz a 363-ra!
+Ha abba a szobába mész be, ahonnan az óvóbácsi jött ki, lapozz a 135-re!
+Ha a kastély bejáratától balra levő "AJTÓHÓ" mész, lapozz a 390-re!
+
+418.
+
+Egy sikeresen végrehajtott támadásod után Józsi elpityeredik, leül a földre, majd rákezd egy versikére:
+
+Gyurmázok az oviban,
+Ekkor jön meg Obi-wan.
+Rudabánya hőse Ő,
+Tegnap nem volt sok eső.
+Egyenruhát fő’ nem veszek,
+Katonának nem kell retek.
+Őzgidákat tenyésztek,
+Rondákat meg gebéket.
+Örményország messze van,
+Kislányoknak copfjuk van.
+
+Miután elmondja, örömmámorban tör ki az ablakon. Éppen utána vetnéd magad, ám az ajtón beözönlő őrök megakadályoznak ebben. Vajon honnan tudták, hogy szükség van rájuk? Józsi biztosan nem szólhatott nekik.
+
+Ha kitéped magad az őrök karjai közül, és Józsi után ugrasz, lapozz a 231-re!
+Ha megküzdesz az őrökkel, lapozz a 269-re!
+Ha cselt alkalmazol, lapozz a 433-re!
+
+419.
+
+A sárga folyadék nem csak a kémcsőben leledzik, hanem szinte az egész asztalt beborítja, sőt még a falakon és mennyezeten is van belőle. Nem baj, azért megiszod az összeset. Az immár üres kémcső hátsó falán egy feliratot pillantasz meg: „Vizeletminta". Kénytelen vagy beletörődni abba, hogy megittad egy ember vizeletét. Ekkor berohannak az óvodások és meglátják a kezedben az üres üveget. Ezt kiabálják feléd:
+- Ez a mi vizeletszerződésünk volt!
+Az óvodások dühösen rontanak rád. Kalandod véget ért! (Ráadásul nem is egy ember vizeletét ittad meg)
+
+
+
+
+
+
+420.
+
+Az emeleten három tábla alapján kapsz útbaigazítást: A lépcsőfeljárótól jobbra egy drogelőállító üzem, középen Józsi volt irodája, balra pedig egy drogelvonó van.
+
+Ha jobbra mész, lapozz a 424-re!
+Ha balra, lapozz a 245-re!
+Ha Józsi egykori irodájába, lapozz a 343-ra!
+Ha elhagyod a gyárat és a város felé veszed az irányt, lapozz a 410-re!
+
+421.
+
+- Menjen és gyűjtsön ő is kutyát! - szólal fel a fogorvos.
+Ezzel mindenki egyetért és mire észbekapnál, már a kastélyon kívül találod magad, méghozzá Kelbimbó Sziti főterén.
+
+Lapozz a 319-re!
+
+422.
+
+A szemét szemének maradványai hajmosásra nem alkalmasak, ezért ne edd meg őket! A csatazajra kirohannak a felnőtt méretű kis óvodások és körülállnak. Az egyikük összeszedi bátorságát és megszólal:
+- Megszabadítottál az óvóbácsi uralmától. Most már nem kell harmadfokú egyenleteket megoldanunk és veszélyes kísérleteket elvégeznünk, hanem játszhatunk kedvünkre. Köszönjük neked. 
+Azzal elmennek játszani, és utána feléd se néznek. Nyugodtan bemehetsz a laborba.
+
+Lapozz a 236-ra!
+
+423.
+
+Próbálsz nem ránézni a függönyre, de az úgy vonzza a tekintetedet, mint mágnes a macskát. Baltával esnél neki, azonban az nincs a birtokodban. Beéred azzal, hogy leszaggatod. És ekkor förtelmes látvány tárul eléd: az óceánban egy félbevágott bálna úszkál. Micsoda borzalom! Inkább visszarakod az imént leszaggatott függönyt. Odaállsz a P-s szoba elé.
+
+Lapozz a 413-ra!
+
+424.
+
+Az ajtó nyitva áll és belépsz rajta. Innen nem vitték el a gépeket, mint a lenti tésztagyárból. Ugyan kinek kellenének, hiszen ezek a vacak gépek nem tüntetik el a fejedről a korpát és nem lesz tőlük patyolatfehér a ruhád vagy gyönyörű fogsorod.
+Hiába jöttél ide. A poros szerkezetek használati utasításán kívül sajnos semmilyen információt nem találsz.
+
+Ha benyitsz a bal oldali ajtón, lapozz a 245-re!
+Ha Józsi volt irodájába mész, lapozz a 343-ra!
+Ha elhagyod a gyárat és a város felé veszed az irányt, lapozz a 410-re!
+
+
+
+
+
+
+
+
+425.
+
+A gumikesztyűt óvatosan huzigálni kezded, de az nem jön le, mivel a kaktusz tüskéi átszúrták. Mérgedben cserepestül felkapod a növényt és elindulsz az ajtó felé. Elhaladsz a faló mellett, majd a dühtől elvakultan rúgod be a „P”- betűs ajtót és így kiérsz abba az előszobába, ahol az az ocsmány rózsaszínű függöny van. Azonban a „J”- betűs ajtó előtt gondolkodva állsz meg.
+
+Lapozz a 407-re!
+
+426.
+
+Odaállsz egy félkarú kedves emberhez, aki rabruhát visel. Bedobsz egy pimpamot a szájába. Lenyeli, majd kirohan az ajtón, amin bejöttél. (Vonj le egy pimpamot!)
+
+Ha a rulettasztalhoz mész, lapozz a 411-re!
+Ha beállsz a sorba, lapozz a 286-ra!
+Ha kimész, lapozz a 176-ra!
+
+427.
+
+Piroska Panni letérdel a „J” –betűs ajtó elé és szárazra nyalja a kilincset, majd feláll és kinyitja az ajtót és néhány udvarias szót mellékel hozzá:
+- Na mostmá’ takaroggyá befele!
+Tekintetével elkísér az immár nyitott ajtóig, ám ekkor megakad valamin a szeme és így szól:
+- Hogy került hozzád a kedvenc fogkefém?
+Elcsodálkozol a kérdésen, hiszen legjobb tudomásod szerint nincs nálad egy fogkefe sem. De Panni nem hagy sok időt a gondolkodásra, odalép hozzád és kikapja kezedből a cserepes kaktuszt és eltűnik vele a mások szobában.
+Még felocsúdni sincs időd a meglepetésből, amikor már megint ott áll melletted.
+- Mi az? Mire vársz még? Miért nem jössz be?
+Azzal bemegy Józsi szobájába.
+
+Lapozz a 334-re!
+
+428.
+
+Hallasz egy kattanást, majd egy titkos ajtó nyílik ki melletted, ahonnan egy kb. 1m magas, szőrös, nyitott szájú lókecse jön elő. Ilyen állatot még nem láttál élőben, csak egy dokumentumfilmben, amit a primitívek sugároztak. Odaugrál hozzád, leböfög, köp egy nagyot, megfordul, és még mielőtt távozna, bűzös gázfelhőt ereszt ki a végbélnyílásából. A lépcső azonban még mindig mozog.
+
+Ha a méhecskésbe dugod be a kulcsot, lapozz a 405-re!
+Ha a macikásba, lapozz a 166-ra!
+
+429.
+
+Hiába vagy erős, a kaktusz átvág....a tüskéivel! Kalandod véget ért!
+
+430.
+
+Bizonyára itt lehetnek a Kaszinó legjobb gépei, hisz ide csoportosult a legtöbb ember, valamint külön szobát tartanak fönn nekik. Meglepetésedre azonban csak egy pottyantós WC-t látsz. Hát ezen mi volt olyan érdekes?
+
+Ha jobban megvizsgálod, lapozz a 406-ra!
+Ha kimész, lapozz a 176-ra!
+
+431.
+
+A szemét a szemét használja támadásra, ezért úgy gondolod, hogy először a látószervét kellene elintézni. A mutató és a középső ujjadból V alakot formálsz, és akcióba lendülsz. Amíg meg nem vakítod, az ujjaddal harcolsz, és 1 pontot sebzel minden sikeres támadásoddal.
+
+Óvóbácsi: életerő 82, támadási képesség 132, védettségi szint 18. Minden sikeres támadásával 3-8 életerőpont veszteséget okoz.
+
+Ha végrehajtasz két sikeres támadást az óvóbácsi megvakul, de úgy is tovább harcol az alábbi értékekkel: (Most már választhatsz más fegyvert is!)
+
+Az immár vak óvóbácsi: életerő 80, támadási képesség 0, védettségi szint 2.
+
+Ha győztél, lapozz a 422-re!
+Ha vesztettél, Kalandod véget ért!
+Ha elmész péknek, lapozz a 255-re!
+
+432.
+
+A barbárok szeme a válaszod hallatán felcsillan, és sokatmondóan összenéznek. Egyik pillanatról a másikra elkapnak, és egy turmixgépbe gyömöszölnek. Hamarosan halmazállapotod cseppfolyóssá válik és a barbárok ízletes koktélként tálalnak.
+Ma te csillapítottad a felföldi IQ barbárok tudásszomját. Kalandod véget ért!
+
+433.
+
+Lehetőségek tucatjai árasztják el agyadat, ám egyiket sem találod elég jónak ahhoz, hogy egy ilyen szuper intelligens bandán kifogj. Kivéve egyet, amit mesteredtől a nagy Germán Genyótól tanultál. (Egyébként ő Madam McToszlak férje)
+Közben az őrök közeledni kezdenek, ezért nincs idő a további gondolkodásra:
+- Hé! Esik a hóóóó!
+Az őrök erre megtorpannak, majd tekintetüket az ablakokkal szemközt lévő falra irányítják.
+- Nem ott! A másik oldalon! – igazítod helyre őket.
+Odarohannak az ablakokhoz, majd az egyik így kiált a többieknek:
+- Sál, sapka!
+Megfordulnak és kirohannak az ajtón. Döbbenten követed az eseményeket, sose gondoltad volna, hogy ennek a mondatnak ilyen hatása lesz.
+Ám ezzel nem értek véget az események. Hamarosan nagykabátba öltözve térnek vissza, és szép sorban kiugrálnak az ablakokon. (Szép dolog a bizalom, elhinni egy idegen hazugságát. Milyen kár, hogy ezen a szigeten tízévente egyszer esik hó, és az is télen. Most pedig nyár van!)
+Már azt hiszed, hogy egyedül maradtál, ám megfeledkeztél Panniról, akit csak most veszel észre. Már végzett a borotválkozással és éppen a sminkelésnek kezdene neki, amikor odalépsz és megszólítod:
+- Szia János!
+- De hát én Panni vagyok, tudod, találkoztunk az ajtó előtt.
+- Tudom János!
+- De én Panni vagyok!
+- Persze János!
+- Tudod mit? Egyezzünk ki Sanyiban!
+- Oké János!
+- Beverjem arcodat?!
+- Ne Panni! Ne! Kérlek ne!
+- De hát én János vagyok! Nem érted meg?
+Hosszú percekkel később egy monoklival a szemed alatt ébredsz. Panni diadalittasan áll fölötted.
+- Ugye megmondtam, hogy Panni! – mondja János.
+
+Lapozz a 261-re!
+
+ 
+Kalandlap
+
+
+
+
+Életerő:
+Támadási képesség:
+Védettségi szint:
+Szerencse:
+
+Tárgyak:
+
+Pénz:
+Kalandlap az ellenfeleknek
+
+
+
+
+Életerő:	Támadási képesség:	Védettségi szint:
+
+
+Életerő:	Támadási képesség	Védettségi szint:
+
+
+Életerő:	Támadási képesség	Védettségi szint:
+
+
+Életerő:	Támadási képesség	Védettségi szint:
+
+
+Életerő:	Támadási képesség	Védettségi szint:
+
+
+Életerő:	Támadási képesség	Védettségi szint:
+
+
+Életerő:	Támadási képesség	Védettségi szint:
+
+
+
+
+
+
+
+
+
+
+
+
+Nyalóka II.
+
+
+
+
+
+
+ 
+Hónapok teltek el azóta, hogy Józsi elmenekült a szigetről. Ez idő alatt testben és lélekben is felkészültél a végső összecsapásra. Megtanultad bekötni a cipőfűződet, kiismerted a szumó bonyolult szabályait, megtanultál két újabb számot: a 42-t és a 76-ot.
+Miután megnézed A fagyott kecskék lázadása című szappanopera 7789., azaz utolsó részét, útnak indulsz. Elbúcsúzol édesanyádtól, aki ad egy parasztkolbászos kenyeret és heves integetésbe kezd, miután kilépsz a házatokból. Ezúttal azonban nem mész vissza.
+A sziget partjaihoz érve azonban újabb problémával találod szembe magad. Túl nagy távolságot kellene megtenned a vízen mindenféle segédeszköz nélkül, ezért sürgős megoldásra van szükséged. Mentő ötleted támad. Talán Fekete Norbert a lótenyésztő, aki másodállásban kalapokat árul segíthetne. Felkeresed hát a boltját és egy hatalmas, vízhatlan kalapot rendelsz. 
+
+</script>
+</body>
+</html>
