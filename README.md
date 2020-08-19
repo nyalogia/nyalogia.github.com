@@ -1,3 +1,3 @@
 # nyalogia.github.com
 
-Kérjük kerüljéenek bármilyen interakciót a tartalommal!
+Kérjük kerüljenek bármilyen interakciót a tartalommal!
